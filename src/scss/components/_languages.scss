@@ -1,0 +1,16 @@
+.languages {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  &__link {
+    @extend %fs-body-s;
+
+    opacity: 0.4;
+
+    @extend %interactive;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}

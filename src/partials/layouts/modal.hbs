@@ -1,0 +1,24 @@
+<div class="hystmodal modal" id="{{data.id}}" aria-hidden="true">
+    <div class="hystmodal__wrap modal__wrapper">
+        <div class="hystmodal__window modal__window" role="dialog" aria-modal="true">
+            <button class="modal__close" data-hystclose>
+                <svg width="23" height="23">
+                    <use xlink:href="#cross" />
+                </svg>
+            </button>
+
+            {{#if data.heading}}
+                <h2 class="modal__heading">{{data.heading}}</h2>
+            {{/if}}
+            {{#if data.text}}
+                <div class="modal__text">
+                    {{{data.text}}}
+                </div>
+            {{/if}}
+
+            {{#block "content"}}
+
+            {{/block}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+.policy {
+  color: $grayscale-600;
+  @extend %fs-body-xs;
+
+  a {
+    text-decoration: underline;
+    &:link,
+    &:visited {
+      color: $grayscale-900;
+    }
+
+    @extend %interactive;
+  }
+}

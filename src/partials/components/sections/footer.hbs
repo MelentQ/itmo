@@ -1,0 +1,58 @@
+<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer__left">
+
+            </div>
+            <div class="footer__content">
+                <ul class="footer__menu js-footer-accordions">
+                    {{#each menu.footer}}
+                        <li {{#if this.name}}class="js-accordion"{{/if}}>
+                            <div class="footer__menu-heading-block">
+                                {{#if this.name}}
+                                    <a class="footer__menu-heading" href="{{this.link}}">{{this.name}}</a>
+
+                                    <button class="footer__menu-heading-button show-on-tablet js-accordion-btn" type="button">
+                                        <svg width="20" height="20">
+                                            <use xlink:href="#arrow" />
+                                        </svg>
+                                    </button>
+                                {{else}}
+                                    <span class="footer__menu-heading hide-on-tablet">&nbsp;</span>
+                                {{/if}}
+                            </div>
+                            <ul class="footer__submenu {{#if this.name}}js-accordion-content{{/if}}">
+                                {{#each this.items}}
+                                    <li>
+                                        <a class="footer__menu-link" href="{{this.link}}">{{this.name}}</a>
+                                    </li>
+                                {{/each}}
+                            </ul>
+                        </li>
+                    {{/each}}
+                </ul>
+                <div class="footer__contacts">
+                    {{>components/socials}}
+                    <a class="footer__phone" href="tel:+78123123269">+7 (812) 312-32-69</a>
+                    <address class="footer__address">191002, г. Санкт-Петербург, ул. Ломоносова, д. 9, лит. Е</address>
+                </div>
+                <div class="footer__form">
+                    <span class="footer__form-label">Подписывайтесь на рассылку полезных материалов</span>
+                    {{>components/email-form}}
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__copyright-block">
+                <span>© 2022 МНОЦ «Безопасность и надежность критических цифровых технологий»</span>
+                <a href="#" target="_blank">Политика по обработке персональных данных</a>
+            </div>
+            <a class="footer__made-by" href="https://markweber.ru/" target="_blank">
+                <span>Разработка сайта</span>
+                <svg width="87" height="22">
+                    <use xlink:href="#mw" />
+                </svg>
+            </a>
+        </div>
+    </div>
+</footer>

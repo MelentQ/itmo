@@ -1,0 +1,90 @@
+.visually-hidden {
+    @include visuallyHidden();
+}
+
+.no-scroll {
+    overflow-y: scroll;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    body {
+        height: auto;
+        overflow: hidden;
+    }
+}
+
+.hide-on-mobile {
+    @include breakpoint(mobile) {
+        display: none !important;
+    }
+}
+
+.show-on-mobile {
+    @include breakpointMF(small-tablet) {
+        display: none !important;
+    }
+}
+
+.show-on-tablet {
+    @include breakpointMF(laptop) {
+        display: none !important;
+    }
+}
+
+.hide-on-tablet {
+    @include breakpoint(tablet) {
+        display: none !important;
+    }
+}
+
+.hide-on-laptop {
+    @include breakpoint(laptop) {
+        display: none !important;
+    }
+}
+
+.show-on-laptop {
+    @include breakpointMF(desktop) {
+        display: none !important;
+    }
+}
+
+.debug {
+    div:not(.page-content):not(.hystmodal__shadow),
+    ul:not(.debug-grid),
+    li,
+    h1, h2, h3, h4, h5, h6 {
+        outline: 1px dotted red;
+    }
+
+    a,
+    button {
+        outline: 1px dotted green;
+    }
+
+    img {
+        outline: 1px dotted blue;
+    }
+}
+
+.debug-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+
+    pointer-events: none;
+
+    & > * {
+        background-color: #FF4141;
+        opacity: 0.1;
+    }
+}

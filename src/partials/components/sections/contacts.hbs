@@ -1,0 +1,33 @@
+{{#extend "section"}}
+    {{#content "content"}}
+
+        <div class="contacts">
+            <div class="contacts__info-block">
+                <a class="contacts__phone" href="tel:+78123123269">+7 (812) 312–32–69</a>
+                <div class="contacts__content">
+                    <ul class="contacts__info-list">
+                        {{#each data.info}}
+                            <li>
+                                <span class="contacts__info-label">{{this.label}}</span>
+                                <div class="contacts__info-content">
+                                    {{{this.content}}}
+                                </div>
+                            </li>
+                        {{/each }}
+                    </ul>
+                    <div>
+                        {{>components/socials}}
+                        <span class="contacts__socials-label">Мы всегда ответим в мессенджерах и соц. сетях</span>
+                    </div>
+                </div>
+                <div class="contacts__illustration-wrapper hide-on-laptop">
+                    <img class="contacts__illustration" src="{{data.illustration}}" width="380" height="300" alt="Illustration">
+                </div>
+            </div>
+            <div class="contacts__form">
+                {{>components/form}}
+            </div>
+        </div>
+
+    {{/content}}
+{{/extend}}

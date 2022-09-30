@@ -1,0 +1,28 @@
+.big-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  &__button {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.6rem;
+    height: 4.6rem;
+
+    border-radius: 50%;
+
+    background-color: $grayscale-100;
+
+    @extend %interactive-svg-stroke-button;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+
+      stroke: $primary-900;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.map {
+  position: relative;
+  z-index: 5;
+
+  margin-bottom: -14rem;
+
+  @include breakpoint(small-tablet) {
+    margin-bottom: 0;
+  }
+
+  &__element {
+    height: 60rem;
+
+    background-color: $grayscale-400;
+
+    @include breakpoint(small-tablet) {
+      height: 20rem;
+      margin: 0 var(--content-padding);
+
+      border-radius: 2.4rem;
+      overflow: hidden;
+    }
+  }
+}

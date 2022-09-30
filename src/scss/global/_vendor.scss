@@ -1,0 +1,19 @@
+@import '../../node_modules/swiper/swiper-bundle';
+
+.swiper {
+  width: 100%;
+  overflow: visible;
+}
+
+.swiper-slide {
+  box-sizing: border-box;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+[class*="copyrights-pane"] {
+  opacity: 0;
+  visibility: hidden;
+}

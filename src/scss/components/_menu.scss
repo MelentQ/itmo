@@ -1,0 +1,59 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .languages {
+    margin-top: 1.5rem;
+    margin-bottom: 3.6rem;
+  }
+
+  .big-buttons {
+    justify-content: flex-end;
+
+    margin-bottom: 1.2rem;
+
+    .search-field {
+      flex-grow: 1;
+
+      width: auto;
+
+      &__element {
+        display: block;
+
+        @include breakpoint(laptop) {
+          padding: 1.55rem 5rem;
+        }
+      }
+
+      &__button--close {
+        display: none;
+      }
+    }
+  }
+
+  .main-menu {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+
+    margin-bottom: 2rem;
+
+    &__link {
+      display: block;
+      padding: 2rem 0;
+
+      border-bottom: 0.2rem solid rgba($grayscale-100, 0.2);
+    }
+  }
+
+  .secondary-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .change-version {
+    margin-top: auto;
+  }
+}

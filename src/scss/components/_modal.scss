@@ -1,0 +1,94 @@
+.modal {
+  &__wrapper {
+    @include breakpoint(tablet) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__window {
+    padding: 8rem;
+    border-radius: 3.2rem;
+
+    width: 79rem;
+    margin: 0.4rem 0;
+
+    @include breakpoint(tablet) {
+      max-width: 38rem;
+      padding: 3.2rem;
+      border-radius: 2.4rem;
+    }
+
+    @media screen and (max-width: 830px) {
+      width: calc(100% - 0.4rem);
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+
+    @include breakpoint(tablet) {
+      right: 0;
+      top: -4.3rem;
+    }
+
+    &:focus {
+      svg {
+        fill: $primary-400;
+
+        @include breakpoint(tablet) {
+          fill: $grayscale-200;
+        }
+      }
+    }
+
+    &:hover {
+      svg {
+        fill: $primary-500;
+
+        @include breakpoint(tablet) {
+          fill: $grayscale-300;
+        }
+      }
+    }
+
+    svg {
+      width: 2.3rem;
+      height: 2.3rem;
+
+      fill: $primary-900;
+
+      @include breakpoint(tablet) {
+        fill: $grayscale-100;
+      }
+    }
+  }
+
+  &__heading {
+    margin-bottom: 2.4rem;
+    text-transform: uppercase;
+    @extend %fs-h-4;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__text {
+    @extend %fs-roboto-s;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+
+    margin-top: 4rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 2rem;
+      flex-direction: column;
+    }
+  }
+}

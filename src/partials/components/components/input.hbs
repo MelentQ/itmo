@@ -1,0 +1,8 @@
+<div class="input">
+    {{#if data.textarea}}
+        <textarea class="input__element" name="{{data.name}}" placeholder="{{data.placeholder}}" {{#if data.required}}required{{/if}}></textarea>
+    {{else}}
+        <input class="input__element" name="{{data.name}}" type="{{data.type}}" placeholder="{{data.placeholder}}" {{#if data.required}}required{{/if}}>
+    {{/if}}
+    <span class="input__placeholder">{{data.placeholder}}</span>
+</div>

@@ -1,0 +1,10 @@
+.main-menu {
+  display: flex;
+  align-items: center;
+  gap: 3.6rem;
+
+  &__link {
+    @extend %fs-roboto-m;
+    @extend %interactive;
+  }
+}

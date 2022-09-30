@@ -1,0 +1,60 @@
+{
+    "title": "Главная страница",
+    "sections": {
+        "introMain": {
+            "slides": [
+                {
+                    "link": "#",
+                    "image": "img/content/intro-main/1.jpg",
+                    "date": "25 мая",
+                    "section": "Мероприятие",
+                    "title": "Киберучения на Национальном Киберполигоне"
+                },
+                {
+                    "link": "#",
+                    "image": "img/content/intro-main/1.jpg",
+                    "date": "26 мая",
+                    "section": "Мероприятие",
+                    "title": "Киберучения на Национальном Киберполигоне 1"
+                },
+                {
+                    "link": "#",
+                    "image": "img/content/intro-main/1.jpg",
+                    "date": "27 мая",
+                    "section": "Мероприятие",
+                    "title": "Киберучения на Национальном Киберполигоне 2"
+                },
+                {
+                    "link": "#",
+                    "image": "img/content/intro-main/1.jpg",
+                    "date": "28 мая",
+                    "section": "Мероприятие",
+                    "title": "Киберучения на Национальном Киберполигоне 3"
+                },
+                {
+                    "link": "#",
+                    "image": "img/content/intro-main/1.jpg",
+                    "date": "29 мая",
+                    "section": "Мероприятие",
+                    "title": "Киберучения на Национальном Киберполигоне 4"
+                }
+            ]
+        },
+        "contacts": {
+            "block": "contacts",
+            "dot": true,
+            "title": "Контакты",
+            "info": [
+                {
+                    "label": "Адрес",
+                    "content": "<p>Песочная наб., 14 лит. А, Санкт-Петербург</p>"
+                },
+                {
+                    "label": "Электронная почта",
+                    "content": "<a href=\"mailto:fbititmo@gmail.com\">fbititmo@gmail.com</a>"
+                }
+            ],
+            "illustration": "img/content/illustrations/contacts.svg"
+        }
+    }
+}

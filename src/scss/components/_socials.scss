@@ -1,0 +1,24 @@
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+
+    border-radius: 50%;
+
+    border: 0.1rem solid $grayscale-900;
+
+    @extend %interactive-svg-fill-button;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}

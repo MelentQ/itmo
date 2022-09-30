@@ -1,0 +1,31 @@
+.button {
+  justify-content: center;
+  padding: 2rem 3.1rem;
+  background-color: $primary-700;
+  border: 0.1rem solid $primary-700;
+  border-radius: 999rem;
+
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  color: $grayscale-100;
+  @extend %fs-button-1;
+
+  transition: background-color $tt $te, border-color $tt $te, color $tt $te;
+
+  &--white {
+    background-color: $grayscale-100;
+    color: $primary-700;
+  }
+
+  &:focus {
+    background-color: $primary-400;
+    border-color: $primary-400;
+    color: $grayscale-100;
+  }
+
+  &:hover {
+    background-color: $primary-500;
+    border-color: $primary-500;
+    color: $grayscale-100;
+  }
+}

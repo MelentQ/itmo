@@ -1,0 +1,15 @@
+<div class="hystmodal modal-full" id="{{data.id}}" aria-hidden="true">
+    <div class="hystmodal__wrap modal-full__wrapper">
+        <div class="hystmodal__window modal-full__window" role="dialog" aria-modal="true">
+            <button class="modal-full__close" data-hystclose>
+                <svg width="23" height="23">
+                    <use xlink:href="#cross" />
+                </svg>
+            </button>
+
+            {{#block "content"}}
+
+            {{/block}}
+        </div>
+    </div>
+</div>

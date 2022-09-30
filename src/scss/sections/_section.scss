@@ -1,0 +1,69 @@
+.section {
+  position: relative;
+  z-index: 10;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+
+    background-color: white;
+    border-radius: 3.2rem;
+
+    @include breakpoint(laptop) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__heading {
+    grid-column: span 2;
+    align-self: flex-start;
+
+    padding: 8.2rem 0 8rem 4.8rem;
+
+    @extend %fs-body-s;
+
+    h1, h2, h3, h4, h5, h6 {
+      @extend %fs-body-s;
+    }
+
+    @include breakpoint(laptop) {
+      grid-column: span 1;
+      padding: 4rem 2.4rem 0;
+    }
+
+    &--dot {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+
+      &::before {
+        content: '';
+
+        display: block;
+        width: 2.8rem;
+        height: 2.8rem;
+
+        border-radius: 50%;
+
+        background-color: $grayscale-900;
+
+        @include breakpoint(laptop) {
+          width: 1.4rem;
+          height: 1.4rem;
+        }
+      }
+    }
+  }
+
+  &__content {
+    grid-column: span 10;
+
+    padding: 7.2rem 4.8rem 8rem 0rem;
+
+    @include breakpoint(laptop) {
+      grid-column: span 1;
+      padding: 0rem 2.4rem 4rem;
+    }
+  }
+}

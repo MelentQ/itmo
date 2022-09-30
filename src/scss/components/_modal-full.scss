@@ -1,0 +1,39 @@
+.modal-full {
+  &__wrapper {
+
+  }
+
+  &__window {
+    width: 100%;
+    height: 100%;
+    padding: var(--content-padding);
+
+    background-color: $primary-700;
+    color: $grayscale-100;
+  }
+
+  &__close {
+    position: absolute;
+    top: var(--content-padding);
+    right: var(--content-padding);
+
+    &:focus {
+      svg {
+        fill: $grayscale-200;
+      }
+    }
+
+    &:hover {
+      svg {
+        fill: $grayscale-300;
+      }
+    }
+
+    svg {
+      width: 3.2rem;
+      height: 3.2rem;
+
+      fill: $grayscale-100;
+    }
+  }
+}

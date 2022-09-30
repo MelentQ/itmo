@@ -1,0 +1,27 @@
+.container {
+    width: 100%;
+    max-width: calc(var(--max-container-width) + 2 * var(--content-padding));
+    margin: 0 auto;
+    padding: 0 var(--content-padding);
+    @supports (width: max(20vw, 100px)) {
+        padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding));
+        padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
+    }
+
+    &_wide {
+        --max-container-width: 179rem;
+        --content-padding: 6.5rem;
+    }
+}
+
+.page-content {
+    overflow: hidden;
+}
+
+.page-content,
+.page-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}

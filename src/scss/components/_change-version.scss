@@ -1,0 +1,45 @@
+.change-version {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+
+  width: fit-content;
+
+  opacity: 0.4;
+
+  @extend %fs-body-s;
+
+  &:focus {
+    opacity: 1;
+    &:link,
+    &:visited {
+      color: $primary-400;
+    }
+
+    svg {
+      stroke: $primary-400;
+    }
+  }
+
+  &:hover {
+    opacity: 1;
+    &:link,
+    &:visited {
+      color: $primary-500;
+    }
+
+    svg {
+      stroke: $primary-500;
+    }
+  }
+
+  transition: color $tt $te, opacity $tt $te;
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+
+    stroke: $primary-900;
+  }
+}

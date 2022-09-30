@@ -1,0 +1,76 @@
+.email-form {
+  position: relative;
+
+  &__button {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 1.4rem);
+    padding: 0 3rem;
+
+    border-radius: 6.5rem;
+    background-color: $primary-700;
+
+    @extend %interactive-svg-stroke-button;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+
+      stroke: $grayscale-100;
+    }
+  }
+
+  .input {
+    @extend %fs-body-m;
+
+    &__element {
+      height: 5.6rem;
+      padding: 1.85rem 9.4rem 1.85rem 2.8rem;
+      border: 0.1rem solid $grayscale-600;
+      border-radius: 1.2rem;
+
+      transition: border-color $tt $te;
+
+      @include breakpoint(small-tablet) {
+        padding-left: 1.6rem;
+      }
+
+      &:placeholder-shown ~ .input__placeholder {
+        transform: translateY(1.85rem);
+      }
+
+      &:focus {
+        border-color: $primary-700;
+        & ~ .input__placeholder {
+          transform: translateY(0);
+        }
+      }
+
+      &:hover {
+        border-color: $primary-500;
+      }
+    }
+
+    &__placeholder {
+      left: 2.8rem;
+      transform: translateY(0);
+
+      @include breakpoint(small-tablet) {
+        left: 1.6rem;
+      }
+    }
+
+    &__validation-messages {
+      left: 2.8rem;
+
+      @include breakpoint(small-tablet) {
+        left: 1.6rem;
+      }
+    }
+  }
+}

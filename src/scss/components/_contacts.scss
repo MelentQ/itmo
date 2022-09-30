@@ -1,0 +1,137 @@
+.contacts {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 2rem;
+
+  margin-right: -4.8rem;
+
+  @include breakpoint(laptop) {
+    margin-right: -2rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  &__info-block {
+    grid-column: span 6;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: min-content;
+    gap: 2rem;
+
+    @include breakpoint(laptop) {
+      grid-template-columns: 1fr;
+    }
+
+    @include breakpoint(small-tablet) {
+      grid-column: span 1;
+    }
+  }
+
+  &__phone {
+    grid-column: span 2;
+
+    display: block;
+    width: fit-content;
+
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    @extend %fs-h-2;
+
+    @include breakpoint(laptop) {
+      grid-column: span 1;
+    }
+
+    @extend %interactive;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 11.2rem;
+    margin-top: 4rem;
+
+    @include breakpoint(small-tablet) {
+      margin-top: 0;
+      gap: 2rem;
+    }
+  }
+
+  &__info-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    @include breakpoint(small-tablet) {
+      gap: 1.1rem;
+    }
+
+    @include breakpoint(small-mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__info-label {
+    display: block;
+    margin-bottom: 1.2rem;
+
+    color: $grayscale-600;
+    @extend %fs-body-xs;
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__info-content {
+    @extend %fs-body-s;
+
+    a {
+      @extend %interactive;
+    }
+  }
+
+  &__socials-label {
+    display: block;
+    width: 20rem;
+    margin-top: 1.2rem;
+
+    @extend %fs-body-s;
+
+    @include breakpoint(small-tablet) {
+      width: 100%;
+    }
+  }
+
+  &__illustration-wrapper {
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      width: auto;
+      height: 100%;
+      object-fit: contain;
+      object-position: center bottom;
+    }
+  }
+
+  &__form {
+    grid-column: span 4;
+
+    margin-right: 4.8rem;
+
+    @include breakpoint(laptop) {
+      margin-right: 2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      grid-column: span 1;
+    }
+  }
+}

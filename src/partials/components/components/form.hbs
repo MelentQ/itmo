@@ -1,0 +1,17 @@
+<form class="form js-form" action="/">
+    <div class="form__heading-block">
+        <h2 class="form__heading">Остались вопросы?</h2>
+        <span class="form__heading-label">Задайте их напрямую!</span>
+    </div>
+
+    <fieldset class="form__inputs">
+        {{>components/input data=inputs.name}}
+        {{>components/input data=inputs.phone}}
+        {{>components/input data=inputs.message}}
+    </fieldset>
+
+    <div class="form__footer">
+        <button class="button js-form-submit" type="submit">Отправить</button>
+        {{>components/policy}}
+    </div>
+</form>

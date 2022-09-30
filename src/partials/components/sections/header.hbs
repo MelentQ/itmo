@@ -1,0 +1,33 @@
+<header class="header">
+    <div class="container">
+        <div class="header__top hide-on-laptop">
+            {{> components/change-version}}
+            <nav class="header__top-right">
+                {{> components/secondary-menu}}
+                {{> components/langs}}
+            </nav>
+        </div>
+        <div class="header__main">
+            <nav class="header__main-row">
+                <div class="header__logos">
+                    <a class="header__logo" href="#">
+                        <img src="img/logo-1.svg" width="250" height="28" alt="Logo">
+                    </a>
+                    <a class="header__logo" href="#">
+                        <img class="hide-on-laptop" src="img/logo-2.svg" width="258" height="33" alt="Logo">
+                        <img class="show-on-laptop" src="img/logo-2-short.svg" width="24" height="24" alt="Logo">
+                    </a>
+                </div>
+                <div class="header__main-right">
+                    {{> components/main-menu}}
+                    <button class="header__burger show-on-laptop" data-hystmodal="#menu" title="Menu">
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+            <div class="header__search-wrapper">
+                {{> components/big-buttons}}
+            </div>
+        </div>
+    </div>
+</header>
