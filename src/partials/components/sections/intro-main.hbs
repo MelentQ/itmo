@@ -1,26 +1,50 @@
 <section class="intro-main">
     <div class="container">
         <div class="intro-main__inner">
-            <div class="intro-main__heading-block">
-                <h1 class="intro-main__heading">МНОЦ</h1>
-                <div class="intro-main__heading-decoration">
-                    <span class="intro-main__heading-label">Междисциплинарный научно-образовательный центр</span>
-                    <img src="img/content/decorations/intro-main-heading.svg" width="885" height="701" alt="Intro Main Heading Decoration">
+            <div class="intro-main__mobile-wrapper">
+                <img class="intro-main__mobile-background show-on-small-tablet" src="img/content/intro-main/mobile.jpg" alt="Intro Mobile Background">
+                <div class="intro-main__mobile-overlay show-on-small-tablet" style="background-color: rgba(0, 0, 0, 0.5);"></div>
+                <div class="intro-main__heading-block">
+                    <h1 class="intro-main__heading">МНОЦ</h1>
+                    <div class="intro-main__heading-decoration">
+                        <span class="intro-main__heading-label">Междисциплинарный научно-образовательный центр</span>
+                        <img src="img/content/decorations/intro-main-heading.svg" width="885" height="701" alt="Intro Main Heading Decoration">
+                    </div>
                 </div>
-            </div>
-            <div class="intro-main__description-block">
-                <div class="intro-main__description">
-                    <p>Первый научно-образовательный центр, занимающийся реализацией проектов в области информационной безопасности на стыке науки и бизнеса.</p>
+                <div class="intro-main__description-block">
+                    <div class="intro-main__description">
+                        <p>Первый научно-образовательный центр, занимающийся реализацией проектов в области информационной безопасности на стыке науки и бизнеса.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="intro-main__footer">
-                <img class="intro-main__footer-decoration" src="img/content/decorations/intro-main-footer.svg" width="728" height="299" alt="Intro Main Footer Decoration">
-                <div class="intro-main__menu">
+                <div class="intro-main__menu show-on-small-tablet">
                     <span class="intro-main__menu-label">Разделы</span>
                     <ul class="intro-main__menu-list">
                         {{#each menu.intro }}
                             <li>
-                                <a class="intro-main__menu-link" href="{{this.link}}">{{this.name}}</a>
+                                <a class="intro-main__menu-link" href="{{this.link}}">
+                                    <svg width="16" height="16">
+                                        <use xlink:href="#arrow-link" />
+                                    </svg>
+                                    <span>{{this.name}}</span>
+                                </a>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+            <div class="intro-main__footer">
+                <img class="intro-main__footer-decoration" src="img/content/decorations/intro-main-footer.svg" width="728" height="299" alt="Intro Main Footer Decoration">
+                <div class="intro-main__menu hide-on-small-tablet">
+                    <span class="intro-main__menu-label">Разделы</span>
+                    <ul class="intro-main__menu-list">
+                        {{#each menu.intro }}
+                            <li>
+                                <a class="intro-main__menu-link" href="{{this.link}}">
+                                    <svg width="16" height="16">
+                                        <use xlink:href="#arrow-link" />
+                                    </svg>
+                                    <span>{{this.name}}</span>
+                                </a>
                             </li>
                         {{/each}}
                     </ul>

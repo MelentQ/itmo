@@ -51,6 +51,18 @@
     }
 }
 
+.show-on-small-tablet {
+    @include breakpointMF(tablet) {
+        display: none !important;
+    }
+}
+
+.hide-on-small-tablet {
+    @include breakpoint(small-tablet) {
+        display: none !important;
+    }
+}
+
 .debug {
     div:not(.page-content):not(.hystmodal__shadow),
     ul:not(.debug-grid),

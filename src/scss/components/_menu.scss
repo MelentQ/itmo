@@ -55,5 +55,9 @@
 
   .change-version {
     margin-top: auto;
+
+    svg {
+      stroke: $grayscale-100;
+    }
   }
 }

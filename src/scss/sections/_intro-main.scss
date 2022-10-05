@@ -8,23 +8,83 @@
 
     background-color: $grayscale-600;
     color: $grayscale-100;
+
+    @include breakpoint(laptop) {
+      padding: 4rem 0 2.4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 0;
+      background: none;
+    }
+  }
+
+  &__mobile-wrapper {
+    position: relative;
+
+    display: contents;
+    padding: 4rem 0 2.4rem;
+    border-radius: 2.4rem;
+
+    overflow: hidden;
+
+    @include breakpoint(small-tablet) {
+      display: block;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__mobile-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  &__mobile-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
   }
 
   &__heading-block {
+    position: relative;
+    z-index: 3;
+
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     gap: 2.4rem;
     padding: 0 4rem;
     margin-bottom: 4.8rem;
+
+    @include breakpoint(laptop) {
+      flex-direction: column;
+      padding: 0 2.4rem;
+    }
   }
 
   &__heading {
     @extend %fs-hero;
+
+    @include breakpoint(laptop) {
+      order: 2;
+    }
   }
 
   &__heading-decoration {
     position: relative;
+
+    @include breakpoint(laptop) {
+      order: 1;
+    }
 
     img {
       position: absolute;
@@ -38,11 +98,18 @@
 
       opacity: 0.1;
       pointer-events: none;
+
+      @include breakpoint(laptop) {
+        display: none;
+      }
     }
   }
 
   &__heading-label {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     max-width: 26rem;
     padding: 0.8rem 2.4rem;
     min-height: 5.1rem;
@@ -54,25 +121,53 @@
   }
 
   &__description-block {
+    position: relative;
+    z-index: 3;
+
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 2rem;
 
     margin-bottom: 12rem;
+
+    @include breakpoint(laptop) {
+      grid-template-columns: 1fr;
+      padding: 0 2.4rem;
+
+      margin-bottom: 10.6rem;
+    }
   }
 
   &__description {
     grid-column: 2/-1;
     max-width: 52rem;
     margin-right: 4rem;
+    letter-spacing: -0.02em;
 
     @extend %fs-roboto-l;
+
+    @include breakpoint(laptop) {
+      grid-column: 1/1;
+      margin-right: 0;
+    }
+
+    @include breakpoint(small-tablet) {
+      font-size: 1.6rem;
+    }
   }
 
   &__footer {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 2rem;
+
+    @include breakpoint(laptop) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint(small-tablet) {
+      display: contents;
+    }
   }
 
   &__footer-decoration {
@@ -80,8 +175,22 @@
     bottom: 0;
     left: 0;
 
+    width: 72.8rem;
+    height: 30rem;
+
+    object-fit: contain;
+
     pointer-events: none;
     opacity: 0.1;
+
+    @include breakpoint(laptop) {
+      width: 58rem;
+      height: 24rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      display: none;
+    }
   }
 
   &__menu {
@@ -93,11 +202,33 @@
     margin-top: 3rem;
 
     @extend %fs-body-m;
+
+    @include breakpoint(laptop) {
+      grid-column: 1/1;
+      margin-top: 0;
+    }
+
+    @include breakpoint(small-tablet) {
+      position: relative;
+      z-index: 3;
+
+      grid-template-columns: 1fr;
+      padding: 0 2.4rem;
+    }
   }
 
   &__menu-label {
     grid-column: 1/3;
     padding-left: 4rem;
+
+    @include breakpoint(laptop) {
+      padding-left: 2.4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      grid-column: span 1;
+      padding-left: 0;
+    }
   }
 
   &__menu-list {
@@ -108,6 +239,34 @@
     grid-auto-rows: min-content;
     column-gap: 2rem;
     row-gap: 1.6rem;
+
+    @include breakpoint(small-tablet) {
+      grid-column: span 1;
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+    }
+
+    & > * {
+      position: relative;
+
+      @include breakpoint(small-tablet) {
+        &::after {
+          content: '';
+
+          position: absolute;
+          left: 0;
+          bottom: -1rem;
+
+          width: 100%;
+          height: 0.1rem;
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        &:last-of-type::after {
+          content: none;
+        }
+      }
+    }
   }
 
   &__menu-link {
@@ -115,22 +274,51 @@
     align-items: center;
     gap: 0.8rem;
 
-    &::before {
-      content: '';
+    transition: color $tt $te;
 
+    @include breakpoint(small-tablet) {
+      font-weight: 500;
+      font-size: 1.8rem;
+    }
+
+    &:focus {
+      color: $primary-400;
+
+      svg {
+        stroke: $primary-400;
+      }
+    }
+
+    &:hover {
+      color: $primary-500;
+
+      svg {
+        stroke: $primary-500;
+      }
+    }
+
+    svg {
       display: block;
       width: 1.6rem;
       height: 1.6rem;
 
-      background-image: url('../img/icons/arrow-link.svg');
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
+      stroke: $grayscale-100;
     }
   }
 
   &__slider {
     grid-column: 8/-1;
     margin-right: 4rem;
+
+    @include breakpoint(laptop) {
+      grid-column: 2/3;
+      margin-right: 2.4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      grid-column: 1/1;
+      margin-right: 0;
+    }
   }
 
   .mini-slider {

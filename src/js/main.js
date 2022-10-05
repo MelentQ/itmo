@@ -77,7 +77,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             },
             autoplay: {
-                delay: 5000
+                delay: 5000,
+                disableOnInteraction: true,
+                pauseOnMouseEnter: true
             },
             effect: 'fade',
             fadeEffect: {
