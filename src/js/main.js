@@ -6,11 +6,21 @@ import debug from './utils/debug';
 import Accordions from './Accordions';
 
 document.addEventListener('DOMContentLoaded', function() {
-    window.itmo = {};
+    window.itmo = {}; // Тут будут лежать всякие функции с фронта
 
-    document.header = document.querySelector('.header');
+    // document.header = document.querySelector('.header');
 
-    const modals = new HystModal({
+    modals();
+    forms();
+    maps();
+    debug(); // Нажми 5 раз "d" на клавиатуре
+    accordions();
+    searchFields();
+    miniSliders();
+});
+
+function modals() {
+    new HystModal({
         beforeOpen: instance => {
             // const target = instance.starter;
             //
@@ -20,7 +30,9 @@ document.addEventListener('DOMContentLoaded', function() {
             // }
         }
     });
+}
 
+function forms() {
     new Forms({
         onSuccess: (form, response) => {
             modals.open('#success');
@@ -29,7 +41,9 @@ document.addEventListener('DOMContentLoaded', function() {
             modals.open('#error');
         }
     });
+}
 
+function maps() {
     ymaps.ready(() => {
         [...document.querySelectorAll('.js-map')].forEach(map => {
             const instance = new Map(map, {
@@ -40,9 +54,9 @@ document.addEventListener('DOMContentLoaded', function() {
             instance.addPlace([55.76, 37.64]);
         });
     });
+}
 
-    debug();
-
+function accordions() {
     new Accordions({
         selectors: {
             container: '.js-footer-accordions',
@@ -51,9 +65,9 @@ document.addEventListener('DOMContentLoaded', function() {
             content: '.js-accordion-content'
         }
     });
+}
 
-    searchFields();
-
+function miniSliders() {
     const miniSliders = document.querySelectorAll('.js-mini-slider');
     miniSliders.forEach(slider => {
         new Swiper(slider.querySelector('.swiper'), {
@@ -92,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
         });
     });
-});
+}
 
 function searchFields() {
     const containers = document.querySelectorAll('.js-search');

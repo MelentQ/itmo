@@ -206,5 +206,23 @@
       "heading": "При отправке Произошла ошибка",
       "text": "<p>Попробуйте повторить попытку</p>"
     }
+  },
+  "sections": {
+    "contacts": {
+      "block": "contacts",
+      "dot": true,
+      "title": "Контакты",
+      "info": [
+        {
+          "label": "Адрес",
+          "content": "<p>Песочная наб., 14 лит. А, Санкт-Петербург</p>"
+        },
+        {
+          "label": "Электронная почта",
+          "content": "<a href=\"mailto:fbititmo@gmail.com\">fbititmo@gmail.com</a>"
+        }
+      ],
+      "illustration": "img/content/illustrations/contacts.svg"
+    }
   }
 }
