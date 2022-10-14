@@ -1,0 +1,50 @@
+<section class="case-main">
+  <div class="container">
+    <div class="case-main__inner {{#if master}}case-main__inner--bg {{/if}}">
+      {{> components/breadcrumbs}}
+      <div class="case-main__wrapper">
+        {{#if case}}
+          <p class="case-main__subtitle">
+            Требует инвестиций
+          </p>
+          <h1 class="case-main__title">
+            Разработка личного кабинета для  StarLine
+          </h1>
+          <p class="case-main__desc">
+            Текст — зафиксированная на каком-либо материальном носителе человеческая мысль;
+          </p>
+          <div class="case-main__footer">
+            <div class="case-main__footer-items">
+              {{#each sections.caseMain}}
+                <div class="case-main__footer-item">
+                  <h4 class="case-main__footer-itemTitle">
+                    {{this.title}}
+                  </h4>
+                  <p class="case-main__footer-itemDesc">
+                    {{this.desc}}
+                  </p>
+                </div>
+              {{/each}}
+            </div>
+            <div class="case-main__footer-box">
+              <img class="case-main__footer-boxImg" src="img/content/case-main/starline.png" alt="StarLine">
+            </div>
+          </div>
+        {{/if}}
+        {{#if master}}
+          <h1 class="case-main__title">
+            Сетевая магистратура для бизнеса
+          </h1>
+          <p class="case-main__desc">
+            Сетевая магистратура – уникальное целевое сотрудничество университета и бизнеса.
+          </p>
+          <div class="case-main__link-box">
+            <a class="case-main__link" href="#">
+              Обсудить сотрудничество
+            </a>
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</section>

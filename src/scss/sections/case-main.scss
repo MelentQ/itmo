@@ -1,0 +1,241 @@
+.case-main {
+  width: 100%;
+
+  &__inner {
+    display: flex;
+    border-radius: 3.2rem;
+    padding: 8.8rem 4.8rem 4.8rem 4rem;
+    background: linear-gradient(251.65deg, #ACACFF -3.29%, #B7D7FF 87.87%);
+
+
+    @include breakpoint(laptop) {
+      flex-direction: column;
+      padding: 4rem 2.4rem 2.4rem 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      border-radius: 2.4rem;
+    }
+
+    &--bg {
+      position: relative;
+      z-index: 2;
+
+      &::before {
+        content: '';
+        position: absolute;
+        background-image: url('../../img/circles-small.svg');
+        width: 441px;
+        height: 227px;
+        left: 0;
+        top: 0;
+        z-index: -1;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        background-image: url('../../img/circles.svg');
+        width: 748px;
+        height: 379px;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+      }
+
+      @include breakpoint(tablet) {
+
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__subtitle {
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    border-radius: 2rem;
+    background-color: #fff;
+    padding: 0.6rem 1.6rem;
+    margin-bottom: 3.2rem;
+
+    @extend %fs-roboto-xs;
+
+    @include breakpoint(mobile) {
+      font-size: 1.4rem;
+      margin-bottom: 2rem;
+    }
+
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 7.8rem;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    margin-bottom: 24px;
+    max-width: 1020px;
+    text-transform: uppercase;
+
+    @include breakpoint(laptop) {
+      font-size: 6rem;
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      font-size: 4.5rem;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 3.5rem;
+      margin-bottom: 2rem;
+    }
+
+    @include breakpoint(small-mobile) {
+      font-size: 2.8rem;
+    }
+
+  }
+
+  &__desc {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    max-width: 520px;
+
+    @extend %fs-roboto-s;
+
+    @include breakpoint(mobile) {
+      font-size: 1.6rem;
+    }
+
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8.5rem;
+
+    @include breakpoint(laptop) {
+      margin-top: 6rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 4rem;
+    }
+
+  }
+
+  &__footer-items {
+    display: flex;
+
+    @include breakpoint(small-tablet) {
+      flex-direction: column;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__footer-item {
+    margin-right: 8rem;
+
+    @include breakpoint(tablet) {
+      margin-right: 6rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__footer-itemTitle {
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+
+    @include breakpoint(tablet) {
+      font-size: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__footer-itemDesc {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+
+    @extend %fs-roboto-xs;
+  }
+
+  &__footer-boxImg {
+    width: 12rem;
+
+    @include breakpoint(laptop) {
+      width: 9rem;
+    }
+
+    @include breakpoint(mobile) {
+      width: 6rem;
+    }
+  }
+
+  &__link-box {
+    color: #fff;
+  }
+
+  &__link {
+    display: inline-block;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    background-color: $primary-700;
+    color: #fff;
+    border-radius: 6.5rem;
+    padding: 1.9rem 3.2rem;
+    margin-top: 48px;
+    margin-bottom: 4rem;
+    text-align: center;
+    transition: all $tt $te;
+
+    &:hover,
+    &:focus {
+      background-color: $primary-500;
+    }
+
+    &:active {
+      background-color: $primary-400;
+    }
+
+    @include breakpoint(tablet) {
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+      width: 100%;
+    }
+
+    @include breakpoint(supersmall-mobile) {}
+  }
+}

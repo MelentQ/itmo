@@ -1,0 +1,55 @@
+.breadcrumbs {
+  max-width: 210px;
+  margin-right: 2rem;
+
+  @include breakpoint(laptop) {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 8px;
+
+    li {
+      &:last-child {
+        .breadcrumbs__link {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__link {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.2;
+    position: relative;
+    padding-right: 1.1rem;
+
+    &:hover,
+    &:focus{
+      color: #4F51AE;
+    }
+
+    &:active{
+      color: #21222E;
+    }
+
+    &::after {
+      content: '/';
+      font-size: 1.6rem;
+      line-height: 1.2;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    @include breakpoint(mobile){
+      font-size: 1.4rem;
+    }
+  }
+}
