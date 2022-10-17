@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
   accordions();
   searchFields();
   miniSliders();
+  ordinarySlider();
   contentSliders();
 });
 
@@ -179,6 +180,35 @@ function contentSliders() {
 
   });
 }
+
+
+
+function ordinarySlider() {
+    const ordinarySlider = document.querySelectorAll('.cards-main__slider');
+    ordinarySlider.forEach(slider => {
+      new Swiper(slider.querySelector('.ordinary-slider'), {
+        speed: 500,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        modules: [Navigation],
+        breakpoints: {
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 30
+          }
+        },
+        navigation: {
+          nextEl: '.cards-main__slider .next',
+          prevEl: '.cards-main__slider .prev'
+        },
+        on: {
+          init: function (swiper) {
+            swiper.el.classList.remove("loading")
+          },
+        }
+      });
+    });
+  }
 
 
 

@@ -71,6 +71,7 @@
     align-items: flex-end;
     column-gap: 2rem;
     margin-top: -7.2rem;
+    position: relative;
 
     @include breakpoint(laptop) {
       width: 90rem;

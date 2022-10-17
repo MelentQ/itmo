@@ -152,6 +152,17 @@
   }
 }
 
+%fs-roboto-xl {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  font-family: 'Roboto Mono', monospace;
+
+  @media screen and (max-width: 1200px) {
+    font-size: 1.4rem;
+  }
+}
+
 %interactive {
   transition: color $tt $te, opacity $tt $te;
 

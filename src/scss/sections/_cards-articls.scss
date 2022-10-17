@@ -1,0 +1,74 @@
+.cards-articls{
+
+  &__inner{
+    display: flex;
+    align-items: flex-start;
+    padding: 7.2rem 0 8rem 4.8rem;
+
+    @include breakpoint(laptop) {
+      flex-direction: column;
+      padding: 4.2rem 0 4rem 2.8rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 2.4rem;
+    }
+  }
+
+  &__desc{
+    width: 52rem;
+    margin-bottom: 6.4em;
+    @extend %fs-roboto-l;
+  }
+
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  &__item{
+    background-color: #fff;
+    border-radius: 2.4rem;
+    padding: 1.2rem;
+  }
+
+  &__item-link{
+    display: block;
+    border-radius: 1.8rem;
+    margin-bottom: 2.4rem;
+
+    @include breakpoint(laptop) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__item-box{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    @include breakpoint(laptop) {
+      margin-bottom: auto;
+    }
+  }
+
+  &__item-img{
+    border-radius: 1.8rem;
+  }
+
+  &__item-box-number{
+    @extend %fs-roboto-xl;
+    margin-right: 4rem;
+
+    @include breakpoint(laptop) {
+      margin-right: 2rem;
+    }
+  }
+
+  &__item-box-text{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,44 @@
+.slider-pagination-btns {
+  background-color: $grayscale-300;
+  border-radius: 999px;
+  width: 13rem;
+  height: 4.2rem;
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include breakpoint(tablet) {
+    width: 11rem;
+    height: 3.2rem;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $grayscale-500;
+  }
+
+  &:active {
+    background-color: $grayscale-200;
+  }
+
+  &__button {
+    height: 4.2rem;
+    width: 4.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include breakpoint(tablet) {
+      height: 3.2rem;
+      width: 4.2rem;
+    }
+
+    &.next {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+}
