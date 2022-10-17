@@ -1,4 +1,4 @@
-.case-main {
+.intro-digits {
   width: 100%;
 
   &__inner {
@@ -53,7 +53,11 @@
     }
   }
 
-  &__subtitle {
+  &__wrapper{
+    width: 100%;
+  }
+
+  &__span{
     display: inline-block;
     font-size: 1.6rem;
     line-height: 1.2;
@@ -159,7 +163,7 @@
     }
   }
 
-  &__footer-itemTitle {
+  &__footer-item-title {
     font-weight: 700;
     font-size: 3.6rem;
     line-height: 1.15;
@@ -176,7 +180,7 @@
     }
   }
 
-  &__footer-itemDesc {
+  &__footer-item-desc {
     font-size: 1.6rem;
     line-height: 1.2;
     letter-spacing: -0.02em;
@@ -196,46 +200,30 @@
     }
   }
 
-  &__link-box {
-    color: #fff;
-  }
-
   &__link {
-    display: inline-block;
     font-size: 1.4rem;
     line-height: 1.4;
     font-weight: 700;
-    letter-spacing: 0.01em;
-    text-transform: uppercase;
-    background-color: $primary-700;
-    color: #fff;
-    border-radius: 6.5rem;
-    padding: 1.9rem 3.2rem;
     margin-top: 48px;
     margin-bottom: 4rem;
+    display: inline-flex;
     text-align: center;
-    transition: all $tt $te;
 
-    &:hover,
-    &:focus {
-      background-color: $primary-500;
-    }
-
-    &:active {
-      background-color: $primary-400;
+    &:link,
+    &:visited {
+      color: #fff;
     }
 
     @include breakpoint(tablet) {
       margin-top: 4rem;
       margin-bottom: 2rem;
+      font-size: 1.2rem;
     }
 
     @include breakpoint(mobile) {
-      font-size: 1.2rem;
       margin-bottom: 0;
       width: 100%;
     }
 
-    @include breakpoint(supersmall-mobile) {}
   }
 }

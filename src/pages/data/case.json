@@ -1,8 +1,7 @@
 {
   "title": "Страница кейса",
   "sections": {
-    "caseMain": [
-      {
+    "introDigits": [{
         "title": "25 000 000 ₽",
         "desc": "Размер инвестиций"
       },

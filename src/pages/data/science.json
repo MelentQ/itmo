@@ -1,0 +1,35 @@
+{
+  "title": "Наука",
+  "sections": {
+    "contentDevelopment": {
+      "directions": [
+        {
+          "urlImg": "img/content/content-development/1.svg",
+          "altImg": "Технологии AI",
+          "text": "Технологии AI"
+        },
+        {
+          "urlImg": "img/content/content-development/2.svg",
+          "altImg": "IoT и роботизированные системы",
+          "text": "IoT и роботизированные системы"
+        },
+        {
+          "urlImg": "img/content/content-development/3.svg",
+          "altImg": "Облачные технологии",
+          "text": "Облачные технологии в контексте развития сетей 5G"
+        },
+        {
+          "urlImg": "img/content/content-development/4.svg",
+          "altImg": "Компьютерные системы",
+          "text": "Компьютерные системы"
+        }
+      ]
+    },
+    "contentResult": [
+      {"text": "31% работ Федерального уровня"},
+      {"text": "Реальные внедрения"},
+      {"text": "Разработки по внешним заказам"},
+      {"text": "Гособоронзаказ"}
+    ]
+  }
+}

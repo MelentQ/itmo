@@ -1,0 +1,50 @@
+<div class="content-graphic">
+  <div class="container">
+    <div class="content-graphic__inner">
+      {{> components/subtitle data=subtitle.developCourses}}
+      <div class="content-graphic__wrapper">
+        <h3 class="content-graphic__title">
+          разрабатываем курсы под нужды бизнеса и студентов
+        </h3>
+        <div class="content-graphic__img-box">
+          <img class="content-graphic__img" src="img/content-graphic__img.svg" alt="">
+        </div>
+        <div class="content-graphic__content">
+          <div class="content-graphic__desc">
+            <p>
+              Текст — зафиксированная на каком-либо материальном носителе человеческая мысль; в общем плане связная и полная последовательность символов.
+            </p>
+          </div>
+          <ul class="content-graphic__list">
+            {{#each sections.contentGraphic.capabilities}}
+              <li>
+                <picture>
+                  <source srcset="img/bullet.svg" media="(max-width: 640px)">
+                  <img class="content-graphic__list-img" src="img/check-circle.svg" alt="Галочка">
+                </picture>
+                <span class="content-graphic__list-item">
+                  {{this.text}}
+                </span>
+              </li>
+            {{/each}}
+          </ul>
+          <ul class="content-graphic__data">
+            {{#each sections.contentGraphic.data}}
+              <li>
+                <div class="content-graphic__data-number">
+                  {{this.number}}
+                </div>
+                <p class="content-graphic__data-text">
+                  {{this.text}}
+                </p>
+              </li>
+            {{/each}}
+          </ul>
+          <a class="content-graphic__link button" href="#">
+            Подробнее
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -14,7 +14,10 @@
 @import 'sections/section';
 @import 'sections/map';
 @import 'sections/intro-main';
-@import 'sections/case-main';
+@import 'sections/intro-digits';
+@import 'sections/content-graphic';
+@import 'sections/content-development';
+@import 'sections/content-slider';
 
 @import 'components/contacts';
 @import 'components/socials';
@@ -34,3 +37,4 @@
 @import 'components/search-field';
 @import 'components/mini-slider';
 @import 'components/breadcrumbs';
+@import 'components/subtitle';

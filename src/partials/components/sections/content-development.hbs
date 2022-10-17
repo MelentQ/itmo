@@ -1,0 +1,50 @@
+<div class="content-graphic">
+  <div class="container">
+    <div class="content-graphic__inner">
+      {{> components/subtitle data=subtitle.development}}
+      <div class="content-development__wrapper">
+        <h2 class="content-development__title title-h2">
+          Постоянно Развиваемся
+        </h2>
+        <div class="content-development__content">
+          <div class="content-development__content-left">
+            <div class="content-development__desc">
+              <p>
+                Фокусируемся на развитии в следующих направлениях:
+              </p>
+            </div>
+            <ul class="content-development__list">
+              {{#each sections.contentDevelopment.directions}}
+              <li>
+                <img class="content-development__list-img" src="{{this.urlImg}}" alt="{{this.altImg}}">
+                <p class="content-development__list-text">
+                  {{this.text}}
+                </p>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+          <div class="content-development__line"></div>
+          <div class="content-development__result">
+            <span class="content-development__result-title">
+              Результаты 2021 года
+            </span>
+            <ul class="content-graphic__list">
+            {{#each sections.contentResult}}
+              <li>
+                <picture>
+                  <source srcset="img/bullet.svg" media="(max-width: 640px)">
+                  <img class="content-graphic__list-img" src="img/check-circle.svg" alt="Галочка">
+                </picture>
+                <span class="content-graphic__list-item">
+                  {{this.text}}
+                </span>
+              </li>
+            {{/each}}
+          </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
