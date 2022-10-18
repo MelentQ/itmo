@@ -3,7 +3,8 @@ import {
   Navigation,
   Pagination,
   Autoplay,
-  EffectFade
+  EffectFade,
+  Controller
 } from 'swiper';
 import HystModal from './HystModal';
 import Forms from './Forms';
@@ -11,6 +12,7 @@ import {
   Map
 } from './Map';
 import debug from './utils/debug';
+import mobileSlider from './moduls/mobileSlider';
 import Accordions from './Accordions';
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -27,14 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
   miniSliders();
   ordinarySlider();
   contentSliders();
-
-
-
-  let mql = window.matchMedia('(max-width: 768px)');
-  console.log(mql.matches, "mql");
-  if (mql.matches) {
-    mobileSlider();
-  }
 
 
 });
@@ -110,11 +104,11 @@ function miniSliders() {
           return (n < 10 ? '0' : '') + n;
         }
       },
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: true,
-        pauseOnMouseEnter: true
-      },
+      // autoplay: {
+      //   delay: 5000,
+      //   disableOnInteraction: true,
+      //   pauseOnMouseEnter: true
+      // },
       effect: 'fade',
       fadeEffect: {
         crossFade: true
@@ -134,9 +128,9 @@ function contentSliders() {
     const contentSwiper = new Swiper(slider.querySelector('.content-swiper'), {
       loop: true,
       speed: 500,
-      slidesPerView: 1,
-      spaceBetween: 0,
-      modules: [Navigation, Pagination, Autoplay, EffectFade],
+      slidesPerView: 1.2,
+      spaceBetween: 10,
+      modules: [Navigation, Pagination, EffectFade, Controller],
       navigation: {
         nextEl: '.content-slider__slider .next',
         prevEl: '.content-slider__slider .prev'
@@ -144,13 +138,12 @@ function contentSliders() {
       pagination: {
         el: '.content-slider__slider .content-slider__pagination',
         type: 'fraction',
-        renderFraction: function (currentClass, totalClass) {
+        renderFraction: function (currentClass) {
           return '<span class="' + currentClass + '"></span>'
         },
-        totalClass: false,
         formatFractionCurrent: function (n) {
           return (n < 10 ? '0' : '') + n;
-        },
+        }
       },
       autoplay: {
         delay: 5000,
@@ -161,7 +154,7 @@ function contentSliders() {
         init: function (swiper) {
           swiper.el.classList.remove("loading")
         },
-      },
+      }
     });
 
     const sliderText = new Swiper(slider.querySelector('.content-slider__text-block'), {
@@ -169,6 +162,7 @@ function contentSliders() {
       speed: 500,
       slidesPerView: 1,
       spaceBetween: 0,
+      modules: [ EffectFade, Controller],
       autoplay: {
         delay: 5000,
         disableOnInteraction: true,
@@ -182,7 +176,7 @@ function contentSliders() {
         init: function (swiper) {
           swiper.el.classList.remove("loading")
         },
-      },
+      }
     });
 
     contentSwiper.controller.control = sliderText;
@@ -219,29 +213,6 @@ function ordinarySlider() {
     });
   });
 }
-
-
-function mobileSlider() {
-  new Swiper('.cards-articls__swiper', {
-    speed: 500,
-    slidesPerView: 1,
-    spaceBetween: 20,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: true,
-      pauseOnMouseEnter: true
-    },
-    on: {
-      init: function (swiper) {
-        swiper.el.classList.remove("loading")
-      },
-    }
-  })
-}
-
-
-
-
 
 function searchFields() {
   const containers = document.querySelectorAll('.js-search');

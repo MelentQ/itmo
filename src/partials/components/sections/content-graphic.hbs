@@ -15,28 +15,16 @@
               Текст — зафиксированная на каком-либо материальном носителе человеческая мысль; в общем плане связная и полная последовательность символов.
             </p>
           </div>
-          <ul class="content-graphic__list">
-            {{#each sections.contentGraphic.capabilities}}
-              <li>
-                <picture>
-                  <source srcset="img/bullet.svg" media="(max-width: 640px)">
-                  <img class="content-graphic__list-img" src="img/check-circle.svg" alt="Галочка">
-                </picture>
-                <span class="content-graphic__list-item">
-                  {{this.text}}
-                </span>
-              </li>
-            {{/each}}
-          </ul>
+          {{> components/list-text data=sections.contentGraphic.capabilities mods="--mod-1 --mod-2"}}
           <ul class="content-graphic__data">
             {{#each sections.contentGraphic.data}}
               <li>
                 <div class="content-graphic__data-number">
                   {{this.number}}
                 </div>
-                <p class="content-graphic__data-text">
+                <span class="content-graphic__data-text">
                   {{this.text}}
-                </p>
+                </span>
               </li>
             {{/each}}
           </ul>

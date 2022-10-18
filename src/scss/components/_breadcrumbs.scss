@@ -15,6 +15,7 @@
     li {
       &:last-child {
         .breadcrumbs__link {
+          padding-right: 0;
           &::after {
             display: none;
           }
@@ -24,19 +25,16 @@
   }
 
   &__link {
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 1.2;
     position: relative;
     padding-right: 1.1rem;
 
     &:hover,
     &:focus{
-      color: #4F51AE;
+      color: $primary-500;
     }
 
     &:active{
-      color: #21222E;
+      color: $grayscale-900;
     }
 
     &::after {

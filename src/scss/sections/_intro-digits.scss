@@ -109,13 +109,9 @@
   }
 
   &__desc {
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 1.1;
+    @extend %fs-roboto-s;
     letter-spacing: -0.02em;
     max-width: 520px;
-
-    @extend %fs-roboto-s;
 
     @include breakpoint(mobile) {
       font-size: 1.6rem;

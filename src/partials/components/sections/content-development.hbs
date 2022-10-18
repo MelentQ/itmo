@@ -29,19 +29,7 @@
             <span class="content-development__result-title">
               Результаты 2021 года
             </span>
-            <ul class="content-graphic__list">
-            {{#each sections.contentResult}}
-              <li>
-                <picture>
-                  <source srcset="img/bullet.svg" media="(max-width: 640px)">
-                  <img class="content-graphic__list-img" src="img/check-circle.svg" alt="Галочка">
-                </picture>
-                <span class="content-graphic__list-item">
-                  {{this.text}}
-                </span>
-              </li>
-            {{/each}}
-          </ul>
+            {{> components/list-text data=sections.contentResult}}
           </div>
         </div>
       </div>

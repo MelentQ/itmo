@@ -15,24 +15,32 @@
     }
   }
 
+  &__wrapper{
+    width: 100%;
+  }
+
   &__desc{
-    width: 52rem;
+    max-width: 52rem;
     margin-bottom: 6.4rem;
     @extend %fs-roboto-l;
+
+    @include breakpoint(laptop) {
+      margin-bottom: 4.4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__items{
-    width: 132.6rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 
-    @include breakpoint(laptop) {
-      // width: calc(100vw - 40px);
-    }
-
     @include breakpoint(small-tablet) {
       display: flex;
+      gap: 0;
     }
   }
 
@@ -40,16 +48,34 @@
     background-color: #fff;
     border-radius: 2.4rem;
     padding: 1.2rem;
+    max-width: 65.5rem;
+    position: relative;
+
+    @include breakpoint(small-tablet) {
+      max-width: 100%;
+    }
   }
 
   &__item-link{
     display: block;
     border-radius: 1.8rem;
     margin-bottom: 2.4rem;
+    position: relative;
+    padding: 0px 0px 52% 0px;
 
     @include breakpoint(laptop) {
       margin-bottom: 2rem;
     }
+  }
+
+  &__item-img{
+    border-radius: 1.8rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   &__item-box{
@@ -60,10 +86,6 @@
     @include breakpoint(laptop) {
       margin-bottom: auto;
     }
-  }
-
-  &__item-img{
-    border-radius: 1.8rem;
   }
 
   &__item-box-number{
@@ -79,13 +101,23 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+
+    &::after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
   }
 
   &__swiper{
 
     @include breakpoint(small-tablet) {
       overflow: hidden;
-      width: calc(100vw - 40px);
+      width: 100%;
+      margin: 0 auto;
     }
   }
 

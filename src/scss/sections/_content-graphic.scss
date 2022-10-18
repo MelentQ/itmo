@@ -81,28 +81,12 @@
     }
   }
 
-  &__list {
-    display: flex;
-    flex-direction: column;
-    row-gap: 0.8rem;
-    margin-bottom: 3.2rem;
-
-    li {
-      display: flex;
-      align-items: center;
-    }
-  }
-
   &__list-img {
     margin-right: 1.6rem;
 
     @include breakpoint(mobile) {
       margin-right: 1.2rem;
     }
-  }
-
-  &__list-item {
-    @extend %fs-roboto-xs;
   }
 
   &__link {
