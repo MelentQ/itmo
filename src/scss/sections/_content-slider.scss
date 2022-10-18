@@ -132,15 +132,12 @@
   }
 
   &__swiper{
-    // height: 38rem;
     margin-left: auto;
     overflow: hidden;
     flex: 0 1 55%;
   }
 
   &__swiper-item{
-    // height: 38rem;
-
     .swiper-slide-next,
     .swiper-slide-duplicate-prev{
       margin-left: -9rem !important;
@@ -148,7 +145,6 @@
   }
 
   &__swiper-item-img{
-    // height: 38rem;
     width: 57.2rem;
   }
 

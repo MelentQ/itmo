@@ -27,6 +27,16 @@ document.addEventListener('DOMContentLoaded', function () {
   miniSliders();
   ordinarySlider();
   contentSliders();
+
+
+
+  let mql = window.matchMedia('(max-width: 768px)');
+  console.log(mql.matches, "mql");
+  if (mql.matches) {
+    mobileSlider();
+  }
+
+
 });
 
 function modals() {
@@ -135,7 +145,7 @@ function contentSliders() {
         el: '.content-slider__slider .content-slider__pagination',
         type: 'fraction',
         renderFraction: function (currentClass, totalClass) {
-            return '<span class="' + currentClass + '"></span>'
+          return '<span class="' + currentClass + '"></span>'
         },
         totalClass: false,
         formatFractionCurrent: function (n) {
@@ -143,9 +153,9 @@ function contentSliders() {
         },
       },
       autoplay: {
-          delay: 5000,
-          disableOnInteraction: true,
-          pauseOnMouseEnter: true
+        delay: 5000,
+        disableOnInteraction: true,
+        pauseOnMouseEnter: true
       },
       on: {
         init: function (swiper) {
@@ -154,29 +164,29 @@ function contentSliders() {
       },
     });
 
-    const sliderText  = new Swiper(slider.querySelector('.content-slider__text-block'), {
-        loop: true,
-        speed: 500,
-        slidesPerView: 1,
-        spaceBetween: 0,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: true,
-            pauseOnMouseEnter: true
+    const sliderText = new Swiper(slider.querySelector('.content-slider__text-block'), {
+      loop: true,
+      speed: 500,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+        pauseOnMouseEnter: true
+      },
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      on: {
+        init: function (swiper) {
+          swiper.el.classList.remove("loading")
         },
-        effect: 'fade',
-        fadeEffect: {
-          crossFade: true
-        },
-        on: {
-          init: function (swiper) {
-            swiper.el.classList.remove("loading")
-          },
-        },
-      });
+      },
+    });
 
-      contentSwiper.controller.control = sliderText;
-      sliderText.controller.control = contentSwiper;
+    contentSwiper.controller.control = sliderText;
+    sliderText.controller.control = contentSwiper;
 
   });
 }
@@ -184,31 +194,50 @@ function contentSliders() {
 
 
 function ordinarySlider() {
-    const ordinarySlider = document.querySelectorAll('.cards-main__slider');
-    ordinarySlider.forEach(slider => {
-      new Swiper(slider.querySelector('.ordinary-slider'), {
-        speed: 500,
-        slidesPerView: 1,
-        spaceBetween: 20,
-        modules: [Navigation],
-        breakpoints: {
-          1024: {
-            slidesPerView: 2,
-            spaceBetween: 30
-          }
-        },
-        navigation: {
-          nextEl: '.cards-main__slider .next',
-          prevEl: '.cards-main__slider .prev'
-        },
-        on: {
-          init: function (swiper) {
-            swiper.el.classList.remove("loading")
-          },
+  const ordinarySlider = document.querySelectorAll('.cards-main__slider');
+  ordinarySlider.forEach(slider => {
+    new Swiper(slider.querySelector('.ordinary-slider'), {
+      speed: 500,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      modules: [Navigation],
+      breakpoints: {
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 30
         }
-      });
+      },
+      navigation: {
+        nextEl: '.cards-main__slider .next',
+        prevEl: '.cards-main__slider .prev'
+      },
+      on: {
+        init: function (swiper) {
+          swiper.el.classList.remove("loading")
+        },
+      }
     });
-  }
+  });
+}
+
+
+function mobileSlider() {
+  new Swiper('.cards-articls__swiper', {
+    speed: 500,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: true,
+      pauseOnMouseEnter: true
+    },
+    on: {
+      init: function (swiper) {
+        swiper.el.classList.remove("loading")
+      },
+    }
+  })
+}
 
 
 
