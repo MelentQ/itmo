@@ -1,19 +1,19 @@
-<div class="content-graphic">
-  <div class="container">
-    <div class="content-graphic__inner">
-      {{> components/subtitle data=subtitle.pre-universityTraining}}
-      <div class="content-slider__wrapper">
+
+{{#extend "section"}}
+    {{#content "content"}}
+
+      <div class="content-slider">
         <h2 class="content-slider__title title-h2">
           Отбираем звезд
         </h2>
         <div class="content-slider__content">
-          <div class="content-slider__desc">
+          <div class="content-slider__desc desc">
             <p>
               В результате проведенных мероприятий мы добились следующих показателей:
             </p>
           </div>
         </div>
-        {{> components/list-text data=sections.contentSliderResult modsClass="list-text--row"}}
+        {{> components/list-text data=sections.contentSlider.result modsClass="list-text--row"}}
           <div class="content-slider__box">
             <span class="content-slider__box-title">
               Регулярно побеждаем на соревнованиях
@@ -22,7 +22,8 @@
               <div class="content-slider__slider-navigation">
                 <div class="content-slider__pagination"></div>
 
-                <div class="content-slider__text-block">
+                
+                  <div class="content-slider__text-block">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <p>
@@ -36,6 +37,7 @@
                     </div>
                   </div>
                 </div>
+    
 
                 <div class="content-slider__navigation slider-pagination-btns">
                   <button class="content-slider__navigation-button prev" type="button" title="Prev">
@@ -50,19 +52,21 @@
                   </button>
                 </div>
               </div>
-              <ul class="content-slider__swiper content-swiper loading">
-                <div class="content-slider__swiper-list swiper-wrapper">
-                  <li class="content-slider__swiper-item swiper-slide">
-                    <img class="content-slider__swiper-item-img" src="img/content/content-slider/1.jpg" alt="Картинка слайдера">
-                  </li>
-                  <li class="content-slider__swiper-item swiper-slide">
-                    <img class="content-slider__swiper-item-img" src="img/content/content-slider/2.jpg" alt="Картинка слайдера">
-                  </li>
-                </div>
-              </ul>
+              <div class="content-slider__swiper-box">
+                <ul class="content-slider__swiper content-swiper loading">
+                  <div class="content-slider__swiper-list swiper-wrapper">
+                    <li class="content-slider__swiper-item swiper-slide">
+                      <img class="content-slider__swiper-item-img" src="img/content/content-slider/1.jpg" alt="Картинка слайдера">
+                    </li>
+                    <li class="content-slider__swiper-item swiper-slide">
+                      <img class="content-slider__swiper-item-img" src="img/content/content-slider/2.jpg" alt="Картинка слайдера">
+                    </li>
+                  </div>
+                </ul>
+              </div>
             </div>
           </div>
       </div>
-    </div>
-  </div>
-</div>
+
+    {{/content}}
+{{/extend}}

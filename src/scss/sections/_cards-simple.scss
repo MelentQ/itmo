@@ -1,0 +1,48 @@
+.cards-simple{
+
+    &__slider{
+        position: relative;
+    }
+
+    &__swiper{
+        width: 129rem;
+        overflow: hidden;
+
+        @include breakpoint(laptop) {
+            width: calc(100vw - 8.8rem);
+        }
+    }
+
+    &__slide-img-box{
+        border-radius: 1.8rem;
+        margin-bottom: 2.4rem;
+        position: relative;
+        padding: 0 0 120%;
+    }
+
+    &__slide-img{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 1.8rem;
+    }
+
+    &__slide-name{
+        @extend %fs-roboto-m;
+        margin-bottom: 1.2rem;
+    }
+
+    &__navigation{
+        position: absolute;
+        right: 0;
+        top: -10.7rem;
+
+        @include breakpoint(laptop) {
+            position: static;
+            margin-top: 2rem;
+        }
+    }
+}

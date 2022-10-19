@@ -41,6 +41,10 @@
             ]
         },
         "contentGraphic": {
+            "block": "cards",
+            "dot": true,
+            "title": "Разрабатываем курсы",
+            "mods": "section--bg-transparent section--adaptive-without-padding",
             "capabilities": [
                 {"text": "Подготовка к CTF-соревнованиям"},
                 {"text": "Повышение квалификации"},
@@ -57,10 +61,22 @@
                 }
             ]
         },
-        "contentSliderResult": [
+        "contentSlider": {
+            "block": "cards",
+            "dot": true,
+            "title": "Довузовская подготовка",
+            "mods": "section--bg-transparent section--without-right section--adaptive-without-padding",
+           "result": [
             {"text": "Набор мотивированных ребят, которые знают ФБИТ"},
             {"text": "Проходной балл ЕГЭ 280 баллов"},
             {"text": "50% обучающихся — контарктники"}
           ]
+        },
+        "cardsMain": {
+            "block": "cards",
+            "dot": true,
+            "title": "",
+            "mods": ""
+        }
     }
 }

@@ -1,0 +1,11 @@
+{
+  "title": "Страница кейса",
+  "sections": {
+    "cardsSimple": {
+      "block": "cards",
+      "dot": true,
+      "title": "Сотрудники центра",
+      "bgColor": ""
+    }
+  }
+}

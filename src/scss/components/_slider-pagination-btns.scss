@@ -41,4 +41,33 @@
     }
   }
 
+  &--bg-white{
+    background-color: $grayscale-100;
+
+    &:hover,
+    &:focus {
+      background-color: $grayscale-100;
+    }
+
+    &:active {
+      background-color: $grayscale-100;
+    }
+
+    .slider-pagination-btns__button{
+      &:hover,
+      &:focus {
+        svg{
+          stroke: $primary-500;
+        }
+      }
+
+      &:active {
+        svg{
+          stroke: $grayscale-900;
+        }
+      }
+      
+    }
+  }
+
 }

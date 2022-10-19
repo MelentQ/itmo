@@ -18,14 +18,3 @@
   visibility: hidden;
 }
 
-.title-h2{
-  @extend %fs-h-2;
-  text-transform: uppercase;
-  margin-bottom: 4rem;
-  max-width: 106rem;
-
-  @media only screen and (max-width: (1200px)) {
-    margin-bottom: 2.4rem;
-    font-size: 2.8rem;
-  }
-}

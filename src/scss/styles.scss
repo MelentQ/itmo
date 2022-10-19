@@ -8,6 +8,7 @@
 @import 'global/layout';
 
 @import 'vendor/hystModal';
+@import 'vendor/various';
 
 @import 'sections/header';
 @import 'sections/footer';
@@ -20,6 +21,7 @@
 @import 'sections/content-slider';
 @import 'sections/cards-main';
 @import 'sections/cards-articls';
+@import 'sections/cards-simple';
 
 @import 'components/contacts';
 @import 'components/socials';
@@ -39,6 +41,5 @@
 @import 'components/search-field';
 @import 'components/mini-slider';
 @import 'components/breadcrumbs';
-@import 'components/subtitle';
 @import 'components/slider-pagination-btns';
 @import 'components/list-text';

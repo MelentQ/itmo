@@ -2,10 +2,10 @@
 {{#content "main"}}
 
     {{> sections/intro-main }}
-    {{> sections/content-graphic }}
+    {{> sections/content-graphic data=sections.contentGraphic}}
     {{> sections/contacts data=sections.contacts}}
-    {{> sections/content-slider }}
-    {{> sections/cards-main }}
+    {{> sections/content-slider data=sections.contentSlider}}
+    {{> sections/cards-main data=sections.cardsMain}}
     {{> sections/map }}
 
 {{/content}}

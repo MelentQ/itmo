@@ -27,9 +27,10 @@ document.addEventListener('DOMContentLoaded', function () {
   accordions();
   searchFields();
   miniSliders();
+  mobileSlider();
   ordinarySlider();
   contentSliders();
-
+  ordinary3slide();
 
 });
 
@@ -104,11 +105,11 @@ function miniSliders() {
           return (n < 10 ? '0' : '') + n;
         }
       },
-      // autoplay: {
-      //   delay: 5000,
-      //   disableOnInteraction: true,
-      //   pauseOnMouseEnter: true
-      // },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+        pauseOnMouseEnter: true
+      },
       effect: 'fade',
       fadeEffect: {
         crossFade: true
@@ -130,10 +131,10 @@ function contentSliders() {
       speed: 500,
       slidesPerView: 1,
       spaceBetween: 10,
-      modules: [Navigation, Pagination, EffectFade, Controller],
+      modules: [Navigation, Pagination, Autoplay, EffectFade, Controller],
       breakpoints: {
         768: {
-          slidesPerView: 1.2,
+          slidesPerView: 1,
         }
       },
       navigation: {
@@ -167,7 +168,7 @@ function contentSliders() {
       speed: 500,
       slidesPerView: 1,
       spaceBetween: 0,
-      modules: [ EffectFade, Controller],
+      modules: [ EffectFade, Autoplay, Controller],
       autoplay: {
         delay: 5000,
         disableOnInteraction: true,
@@ -199,7 +200,7 @@ function ordinarySlider() {
       speed: 500,
       slidesPerView: 1,
       spaceBetween: 20,
-      modules: [Navigation],
+      modules: [Navigation, Pagination],
       breakpoints: {
         1024: {
           slidesPerView: 2,
@@ -209,6 +210,35 @@ function ordinarySlider() {
       navigation: {
         nextEl: '.cards-main__slider .next',
         prevEl: '.cards-main__slider .prev'
+      },
+      on: {
+        init: function (swiper) {
+          swiper.el.classList.remove("loading")
+        },
+      }
+    });
+  });
+}
+
+function ordinary3slide() {
+  const ordinary3slide = document.querySelectorAll('.cards-simple__slider');
+  ordinary3slide.forEach(slider => {
+    new Swiper(slider.querySelector('.cards-simple__swiper'), {
+      speed: 500,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      modules: [Navigation],
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        }
+      },
+      navigation: {
+        nextEl: '.cards-simple__navigation .next',
+        prevEl: '.cards-simple__navigation .prev'
       },
       on: {
         init: function (swiper) {

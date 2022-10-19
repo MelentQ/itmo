@@ -1,11 +1,5 @@
 .content-slider {
 
-  &__desc {
-    @extend %fs-roboto-l;
-    max-width: 52rem;
-    margin-bottom: 6.4rem;
-  }
-
   &__list {
     display: flex;
     justify-content: space-between;
@@ -100,7 +94,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: end;
-    max-height: 19rem;
 
     @include breakpoint(tablet) {
       display: flex;
@@ -163,15 +156,29 @@
     }
   }
 
-  &__swiper {
-    margin-left: auto;
-    overflow: hidden;
+  &__swiper-box{
+    overflow: hidden; 
+    min-width: 0;
+    margin-right: -3rem;
     flex: 0 1 55%;
 
     @include breakpoint(tablet) {
       order: -1;
-      width: calc(100vw - 88px);
       margin-bottom: 2rem;
+    }
+  }
+
+  &__swiper {
+    margin-left: auto;
+    margin-right: 11.2rem;
+
+    @include breakpoint(tablet) {
+      width: calc(100vw - 60px);
+    }
+
+    @include breakpoint(small-tablet) {
+      width: calc(100vw - 88px);
+      margin-right: 0;
     }
   }
 

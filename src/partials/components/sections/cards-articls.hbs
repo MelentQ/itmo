@@ -1,8 +1,7 @@
-<div class="cards-articls">
-  <div class="container">
-    <div class="cards-articls__inner">
-    {{> components/subtitle }}
-    <div class="cards-articls__wrapper">
+{{#extend "section"}}
+    {{#content "content"}}
+
+        <div class="cards-articls">
       <h2 class="cards-articls__title title-h2">
         помогаем развиваться бизнесу
       </h2>
@@ -80,6 +79,6 @@
         </div>
       </div>
     </div>
-    </div>
-  </div>
-</div>
+
+    {{/content}}
+{{/extend}}

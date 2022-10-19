@@ -1,7 +1,17 @@
 {
   "title": "Наука",
   "sections": {
+    "cardsArticle": {
+      "block": "cards",
+      "dot": true,
+      "title": "",
+      "mods": "section--bg-transparent section--without-right section--adaptive-without-padding"
+    },
     "contentDevelopment": {
+      "block": "content",
+      "dot": true,
+      "title": "Фокусируемся на развитии",
+      "mods": "section--bg-transparent section--adaptive-without-padding",
       "directions": [
         {
           "urlImg": "img/content/content-development/1.svg",

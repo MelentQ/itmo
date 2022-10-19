@@ -1,8 +1,7 @@
-<div class="cards-main">
-  <div class="container">
-    <div class="cards-main__inner">
-      {{> components/subtitle }}
-      <div class="cards-main__wrapper">
+{{#extend "section"}}
+    {{#content "content"}}
+
+      <div class="cards-main">
         <h2 class="cards-main__title title-h2">
           Кейс-стади
         </h2>
@@ -190,6 +189,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
+
+    {{/content}}
+{{/extend}}

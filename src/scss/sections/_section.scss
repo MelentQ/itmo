@@ -43,7 +43,8 @@
         display: block;
         width: 2.8rem;
         height: 2.8rem;
-
+        min-width: 2.8rem;
+        
         border-radius: 50%;
 
         background-color: $grayscale-900;
@@ -54,6 +55,7 @@
         }
       }
     }
+
   }
 
   &__content {
@@ -64,6 +66,42 @@
     @include breakpoint(laptop) {
       grid-column: span 1;
       padding: 0rem 2.4rem 4rem;
+    }
+  }
+
+  &--bg-transparent{
+
+    .section__inner{
+      background-color: transparent;
+    }
+  }
+
+  &--without-right{
+
+    .section__content{
+      padding: 7.2rem 0rem 8rem 0rem;
+    
+      @include breakpoint(laptop) {
+        grid-column: span 1;
+        padding: 0rem 2.4rem 4rem;
+      }
+    }
+  }
+
+  &--adaptive-without-padding{
+
+    .section__heading{
+
+      @include breakpoint(laptop) {
+        padding: 4rem 0 0;
+      }
+    }
+    .section__content{
+      
+      @include breakpoint(laptop) {
+        grid-column: span 1;
+        padding: 0rem 0rem 4rem;
+      }
     }
   }
 }

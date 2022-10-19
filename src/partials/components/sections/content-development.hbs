@@ -1,8 +1,7 @@
-<div class="content-graphic">
-  <div class="container">
-    <div class="content-graphic__inner">
-      {{> components/subtitle data=subtitle.development}}
-      <div class="content-development__wrapper">
+{{#extend "section"}}
+    {{#content "content"}}
+
+      <div class="content-development">
         <h2 class="content-development__title title-h2">
           Постоянно Развиваемся
         </h2>
@@ -33,6 +32,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
+
+    {{/content}}
+{{/extend}}

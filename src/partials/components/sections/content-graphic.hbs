@@ -1,8 +1,7 @@
-<div class="content-graphic">
-  <div class="container">
-    <div class="content-graphic__inner">
-      {{> components/subtitle data=subtitle.developCourses}}
-      <div class="content-graphic__wrapper">
+{{#extend "section"}}
+    {{#content "content"}}
+
+      <div class="content-graphic">
         <h3 class="content-graphic__title">
           разрабатываем курсы под нужды бизнеса и студентов
         </h3>
@@ -33,6 +32,6 @@
           </a>
         </div>
       </div>
-    </div>
-  </div>
-</div>
+
+    {{/content}}
+{{/extend}}
