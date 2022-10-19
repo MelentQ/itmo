@@ -128,9 +128,14 @@ function contentSliders() {
     const contentSwiper = new Swiper(slider.querySelector('.content-swiper'), {
       loop: true,
       speed: 500,
-      slidesPerView: 1.2,
+      slidesPerView: 1,
       spaceBetween: 10,
       modules: [Navigation, Pagination, EffectFade, Controller],
+      breakpoints: {
+        768: {
+          slidesPerView: 1.2,
+        }
+      },
       navigation: {
         nextEl: '.content-slider__slider .next',
         prevEl: '.content-slider__slider .prev'

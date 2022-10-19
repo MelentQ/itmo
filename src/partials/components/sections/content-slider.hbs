@@ -14,27 +14,12 @@
           </div>
         </div>
         {{> components/list-text data=sections.contentSliderResult modsClass="list-text--row"}}
-        <ul class="content-slider__list">
-            {{#each sections.contentSliderResult}}
-              <li>
-                <picture>
-                  <source srcset="img/bullet.svg" media="(max-width: 640px)">
-                  <img class="content-slider__list-img" src="img/check-circle-big.svg" alt="Галочка">
-                </picture>
-                <span class="content-slider__list-item">
-                  {{this.text}}
-                </span>
-              </li>
-            {{/each}}
-          </ul>
           <div class="content-slider__box">
             <span class="content-slider__box-title">
               Регулярно побеждаем на соревнованиях
             </span>
             <div class="content-slider__slider">
               <div class="content-slider__slider-navigation">
-
-
                 <div class="content-slider__pagination"></div>
 
                 <div class="content-slider__text-block">
@@ -46,13 +31,13 @@
                     </div>
                     <div class="swiper-slide">
                       <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ea, in itaque porro architecto laboriosam aspernatur 
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ea, in itaque porro architecto laboriosam aspernatur
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div class="content-slider__navigation">
+                <div class="content-slider__navigation slider-pagination-btns">
                   <button class="content-slider__navigation-button prev" type="button" title="Prev">
                       <svg width="8" height="16">
                           <use xlink:href="#arrow-slide" />

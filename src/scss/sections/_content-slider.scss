@@ -1,18 +1,18 @@
 .content-slider {
 
-  &__desc{
+  &__desc {
     @extend %fs-roboto-l;
     max-width: 52rem;
     margin-bottom: 6.4rem;
   }
 
-  &__list{
+  &__list {
     display: flex;
     justify-content: space-between;
     column-gap: 8.5rem;
     margin-bottom: 8rem;
 
-    li{
+    li {
       display: flex;
       align-items: center;
       flex: 33.33;
@@ -21,7 +21,7 @@
         margin-bottom: 10px;
       }
 
-      picture{
+      picture {
         margin-right: 2.4rem;
       }
     }
@@ -31,7 +31,7 @@
     }
   }
 
-  &__list-img{
+  &__list-img {
     border-radius: 53%;
     box-shadow: -5px 10px 24px rgba(55, 56, 123, 0.3);
     min-width: 7.2rem;
@@ -43,29 +43,39 @@
     }
   }
 
-  &__list-item{
+  &__list-item {
     @extend %fs-roboto-s;
   }
 
-  &__box{
+  &__box {
     padding: 6rem 0 6rem 6rem;
     background-color: #fff;
     margin-right: -4rem;
-    border-radius: 32px 0px 0px 32px;
+    border-radius: 3.2rem 0px 0px 3.2rem;
 
     @include breakpoint(laptop) {
       padding: 4rem 0 4rem 4rem;
     }
+
+    @include breakpoint(small-tablet) {
+      padding: 2.4rem;
+      margin-right: 0;
+      border-radius: 3.2rem;
+    }
   }
 
-  &__box-title{
+  &__box-title {
     display: inline-block;
     @extend %fs-h-4;
     max-width: 49rem;
     text-transform: uppercase;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 3.2rem;
+    }
   }
 
-  &__slider{
+  &__slider {
     width: 128rem;
     display: flex;
     align-items: flex-end;
@@ -77,25 +87,43 @@
       margin-top: -4.2rem;
       width: calc(100vw - 98px);
     }
+
+    @include breakpoint(tablet) {
+      margin-top: 0;
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
-  &__slider-navigation{
+  &__slider-navigation {
     flex: 0 1 47%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: end;
     max-height: 19rem;
+
+    @include breakpoint(tablet) {
+      display: flex;
+      flex-direction: column;
+    }
+
   }
 
-  &__pagination{
+  &__pagination {
     display: flex;
     justify-content: flex-end;
     margin-right: 32px;
     margin-bottom: 83px;
     @extend %fs-roboto-xs;
+
+    @include breakpoint(tablet) {
+      margin-right: 0;
+      margin-bottom: 2rem;
+      justify-content: flex-start;
+    }
   }
 
-  &__navigation{
+  &__navigation {
     background-color: $grayscale-300;
     border-radius: 999px;
     width: 13rem;
@@ -107,16 +135,21 @@
     align-items: center;
 
     &:hover,
-    &:focus{
+    &:focus {
       background-color: $grayscale-500;
     }
 
-    &:active{
+    &:active {
       background-color: $grayscale-200;
     }
+
+    @include breakpoint(laptop) {
+      margin: 0 20rem 0 0;
+    }
+
   }
 
-  &__navigation-button{
+  &__navigation-button {
     height: 4.2rem;
     width: 4.2rem;
     display: flex;
@@ -130,18 +163,24 @@
     }
   }
 
-  &__swiper{
+  &__swiper {
     margin-left: auto;
     overflow: hidden;
     flex: 0 1 55%;
+
+    @include breakpoint(tablet) {
+      order: -1;
+      width: calc(100vw - 88px);
+      margin-bottom: 2rem;
+    }
   }
 
-  &__swiper-item{
+  &__swiper-item {
 
-    &.swiper-slide-duplicate-prev{
+    &.swiper-slide-duplicate-prev {
       position: relative;
 
-      &::after{
+      &::after {
         content: '';
         position: absolute;
         z-index: 2;
@@ -155,20 +194,25 @@
     }
   }
 
-  &__swiper-item-img{
+  &__swiper-item-img {
     width: 57.2rem;
     object-fit: cover;
     height: 100%;
     border-radius: 2rem;
   }
 
-  .swiper-pagination-total{
+  .swiper-pagination-total {
     display: none;
   }
 
-  &__text-block{
+  &__text-block {
     width: 33rem;
     overflow: hidden;
+
+    @include breakpoint(tablet) {
+      width: calc(100vw - 88px);
+      margin-bottom: 2rem;
+    }
   }
 
 }

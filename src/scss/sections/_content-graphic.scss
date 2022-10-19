@@ -58,7 +58,7 @@
   &__desc {
     @extend %fs-roboto-l;
     max-width: 52rem;
-    margin-bottom: 2.4rem;
+    margin-bottom: 3rem;
 
     @include breakpoint(tablet) {
       max-width: 80rem;
