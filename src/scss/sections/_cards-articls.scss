@@ -36,6 +36,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    counter-reset: list2;
 
     @include breakpoint(small-tablet) {
       display: flex;
@@ -46,12 +47,13 @@
   &__item{
     background-color: #fff;
     border-radius: 2.4rem;
-    padding: 1.2rem;
+    padding: 1.2rem 1.2rem 3.2rem;
     max-width: 65.5rem;
     position: relative;
 
     @include breakpoint(small-tablet) {
       max-width: 100%;
+      padding: 1.2rem;  
     }
   }
 
@@ -60,10 +62,22 @@
     border-radius: 1.8rem;
     margin-bottom: 2.4rem;
     position: relative;
-    padding: 0px 0px 52% 0px;
+    padding: 0rem 0rem 52% 0rem;
 
     @include breakpoint(laptop) {
       margin-bottom: 2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+
+      &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+      }
     }
   }
 
@@ -77,16 +91,6 @@
     object-fit: cover;
   }
 
-  &__item-box{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-
-    @include breakpoint(laptop) {
-      margin-bottom: auto;
-    }
-  }
-
   &__item-box-number{
     @extend %fs-roboto-xl;
     margin-right: 4rem;
@@ -96,19 +100,45 @@
     }
   }
 
-  &__item-box-text{
+  &__item-text{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    @extend %fs-roboto-l;
+    padding-left: 6.4rem;
+    position: relative;
+    counter-increment: list2;
 
-    &::after{
-      content: '';
+    &::before{
+      content: counter(list2, decimal-leading-zero) '';
       position: absolute;
-      width: 100%;
-      height: 100%;
+      z-index: 10;
+      @extend %fs-roboto-xs;
+      top:  0.5rem;
       left: 0;
-      top: 0;
     }
+
+    @include breakpoint(laptop) {
+      padding-left: 3.4rem;
+    }
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      align-items: stretch;
+      padding-left: 0;
+      top: 0;
+
+      svg{
+        order: -1;
+        margin-left: auto;
+        margin-bottom: 1.2rem;
+      }
+    }
+
+    @include breakpoint(small-tablet) {
+      padding-bottom: 2rem;
+    }
+
   }
 
   &__swiper{
@@ -122,7 +152,7 @@
   &__item{
 
     @include breakpoint(small-tablet) {
-      // width: calc(100vw - 96px);
+
     }
   }
 }

@@ -127,11 +127,10 @@ function contentSliders() {
   const contentSliders = document.querySelectorAll('.content-slider__slider');
   contentSliders.forEach(slider => {
     const contentSwiper = new Swiper(slider.querySelector('.content-swiper'), {
-      loop: true,
       speed: 500,
       slidesPerView: 1,
       spaceBetween: 10,
-      modules: [Navigation, Pagination, Autoplay, EffectFade, Controller],
+      modules: [Navigation, Pagination, EffectFade, Controller],
       breakpoints: {
         768: {
           slidesPerView: 1,
@@ -151,11 +150,6 @@ function contentSliders() {
           return (n < 10 ? '0' : '') + n;
         }
       },
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: true,
-        pauseOnMouseEnter: true
-      },
       on: {
         init: function (swiper) {
           swiper.el.classList.remove("loading")
@@ -164,17 +158,12 @@ function contentSliders() {
     });
 
     const sliderText = new Swiper(slider.querySelector('.content-slider__text-block'), {
-      loop: true,
       speed: 500,
       slidesPerView: 1,
       spaceBetween: 0,
-      modules: [ EffectFade, Autoplay, Controller],
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: true,
-        pauseOnMouseEnter: true
-      },
+      modules: [ EffectFade, Controller],
       effect: 'fade',
+      autoHeight: true,
       fadeEffect: {
         crossFade: true
       },

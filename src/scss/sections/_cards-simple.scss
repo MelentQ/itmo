@@ -1,23 +1,26 @@
 .cards-simple{
 
+    &__slider-box{
+        min-width: 0;
+    }
+
     &__slider{
         position: relative;
     }
 
     &__swiper{
-        width: 129rem;
         overflow: hidden;
-
-        @include breakpoint(laptop) {
-            width: calc(100vw - 8.8rem);
-        }
     }
 
     &__slide-img-box{
         border-radius: 1.8rem;
         margin-bottom: 2.4rem;
         position: relative;
-        padding: 0 0 120%;
+        height: 55rem;  
+
+        @include breakpoint(laptop) {
+            height: 43rem;  
+        }
     }
 
     &__slide-img{
@@ -27,6 +30,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: top center;
         border-radius: 1.8rem;
     }
 

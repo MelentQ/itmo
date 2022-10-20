@@ -1,5 +1,5 @@
 .breadcrumbs {
-  max-width: 210px;
+  max-width: 21rem;
   margin-right: 2rem;
 
   @include breakpoint(laptop) {
@@ -10,7 +10,7 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px 8px;
+    gap: 0.6rem 0.8rem;
 
     li {
       &:last-child {
