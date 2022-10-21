@@ -61,6 +61,7 @@
     border-radius: 1.8rem;
     margin-bottom: 2.4rem;
     height: 38rem;
+    background-color: $grayscale-300;
 
     @include breakpoint(laptop) {
       height: 31rem;
@@ -68,7 +69,6 @@
 
     @include breakpoint(tablet) {
       margin-bottom: none;
-      max-width: 70rem;
     }
 
     @include breakpoint(small-mobile) {
@@ -96,9 +96,8 @@
     top: 2.4rem;
     left: 2.4rem;
     @extend %fs-roboto-xl;
-    margin-right: 2.4rem;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     row-gap: 0.8rem;
 
     @include breakpoint(tablet) {
@@ -111,6 +110,11 @@
       padding: 0.6rem 1.6rem;
       border-radius: 2rem;
       background-color: #fff;
+      margin-right: 2.4rem;
+
+      @include breakpoint(tablet) {
+        margin-right: 1rem;
+      }
     }
 
   }
@@ -131,12 +135,11 @@
 
   &__slide-logo{
     background-color: $grayscale-300;
+    position: relative;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     min-width: 8rem;
     height: 8rem;
+    background-color: $grayscale-300;
 
     @include breakpoint(laptop) {
       min-width: 6rem;
@@ -146,6 +149,15 @@
     @include breakpoint(tablet) {
       margin-bottom: 1.6rem;
     }
+  }
+
+  &__slide-logo-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
   }
 
   &__slide-content{
@@ -190,6 +202,12 @@
     @extend %fs-roboto-l;
     margin-bottom: 3.2rem;
 
+    @extend %interactive;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2rem;
+    }
+
     &::after{
       content: '';
       position: absolute;
@@ -197,10 +215,6 @@
       height: 100%;
       top: 0;
       left: 0;
-    }
-
-    @include breakpoint(tablet) {
-      margin-bottom: 2rem;
     }
   }
 
@@ -220,20 +234,31 @@
 
 
 .user-card{
-  display: inline-flex;
+  display: flex;
+  align-items: center;
   padding-top: 2rem;
   border-top: 0.1rem solid rgba(33, 34, 46, 0.1);
+  max-width: fit-content;
 
   &__logo{
-    min-width: 4.8rem;
+    flex-shrink: 0;
     height: 4.8rem;
     width: 4.8rem;
     border-radius: 50%;
     margin-right: 1.6rem;
-  }
+    position: relative;
+    overflow: hidden;
+    background-color: $grayscale-300;
 
-  &__logo-img{
-    object-fit: cover;
+    img{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      object-position: top center;
+      object-fit: cover;
+    }
   }
 
   &__info-title{

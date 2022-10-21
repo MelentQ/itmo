@@ -53,7 +53,7 @@
 
     @include breakpoint(small-tablet) {
       max-width: 100%;
-      padding: 1.2rem;  
+      padding: 2.4rem;  
     }
   }
 
@@ -135,18 +135,10 @@
       }
     }
 
-    @include breakpoint(small-tablet) {
-      padding-bottom: 2rem;
-    }
-
   }
 
   &__swiper{
-
-    @include breakpoint(small-tablet) {
-      width: calc(100vw - 4rem);
-      margin: 0 auto;
-    }
+    width: auto;
   }
 
   &__item{

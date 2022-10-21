@@ -2,7 +2,6 @@
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(13, 1fr);
   column-gap: 7.5rem;
 
   @include breakpoint(laptop) {
@@ -11,13 +10,11 @@
 
   @include breakpoint(tablet) {
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: max-content;
     row-gap: 2rem;
   }
 
   &__content {
     max-width: 60rem;
-    grid-row: span 10;
 
     @include breakpoint(tablet) {
       max-width: 100%;
@@ -28,11 +25,9 @@
     @extend %fs-h-3;
     text-transform: uppercase;
     margin-bottom: 2.4rem;
-    grid-row: span 3;
     max-width: 60rem;
 
     @include breakpoint(laptop) {
-      grid-row: span 2;
       font-size: 2.8rem;
     }
 

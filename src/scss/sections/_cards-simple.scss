@@ -17,6 +17,7 @@
         margin-bottom: 2.4rem;
         position: relative;
         height: 55rem;  
+        background-color: $grayscale-300;
 
         @include breakpoint(laptop) {
             height: 43rem;  
@@ -37,6 +38,17 @@
     &__slide-name{
         @extend %fs-roboto-m;
         margin-bottom: 1.2rem;
+
+        @extend %interactive;
+
+        &::after{
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+        }
     }
 
     &__navigation{

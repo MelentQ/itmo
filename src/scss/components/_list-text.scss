@@ -1,23 +1,23 @@
 .list-text {
   display: flex;
   flex-direction: column;
-  row-gap: 21px;
+  row-gap: 2.1rem;
 
   @include breakpoint(small-tablet) {
-    row-gap: 12px;
+    row-gap: 1.2rem;
   }
 
   li {
     position: relative;
-    padding-left: 48px;
+    padding-left: 4.8rem;
 
     &::before {
       content: '';
       position: absolute;
-      width: 32px;
-      height: 32px;
+      width: 3.2rem;
+      height: 3.2rem;
       background-color: $primary-700;
-      border: 1px solid #FFFFFF;
+      border: 0.1rem solid #FFFFFF;
       border-radius: 50%;
       left: 0;
       top: 50%;
@@ -28,19 +28,20 @@
       content: '';
       position: absolute;
       background-image: url('../../img/tick.svg');
-      width: 18px;
-      height: 18px;
-      left: 7px;
+      width: 1.8rem;
+      height: 1.8rem;
+      left: 0.7rem;
       top: 50%;
       transform: translateY(-50%);
+      background-size: contain;
     }
 
     @include breakpoint(small-tablet) {
-      padding-left: 28px;
+      padding-left: 2.8rem;
 
       &::before {
-        width: 16px;
-        height: 16px;
+        width: 1.6rem;
+        height: 1.6rem;
       }
 
       &::after {
@@ -66,7 +67,7 @@
     @include breakpoint(small-tablet) {
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: auto;
-      row-gap: 20px;
+      row-gap: 1rem;  
     }
 
     li {
@@ -76,13 +77,14 @@
         content: '';
         width: 7.2rem;
         height: 7.2rem;
-        border: 2px solid #FFFFFF;
+        border: 0.2rem solid #FFFFFF;
         box-shadow: -0.5rem 1rem 2.4rem rgba(55, 56, 123, 0.3);
       }
 
       &::after {
         background-image: url('../../img/tick-big.png');
         background-position: center;
+        background-size: contain;
         width: 3.8rem;
         height: 3.8rem;
         left: 1.6rem;
@@ -90,42 +92,44 @@
         transform: translateY(-50%);
       }
 
-      @include breakpoint(tablet) {
-        padding-left: 50px;
+      @include breakpoint(laptop) {
+        padding-left: 6rem;
 
         &::before {
-          content: '';
-          position: absolute;
-          width: 32px;
-          height: 32px;
+          width: 4.6rem;
+          height: 4.6rem;
+        }
+
+        &::after {
+          width: 2.8rem;
+          height: 2.8rem;
+          left: 0.9rem;
+        }
+      }
+
+      @include breakpoint(small-tablet) {
+        padding-left: 2.8rem;
+
+        &::before {
+          width: 1.6rem;
+          height: 1.6rem;
           background-color: $primary-700;
-          border: 1px solid #FFFFFF;
           border-radius: 50%;
           left: 0;
           top: 50%;
           transform: translateY(-50%);
         }
 
-        &::after {
-          content: '';
-          position: absolute;
-          background-image: url('../../img/tick.svg');
-          width: 18px;
-          height: 18px;
-          left: 7px;
-          top: 50%;
-          transform: translateY(-50%);
-        }
       }
 
-      .list-text__item {
+      p {
         @extend %fs-roboto-s;
         letter-spacing: -0.02em;
       }
     }
   }
 
-  &__item {
+  p {
     @extend %fs-roboto-xs;
   }
 }

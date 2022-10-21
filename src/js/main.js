@@ -124,7 +124,7 @@ function miniSliders() {
 }
 
 function contentSliders() {
-  const contentSliders = document.querySelectorAll('.content-slider__slider');
+  const contentSliders = document.querySelectorAll('.content-slider__box');
   contentSliders.forEach(slider => {
     const contentSwiper = new Swiper(slider.querySelector('.content-swiper'), {
       speed: 500,
@@ -137,11 +137,11 @@ function contentSliders() {
         }
       },
       navigation: {
-        nextEl: '.content-slider__slider .next',
-        prevEl: '.content-slider__slider .prev'
+        nextEl: '.content-slider__box .next',
+        prevEl: '.content-slider__box .prev'
       },
       pagination: {
-        el: '.content-slider__slider .content-slider__pagination',
+        el: '.content-slider__box .content-slider__pagination',
         type: 'fraction',
         renderFraction: function (currentClass) {
           return '<span class="' + currentClass + '"></span>'
@@ -189,6 +189,7 @@ function ordinarySlider() {
       speed: 500,
       slidesPerView: 1,
       spaceBetween: 20,
+      autoHeight: true,
       modules: [Navigation, Pagination],
       breakpoints: {
         1024: {

@@ -184,16 +184,29 @@
     @extend %fs-roboto-xs;
   }
 
-  &__footer-boxImg {
+  &__footer-box{
     width: 12rem;
+    height: 12rem;
+    background-color: $grayscale-100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 1.6rem;
 
     @include breakpoint(laptop) {
       width: 9rem;
+      height: 9rem;
+      padding: 1.3rem;
     }
-
+  
     @include breakpoint(mobile) {
       width: 6rem;
+      height: 6rem;
+      padding: 0.9rem;
     }
+
   }
 
   &__link {

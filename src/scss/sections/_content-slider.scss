@@ -42,6 +42,10 @@
   }
 
   &__box {
+    display: grid; 
+    grid-template-columns: auto 69.5rem;
+    column-gap: 2rem;
+    position: relative;
     padding: 6rem 0 6rem 6rem;
     background-color: #fff;
     margin-right: -4rem;
@@ -54,6 +58,11 @@
 
     @include breakpoint(laptop) {
       padding: 4rem 0 4rem 4rem;
+      grid-template-columns: auto 60.5rem;
+    }
+
+    @include breakpoint(tablet) {
+      display: block;
     }
 
     @include breakpoint(small-tablet) {
@@ -78,27 +87,16 @@
     }
   }
 
-  &__slider {
-    display: grid;
-    grid-template-columns: auto 69.5rem;
-    align-items: flex-end;
-    column-gap: 2rem;
-    margin-top: -7.2rem;
-    position: relative;
-
-    @include breakpoint(laptop) {
-      margin-top: 0;
-      grid-template-columns: auto 60.5rem;
-    }
-
-    @include breakpoint(tablet) {
-      grid-template-columns: repeat(1, 1fr);
-    }
+  &__slider-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   &__slider-navigation {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     max-width: 37rem;
     min-width: 0;
     margin-left: auto;
@@ -159,6 +157,7 @@
   &__swiper-box{
     overflow: hidden; 
     min-width: 0; 
+    grid-row: span 2;
 
     @include breakpoint(tablet) {
       margin-bottom: 2rem;
@@ -212,6 +211,8 @@
   &__swiper-item-box{
     position: relative;
     height: 38rem; 
+    background-color: $grayscale-300;
+    border-radius: 2rem;
 
     @include breakpoint(laptop) {
       height: 34rem;

@@ -15,7 +15,9 @@
             <ul class="content-development__list">
               {{#each sections.contentDevelopment.directions}}
               <li>
-                <img class="content-development__list-img" src="{{this.urlImg}}" alt="{{this.altImg}}">
+                <div class="content-development__list-box">
+                  <img src="{{this.urlImg}}" alt="{{this.altImg}}">
+                </div>
                 <p class="content-development__list-text">
                   {{this.text}}
                 </p>
@@ -23,7 +25,6 @@
               {{/each}}
             </ul>
           </div>
-          <div class="content-development__line"></div>
           <div class="content-development__result">
             <span class="content-development__result-title">
               Результаты 2021 года

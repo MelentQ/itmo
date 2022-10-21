@@ -11,14 +11,13 @@ export default function mobileSlider() {
         new Swiper(container, {
             speed: 500,
             slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
+            spaceBetween: 8,
             centeredSlides: true,
-            autoplay: {
-            delay: 5000,
-            disableOnInteraction: true,
-            pauseOnMouseEnter: true
-            },
+            breakpoints: {
+                768: {
+                  spaceBetween: 20
+                }
+              },
             on: {
                 init: function (swiper) {
                     swiper.el.classList.remove("loading")
