@@ -29,6 +29,23 @@
     align-items: center;
     justify-content: center;
 
+    svg{
+      stroke: $grayscale-900;
+    }
+
+    &:hover,
+    &:focus {
+      svg{
+        stroke: $primary-500;
+      }
+    }
+
+    &:active {
+      svg{
+        stroke: $grayscale-900;
+      }
+    }
+
     @include breakpoint(tablet) {
       height: 3.2rem;
       width: 4.2rem;
@@ -51,22 +68,6 @@
 
     &:active {
       background-color: $grayscale-100;
-    }
-
-    .slider-pagination-btns__button{
-      &:hover,
-      &:focus {
-        svg{
-          stroke: $primary-500;
-        }
-      }
-
-      &:active {
-        svg{
-          stroke: $grayscale-900;
-        }
-      }
-      
     }
   }
 
