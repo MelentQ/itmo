@@ -9,6 +9,18 @@
         "title": "7 лет",
         "desc": "Срок окупаемости"
       }
-    ]
+    ],
+    "contentData": {
+      "block": "centent",
+      "dot": true,
+      "title": "Ключевая информация",
+      "mods": "section--bg-transparent section--adaptive-without-padding"
+    },
+    "contentText": {
+      "block": "centent",
+      "dot": true,
+      "title": "Описание кейса",
+      "mods": ""
+    }
   }
 }

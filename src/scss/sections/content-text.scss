@@ -1,0 +1,170 @@
+.content-text{
+    max-width: 106rem;
+
+    @include breakpoint(laptop) {
+        padding-right: 12rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        padding-right: 9rem;
+    }
+
+    @media only screen and (max-width: (900px)) {
+        padding-right: 0;
+    }
+
+    h2{
+        max-width: 92.5rem; 
+        margin-top: 12rem;
+
+        &:first-child{
+            margin-top: 0;
+        }
+
+        @include breakpoint(laptop) {
+            margin-top: 8rem;
+        }
+
+        @include breakpoint(tablet) {
+            margin-top: 6rem;
+            margin-bottom: 2rem;
+        }
+
+        @include breakpoint(mobile) {
+            margin-top: 4rem;;
+        }
+    }
+
+    h3{
+        @extend %fs-roboto-l;
+        margin-bottom: 3.2rem;
+        max-width: 92.5rem;
+
+        @include breakpoint(tablet) {
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    p{
+        @extend %fs-roboto-s;
+        margin-bottom: 3.2rem;
+        max-width: 92.5rem; 
+    }
+
+    ul{
+        margin-bottom: 1.6rem;
+        max-width: 92.5rem;
+    }
+    
+
+    li{
+        position: relative;
+        padding-left: 1.6rem;
+        margin-bottom: 1.6rem;
+
+        &::before{
+            content: '';
+            position: absolute;
+            width: 0.8rem;
+            height: 0.8rem;
+            top: 0.6rem;
+            left: 0;
+            background-color: $primary-700;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        a{
+            border-bottom: 0.1rem solid $grayscale-900;
+        }
+    }
+
+    ul.content-text__list{
+        max-width: 24rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 4.8rem;
+    }
+
+    
+    iframe{
+        margin: 6rem 0;
+        border-radius: 2.4rem;
+        height: 68rem;
+
+        @include breakpoint(laptop) {
+            height: 50rem;
+            margin: 3rem 0;
+        }
+
+        @include breakpoint(small-tablet) {
+            margin: 2rem 0;
+            height: 35rem;
+        }
+
+        @include breakpoint(small-mobile) {
+            height: 20rem;
+            margin: 2rem 0;
+        }
+    }
+
+    img{
+        width: 100%;
+        height: 68rem;
+        object-fit: cover;
+        object-position: top center;
+        border-radius: 2.4rem;
+        overflow: hidden;
+        margin: 6rem 0;
+
+        @include breakpoint(laptop) {
+            height: 50rem;
+            margin: 3rem 0;
+        }
+
+        @include breakpoint(small-tablet) {
+            height: 35rem;
+        }
+
+        @include breakpoint(small-mobile) {
+            height: 20rem;
+            margin: 2rem 0;
+        }
+    }
+
+    table{
+        border-collapse: collapse;
+        margin-top: 6.4rem;
+
+        @include breakpoint(laptop) {
+            margin-top: 3rem;
+        }
+
+        @include breakpoint(small-tablet) {
+            display: block;
+            overflow-x: scroll;
+            width: 100%
+        }
+
+        th,
+        td{
+            padding: 2.4rem;
+            border: 0.1rem solid $grayscale-600;
+            color: #222222;
+            width: 53rem;
+
+            @include breakpoint(small-tablet) {
+                padding: 1.6rem;
+                min-width: 26rem;
+            }
+        }
+
+        th{
+            @extend %fs-roboto-m;
+        }
+
+        td{
+            @extend %fs-roboto-xl;
+        }
+    }
+}
