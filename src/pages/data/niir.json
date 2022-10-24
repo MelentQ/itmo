@@ -1,0 +1,12 @@
+{
+    "title": "НИИР и исследования",
+    "sections": {
+      "contentSimple": {
+        "block": "centent",
+        "dot": true,
+        "title": "",
+        "mods": "section--bg-transparent section--adaptive-without-padding"
+      }
+    }
+  }
+  

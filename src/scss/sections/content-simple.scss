@@ -1,0 +1,9 @@
+.content-simple{
+    
+    &__top-slider-item{
+        padding: 0.6rem 1.6rem;
+        border-radius: 2rem;
+        background-color: $grayscale-400;
+        display: inline-block;
+    }
+}

@@ -13,6 +13,7 @@ import {
 } from './Map';
 import debug from './utils/debug';
 import mobileSlider from './moduls/mobileSlider';
+import tabsSlider from './moduls/tabsSlider';
 import Accordions from './Accordions';
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -31,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
   ordinarySlider();
   contentSliders();
   ordinary3slide();
-
+  
 });
 
 function modals() {
