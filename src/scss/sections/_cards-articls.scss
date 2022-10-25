@@ -1,6 +1,36 @@
 .cards-articls{
   width: 100%;
 
+  &--3-items{
+    .cards-articls__desc{
+      display: none;
+    }
+    .cards-articls__items{
+      grid-template-columns: repeat(3, 1fr);
+
+      @include breakpoint(small-tablet) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .cards-articls__item-box{
+        padding: 0 0 80%;
+
+        @include breakpoint(small-tablet) {
+          padding: 0 0 74%;
+        }
+      }
+    }
+  }
+
+  &--background-item{
+    .cards-articls__item{
+      background-color: $grayscale-200;
+    }
+    .cards-articls__item-box{
+      background-color: $grayscale-100;
+    }
+  }
+
   &__inner{
     display: flex;
     align-items: flex-start;
@@ -50,6 +80,7 @@
     padding: 1.2rem 1.2rem 3.2rem;
     max-width: 65.5rem;
     position: relative;
+    transition: all $tt $te;
 
     @include breakpoint(small-tablet) {
       max-width: 100%;
@@ -57,27 +88,44 @@
     }
   }
 
-  &__item-link{
+  &__item-box{
     display: block;
     border-radius: 1.8rem;
     margin-bottom: 2.4rem;
     position: relative;
     padding: 0rem 0rem 52% 0rem;
+    counter-increment: list2;
+    background-color: $grayscale-300;
+
+    &::before{
+      content: counter(list2, decimal-leading-zero) '';
+      position: absolute;
+      z-index: 10;
+      @extend %fs-roboto-xs;
+      bottom: -4.6rem;
+      left: 0;
+    } 
 
     @include breakpoint(laptop) {
       margin-bottom: 2rem;
+      &::before{
+        bottom: -4rem;
+      }
+    }
+  }
+
+  &__item-text{
+    padding-left: 6.4rem; 
+    margin-top: 1.6rem;
+
+    @extend %fs-roboto-xl;
+
+    @include breakpoint(laptop) {
+      padding-left: 3.4rem;
     }
 
-    @include breakpoint(small-tablet) {
-
-      &::after{
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-      }
+    @include breakpoint(tablet) {
+      padding-left: 0;
     }
   }
 
@@ -89,6 +137,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top center;
   }
 
   &__item-box-number{
@@ -100,22 +149,30 @@
     }
   }
 
-  &__item-text{
+  &__item-title{
     width: 100%;
     display: flex;
     justify-content: space-between;
     @extend %fs-roboto-l;
     padding-left: 6.4rem;
-    position: relative;
-    counter-increment: list2;
 
-    &::before{
-      content: counter(list2, decimal-leading-zero) '';
+    &::after{
+      content: '';
       position: absolute;
-      z-index: 10;
-      @extend %fs-roboto-xs;
-      top:  0.5rem;
+      width: 100%;
+      height: 100%;
       left: 0;
+      top: 0;
+    }
+
+    svg{
+      transition: all $tt $te;
+    }
+
+    &:hover{
+      svg{
+        transform: rotate(45deg);
+      }
     }
 
     @include breakpoint(laptop) {

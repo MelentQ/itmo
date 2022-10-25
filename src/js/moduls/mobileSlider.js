@@ -13,6 +13,7 @@ export default function mobileSlider() {
             slidesPerView: 1,
             spaceBetween: 8,
             centeredSlides: true,
+            autoHeight: true,
             breakpoints: {
                 768: {
                   spaceBetween: 20

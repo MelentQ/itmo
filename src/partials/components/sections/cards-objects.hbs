@@ -1,26 +1,16 @@
 {{#extend "section"}}
     {{#content "content"}}
 
-    <div class="cards-articls {{sections.cardsArticle.modsSwiper}}">
+    <div class="cards-articls">
       <h2 class="cards-articls__title title-h2">
-        помогаем развиваться бизнесу
+        Мы развиваемся во всех направлениях
       </h2>
-      <div class="cards-articls__desc">
-        <p>
-          Текст — зафиксированная на каком-либо материальном носителе человеческая мысль.
-        </p>
-      </div>
-      <div class="cards-articls__swiper js-mobile-slider swiper loading">
+      <div class="cards-articls__swiper js-mobile-slider swiper">
         <ul class="cards-articls__items swiper-wrapper">
-          {{#each sections.cardsArticle.swiperContent}}
+          {{#each sections.cardsObjects.swiperContent}}
           <li class="cards-articls__item swiper-slide">
             <div class="cards-articls__item-box">
               <img class="cards-articls__item-img" src={{this.imgUrl}} alt={{this.imgAlt}}>
-              <div class="cards-articls__item-links">
-                <a class="cards-articls__item-links-item" href="#">
-                  
-                </a>
-              </div> 
             </div>
             <a class="cards-articls__item-title" href={{this.link}}>
               {{this.title}}
@@ -28,6 +18,9 @@
                 <use xlink:href="#arrow-link-45" />
               </svg>
             </a>
+            <p class="cards-articls__item-text">
+                {{this.text}}
+            </p>
           </li>
           {{/each}}
         </ul>

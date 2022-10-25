@@ -6,104 +6,36 @@
             Области НИИР
         </h2>
         <div class="content-simple__sliders">
-            <div class="content-simple__top-swiper swiper">
+            <div class="content-simple__top-swiper swiper loading">
                 <div class="swiper-wrapper">
+                    {{#each sections.contentSimple.tabsButtons}}
                     <div class="content-simple__top-swiper-slide swiper-slide">
                         <div class="content-simple__top-swiper-item">
-                            Название области 1
+                            {{this.name}}
                         </div>
                     </div>
-                    <div class="content-simple__top-swiper-slide swiper-slide">
-                        <div class="content-simple__top-swiper-item">
-                            Название области 2
-                        </div>
-                    </div>
-                    <div class="content-simple__top-swiper-slide swiper-slide">
-                        <div class="content-simple__top-swiper-item">
-                            Название области 3
-                        </div>
-                    </div>
-                    <div class="content-simple__top-swiper-slide swiper-slide">
-                        <div class="content-simple__top-swiper-item">
-                            Название области 4
-                        </div>
-                    </div>
-                    <div class="content-simple__top-swiper-slide swiper-slide">
-                        <div class="content-simple__top-swiper-item">
-                            Название области 5
-                        </div>
-                    </div>
+                    {{/each}}
                 </div>
             </div>
 
             <div class="content-simple__footer-swiper
-            swiper">
+            swiper loading">
                 <div class="swiper-wrapper">
+                    {{#each sections.contentSimple.swiperContent}}
                     <div class="content-simple__footer-swiper-slide swiper-slide">
                         <div class="content-simple__footer-swiper-box">
                             <span>
-                                Название области
+                                {{this.title}}
                             </span>
                             <p>
-                                Текст — зафиксированная на каком-либо материальном носителе человеческая мысль; в общем плане связная и полная последовательность символов.
+                                {{this.text}}
                             </p>
                         </div>
                         <div class="content-simple__footer-swiper-img-box">
-                            <img class="footer-swiper-img" src="img/content/content-simple/1.jpg" alt="">
+                            <img class="content-simple__footer-swiper-img" src={{this.imgUrl}} alt={{this.imgAlt}}>
                         </div>
                     </div>
-                    <div class="content-simple__footer-swiper-slide swiper-slide">
-                        <div class="content-simple__footer-swiper-box">
-                            <span>
-                                Название области
-                            </span>
-                            <p>
-                                Текст — зафиксированная на каком-либо материальном носителе человеческая мысль; в общем плане связная и полная последовательность символов.
-                            </p>
-                        </div>
-                        <div class="content-simple__footer-swiper-img-box">
-                            <img class="footer-swiper-img" src="img/content/content-simple/1.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="content-simple__footer-swiper-slide swiper-slide">
-                        <div class="content-simple__footer-swiper-box">
-                            <span>
-                                Название области
-                            </span>
-                            <p>
-                                Текст — зафиксированная на каком-либо материальном носителе человеческая мысль; в общем плане связная и полная последовательность символов.
-                            </p>
-                        </div>
-                        <div class="content-simple__footer-swiper-img-box">
-                            <img class="footer-swiper-img" src="img/content/content-simple/1.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="content-simple__footer-swiper-slide swiper-slide">
-                        <div class="content-simple__footer-swiper-box">
-                            <span>
-                                Название области
-                            </span>
-                            <p>
-                                Текст — зафиксированная на каком-либо материальном носителе человеческая мысль; в общем плане связная и полная последовательность символов.
-                            </p>
-                        </div>
-                        <div class="content-simple__footer-swiper-img-box">
-                            <img class="footer-swiper-img" src="img/content/content-simple/1.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="content-simple__footer-swiper-slide swiper-slide">
-                        <div class="content-simple__footer-swiper-box">
-                            <span>
-                                Название области
-                            </span>
-                            <p>
-                                Текст — зафиксированная на каком-либо материальном носителе человеческая мысль; в общем плане связная и полная последовательность символов.
-                            </p>
-                        </div>
-                        <div class="content-simple__footer-swiper-img-box">
-                            <img class="footer-swiper-img" src="img/content/content-simple/1.jpg" alt="">
-                        </div>
-                    </div>
+                    {{/each}}
                 </div>
             </div>
         </div>
