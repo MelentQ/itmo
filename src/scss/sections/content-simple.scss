@@ -1,9 +1,50 @@
 .content-simple{
-    
-    &__top-slider-item{
+    &__sliders{
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__top-swiper{
+        margin-bottom: 5rem;
+    }
+
+    &__top-swiper-item{
         padding: 0.6rem 1.6rem;
         border-radius: 2rem;
         background-color: $grayscale-400;
         display: inline-block;
+    }
+
+    &__footer-swiper{
+        background-color: $grayscale-100;
+        border-radius: 2rem;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__footer-swiper-slide{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 3rem;
+        padding: 4rem 4rem 4rem 6rem;
+    }
+    &__footer-swiper-box{
+        flex: 0 1 50%;
+
+        span{
+            @extend %fs-h-4;
+            margin-bottom: 1rem;
+        }
+
+        p{
+            @extend %fs-roboto-s;
+        }
+    }
+    &__footer-swiper-img-box{
+        height: 38.8rem;
+        flex: 0 1 50%;
     }
 }

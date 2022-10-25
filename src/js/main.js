@@ -32,7 +32,8 @@ document.addEventListener('DOMContentLoaded', function () {
   ordinarySlider();
   contentSliders();
   ordinary3slide();
-  
+  tabsSlider();
+
 });
 
 function modals() {
