@@ -13,7 +13,7 @@
               </p>
             </div>
             <ul class="content-development__list">
-              {{#each sections.contentDevelopment.directions}}
+              {{#each contentDevelopment.directions}}
               <li>
                 <div class="content-development__list-box">
                   <img src="{{this.urlImg}}" alt="{{this.altImg}}">
@@ -29,7 +29,7 @@
             <span class="content-development__result-title">
               Результаты 2021 года
             </span>
-            {{> components/list-text data=sections.contentResult}}
+            {{> components/list-text data=contentResult}}
           </div>
         </div>
       </div>

@@ -223,6 +223,152 @@
         }
       ],
       "illustration": "img/content/illustrations/contacts.svg"
+    },
+    "cardsArticle1": {
+      "block": "",
+      "dot": true,
+      "title": "",
+      "mods": "section--bg-transparent section--without-right section--adaptive-without-padding",
+      "modsSwiper": "",
+      "linksLogo": false,
+      "swiperContent": [
+        {
+          "title": "Сетевая магистратура для бизнеса",
+          "imgUrl": "img/content/cards-articls/1.png",
+          "imgAlt": "Иллюстрация",
+          "link": ""
+        },
+        {
+          "title": "Дополнительное профессиональное образование",
+          "imgUrl": "img/content/cards-articls/1.png",
+          "imgAlt": "Иллюстрация",
+          "link": ""
+        },
+        {
+          "title": "Киберполигон",
+          "imgUrl": "img/content/cards-articls/1.png",
+          "imgAlt": "Иллюстрация",
+          "link": ""
+        },
+        {
+          "title": "Совместные хакатоны",
+          "imgUrl": "img/content/cards-articls/1.png",
+          "imgAlt": "Иллюстрация",
+          "link": ""
+        }
+      ]
+    },
+    "cardsArticle2": {
+      "block": "",
+      "dot": true,
+      "title": "Направления деятельности",
+      "mods": "section--bg-transparent section--without-right section--adaptive-without-padding",
+      "modsSwiper": "cards-articls--3-items",
+      "linksLogo": false,
+      "swiperContent": [
+        {
+          "title": "Сетевая магистратура для бизнеса",
+          "imgUrl": "img/content/cards-articls/1.png",
+          "imgAlt": "Иллюстрация",
+          "link": "",
+          "text": "Технологии AI"
+        },
+        {
+          "title": "Дополнительное профессиональное образование",
+          "imgUrl": "img/content/cards-articls/2.png",
+          "imgAlt": "Иллюстрация",
+          "link": "",
+          "text": "IoT и роботизированные системы"
+        },
+        {
+          "title": "Киберполигон",
+          "imgUrl": "img/content/cards-articls/3.png",
+          "imgAlt": "Иллюстрация",
+          "link": "",
+          "text": "Облачные технологии в контексте развития сетей 5G"
+        }
+      ]
+    },
+    "cardsArticle3": {
+      "block": "",
+      "dot": true,
+      "title": "Возможности бизнеса",
+      "mods": "",
+      "modsSwiper": "cards-articls--3-items cards-articls--background-item",
+      "swiperContent": [
+        {
+          "title": "Сетевая магистратура для бизнеса",
+          "imgUrl": "img/content/cards-articls/1.png",
+          "imgAlt": "Иллюстрация",
+          "link": "",
+          "text": "Технологии AI",
+          "linksLogo": [
+            {
+              "link": "",
+              "imgUrl": "img/content/cards-main/logo-company.png",
+              "imgAlt": "Сбер"
+            },
+            {
+              "link": "",
+              "imgUrl": "img/content/cards-main/logo-company.png",
+              "imgAlt": "Сбер"
+            },
+            {
+              "link": "",
+              "imgUrl": "img/content/cards-main/logo-company.png",
+              "imgAlt": "Сбер"
+            }
+          ]
+        },
+        {
+          "title": "Дополнительное профессиональное образование",
+          "imgUrl": "img/content/cards-articls/2.png",
+          "imgAlt": "Иллюстрация",
+          "link": "",
+          "text": "IoT и роботизированные системы",
+          "linksLogo": [
+            {
+              "link": "",
+              "imgUrl": "img/content/cards-main/logo-company.png",
+              "imgAlt": "Сбер"
+            },
+            {
+              "link": "",
+              "imgUrl": "img/content/cards-main/logo-company.png",
+              "imgAlt": "Сбер"
+            },
+            {
+              "link": "",
+              "imgUrl": "img/content/cards-main/logo-company.png",
+              "imgAlt": "Сбер"
+            }
+          ]
+        },
+        {
+          "title": "Киберполигон",
+          "imgUrl": "img/content/cards-articls/3.png",
+          "imgAlt": "Иллюстрация",
+          "link": "",
+          "text": "Облачные технологии в контексте развития сетей 5G",
+          "linksLogo": [
+            {
+              "link": "",
+              "imgUrl": "img/content/cards-main/logo-company.png",
+              "imgAlt": "Сбер"
+            },
+            {
+              "link": "",
+              "imgUrl": "img/content/cards-main/logo-company.png",
+              "imgAlt": "Сбер"
+            },
+            {
+              "link": "",
+              "imgUrl": "img/content/cards-main/logo-company.png",
+              "imgAlt": "Сбер"
+            }
+          ]
+        }
+      ]
     }
   }
 }

@@ -15,6 +15,7 @@ import debug from './utils/debug';
 import mobileSlider from './moduls/mobileSlider';
 import tabsSlider from './moduls/tabsSlider';
 import Accordions from './Accordions';
+import presentSlider from './moduls/presentSlider';
 
 document.addEventListener('DOMContentLoaded', function () {
   window.itmo = {}; // Тут будут лежать всякие функции с фронта
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
   contentSliders();
   ordinary3slide();
   tabsSlider();
+  presentSlider();
 
 });
 

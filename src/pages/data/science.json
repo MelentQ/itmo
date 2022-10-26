@@ -1,76 +1,37 @@
 {
   "title": "Наука",
-  "sections": {
-    "cardsArticle": {
-      "block": "cards",
-      "dot": true,
-      "title": "",
-      "mods": "section--without-right section--adaptive-without-padding",
-      "modsSwiper": "cards-articls--3-items cards-articls--background-item",
-      "swiperContent": [
-        {
-          "title": "Сетевая магистратура для бизнеса",
-          "imgUrl": "img/content/cards-articls/1.png",
-          "imgAlt": "Иллюстрация",
-          "link": "",
-          "text": "Технологии AI"
-        },
-        {
-          "title": "Дополнительное профессиональное образование",
-          "imgUrl": "img/content/cards-articls/1.png",
-          "imgAlt": "Иллюстрация",
-          "link": "",
-          "text": "IoT и роботизированные системы"
-        },
-        {
-          "title": "Киберполигон",
-          "imgUrl": "img/content/cards-articls/2.png",
-          "imgAlt": "Иллюстрация",
-          "link": "",
-          "text": "Облачные технологии в контексте развития сетей 5G"
-        },
-        {
-          "title": "Совместные хакатоны",
-          "imgUrl": "img/content/cards-articls/3.png",
-          "imgAlt": "Иллюстрация",
-          "link": "",
-          "text": "Компьютерные системы"
-        }
-      ]
-    },
-    "contentDevelopment": {
-      "block": "content",
-      "dot": true,
-      "title": "Фокусируемся на развитии",
-      "mods": "section--bg-transparent section--adaptive-without-padding",
-      "directions": [
-        {
-          "urlImg": "img/content/content-development/1.svg",
-          "altImg": "Технологии AI",
-          "text": "Технологии AI"
-        },
-        {
-          "urlImg": "img/content/content-development/2.svg",
-          "altImg": "IoT и роботизированные системы",
-          "text": "IoT и роботизированные системы"
-        },
-        {
-          "urlImg": "img/content/content-development/3.svg",
-          "altImg": "Облачные технологии",
-          "text": "Облачные технологии в контексте развития сетей 5G"
-        },
-        {
-          "urlImg": "img/content/content-development/4.svg",
-          "altImg": "Компьютерные системы",
-          "text": "Компьютерные системы"
-        }
-      ]
-    },
-    "contentResult": [
-      {"text": "31% работ Федерального уровня"},
-      {"text": "Реальные внедрения"},
-      {"text": "Разработки по внешним заказам"},
-      {"text": "Гособоронзаказ"}
+  "contentDevelopment": {
+    "block": "content",
+    "dot": true,
+    "title": "Фокусируемся на развитии",
+    "mods": "section--bg-transparent section--adaptive-without-padding",
+    "directions": [
+      {
+        "urlImg": "img/content/content-development/1.svg",
+        "altImg": "Технологии AI",
+        "text": "Технологии AI"
+      },
+      {
+        "urlImg": "img/content/content-development/2.svg",
+        "altImg": "IoT и роботизированные системы",
+        "text": "IoT и роботизированные системы"
+      },
+      {
+        "urlImg": "img/content/content-development/3.svg",
+        "altImg": "Облачные технологии",
+        "text": "Облачные технологии в контексте развития сетей 5G"
+      },
+      {
+        "urlImg": "img/content/content-development/4.svg",
+        "altImg": "Компьютерные системы",
+        "text": "Компьютерные системы"
+      }
     ]
-  }
+  },
+  "contentResult": [
+    {"text": "31% работ Федерального уровня"},
+    {"text": "Реальные внедрения"},
+    {"text": "Разработки по внешним заказам"},
+    {"text": "Гособоронзаказ"}
+  ]
 }

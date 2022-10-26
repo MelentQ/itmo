@@ -1,0 +1,92 @@
+{{#extend "section"}}
+    {{#content "content"}}
+
+        <div class="cards-presentation">
+            <h2 class="cards-presentation__title title-h2">
+                Возможности бизнеса в сотрудничестве с университетом
+            </h2>
+            <div class="cards-presentation__wrapper">
+                <div class="cards-presentation__content">
+                    <div class="cards-presentation__content-box">
+                        <span class="cards-presentation__content-span">
+                            Кастмоная разработка курсов
+                        </span>
+                        <div class="cards-presentation__content-center">
+                            <div class="cards-presentation__content-center-title">
+                                Разработаем курс под ваши цели и задачи
+                            </div>
+                            <p class="cards-presentation__content-center-desc">
+                                Проблема нехватки высококвалифицированных кадров – одна из главных на рынке. Курсы позволяют компании повысить квалификацию сотрудников и свою конкурентоспособность.
+                            </p>
+                            <ul class="cards-presentation__content-center-list">
+                                <li>
+                                    преимущество 1
+                                </li>
+                                <li>
+                                    преимущество 2
+                                </li>
+                                <li>
+                                    преимущество 3
+                                </li>
+                            </ul>
+                        </div>
+                        <a class="cards-presentation__content-btn" href="#">
+                            Варианты обучения
+                        </a>
+                    </div>
+                </div>
+                <div class="cards-presentation__slider js-present-slider">
+                    <div class="cards-presentation__swiper swiper">
+                        <div class="swiper-wrapper">
+                            {{#each data.swiperContent}}
+                                <div class="swiper-slide">
+                                    <div class="cards-presentation__swiper-item">
+                                        <div class="cards-presentation__swiper-item-box">
+                                            <div class="cards-presentation__swiper-top">
+                                                <div class="cards-presentation__swiper-pagination"></div>
+                                                <span class="cards-presentation__swiper-top-text">
+                                                    Готовые базовые курсы
+                                                </span>
+                                            </div>
+                                            <div class="cards-presentation__swiper-contain">
+                                                <span>
+                                                    {{this.title}}
+                                                </span>
+                                                <p>
+                                                    {{this.desc}}
+                                                </p>
+                                            </div>
+                                            <div class="cards-presentation__swiper-item-img-box">
+                                                <img src={{this.imgUrl}} alt={{this.imgAlt}}>
+                                            </div>
+                                        </div>
+                                        <ul class="cards-presentation__swiper-item-list">
+                                            {{#each this.numbers}}
+                                                <li>
+                                                    {{> components/numbers}}
+                                                </li>
+                                            {{/each}}
+                                        </ul>
+                                    </div>
+                                </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                    <div class="cards-presentation__navigation slider-pagination-btns">
+                        <button class="slider-pagination-btns__button prev" type="button" title="Prev">
+                            <svg width="8" height="16">
+                                <use xlink:href="#arrow-slide" />
+                            </svg>
+                        </button>
+                        <button class="slider-pagination-btns__button next" type="button" title="Next">
+                            <svg width="8" height="16">
+                                <use xlink:href="#arrow-slide" />
+                            </svg>
+                        </button>
+                    </div> 
+                </div>
+            </div>
+        </div>
+      
+    {{/content}}
+{{/extend}}

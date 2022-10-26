@@ -139,49 +139,17 @@
 
   &__footer-items {
     display: flex;
+    gap: 8rem;
+
+    @include breakpoint(tablet) {
+      gap: 6rem;
+    }
 
     @include breakpoint(small-tablet) {
+      gap: 2rem;
       flex-direction: column;
-      margin-bottom: 2rem;
+      margin-bottom: 4rem;
     }
-  }
-
-  &__footer-item {
-    margin-right: 8rem;
-
-    @include breakpoint(tablet) {
-      margin-right: 6rem;
-    }
-
-    @include breakpoint(small-tablet) {
-      margin-right: 0;
-      margin-bottom: 2rem;
-    }
-  }
-
-  &__footer-item-title {
-    font-weight: 700;
-    font-size: 3.6rem;
-    line-height: 1.15;
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
-    margin-bottom: 4px;
-
-    @include breakpoint(tablet) {
-      font-size: 3rem;
-    }
-
-    @include breakpoint(mobile) {
-      font-size: 2.4rem;
-    }
-  }
-
-  &__footer-item-desc {
-    font-size: 1.6rem;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-
-    @extend %fs-roboto-xs;
   }
 
   &__footer-box{

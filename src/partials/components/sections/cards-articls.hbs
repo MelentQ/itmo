@@ -1,7 +1,7 @@
 {{#extend "section"}}
     {{#content "content"}}
 
-    <div class="cards-articls {{sections.cardsArticle.modsSwiper}}">
+    <div class="cards-articls {{data.modsSwiper}}">
       <h2 class="cards-articls__title title-h2">
         помогаем развиваться бизнесу
       </h2>
@@ -12,15 +12,19 @@
       </div>
       <div class="cards-articls__swiper js-mobile-slider swiper loading">
         <ul class="cards-articls__items swiper-wrapper">
-          {{#each sections.cardsArticle.swiperContent}}
+          {{#each data.swiperContent}}
           <li class="cards-articls__item swiper-slide">
             <div class="cards-articls__item-box">
               <img class="cards-articls__item-img" src={{this.imgUrl}} alt={{this.imgAlt}}>
+              {{#if this.linksLogo}} 
               <div class="cards-articls__item-links">
-                <a class="cards-articls__item-links-item" href="#">
-                  
+                {{#each this.linksLogo}}
+                <a class="cards-articls__item-links-box" href="#">
+                  <img class="cards-articls__item-links-img" src="img/content/cards-main/logo-company.png" alt="Сбер">
                 </a>
-              </div> 
+                {{/each}}
+              </div>
+              {{/if}} 
             </div>
             <a class="cards-articls__item-title" href={{this.link}}>
               {{this.title}}
@@ -28,6 +32,9 @@
                 <use xlink:href="#arrow-link-45" />
               </svg>
             </a>
+            <p class="cards-articls__item-text">
+                {{this.text}}
+            </p>
           </li>
           {{/each}}
         </ul>

@@ -1,26 +1,24 @@
 {
   "title": "Страница кейса",
-  "sections": {
-    "introDigits": [{
-        "title": "25 000 000 ₽",
-        "desc": "Размер инвестиций"
-      },
-      {
-        "title": "7 лет",
-        "desc": "Срок окупаемости"
-      }
-    ],
-    "contentData": {
-      "block": "centent",
-      "dot": true,
-      "title": "Ключевая информация",
-      "mods": "section--bg-transparent section--adaptive-without-padding"
+  "introDigits": [{
+      "title": "25 000 000 ₽",
+      "desc": "Размер инвестиций"
     },
-    "contentText": {
-      "block": "centent",
-      "dot": true,
-      "title": "Описание кейса",
-      "mods": ""
+    {
+      "title": "7 лет",
+      "desc": "Срок окупаемости"
     }
+  ],
+  "contentData": {
+    "block": "centent",
+    "dot": true,
+    "title": "Ключевая информация",
+    "mods": "section--bg-transparent section--adaptive-without-padding"
+  },
+  "contentText": {
+    "block": "centent",
+    "dot": true,
+    "title": "Описание кейса",
+    "mods": ""
   }
 }

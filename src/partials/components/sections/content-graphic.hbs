@@ -14,9 +14,9 @@
               Текст — зафиксированная на каком-либо материальном носителе человеческая мысль; в общем плане связная и полная последовательность символов.
             </p>
           </div>
-          {{> components/list-text data=sections.contentGraphic.capabilities mods="--mod-1 --mod-2"}}
+          {{> components/list-text data=contentGraphic.capabilities mods="--mod-1 --mod-2"}}
           <ul class="content-graphic__data">
-            {{#each sections.contentGraphic.data}}
+            {{#each contentGraphic.data}}
               <li>
                 <div class="content-graphic__data-number">
                   {{this.number}}

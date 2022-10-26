@@ -8,7 +8,7 @@
     .cards-articls__items{
       grid-template-columns: repeat(3, 1fr);
 
-      @include breakpoint(small-tablet) {
+      @include breakpoint(tablet) {
         grid-template-columns: repeat(2, 1fr);
       }
 
@@ -20,6 +20,10 @@
         }
       }
     }
+
+    .cards-articls__item-text{
+      display: block;
+    }
   }
 
   &--background-item{
@@ -28,6 +32,16 @@
     }
     .cards-articls__item-box{
       background-color: $grayscale-100;
+    }
+    .cards-articls__item-title{
+      @include breakpoint(tablet) {
+        padding-top: 3.3rem;
+        
+      }
+
+      svg{
+        display: none;
+      }
     }
   }
 
@@ -115,6 +129,7 @@
   }
 
   &__item-text{
+    display: none;
     padding-left: 6.4rem; 
     margin-top: 1.6rem;
 
@@ -139,14 +154,49 @@
     object-fit: cover;
     object-position: top center;
   }
-
-  &__item-box-number{
-    @extend %fs-roboto-xl;
-    margin-right: 4rem;
+  &__item-links{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    top: 0.8rem;
+    left: 0.8rem;
 
     @include breakpoint(laptop) {
-      margin-right: 2rem;
+      gap: 0.6rem
     }
+
+    @include breakpoint(small-mobile) {
+      gap: 0.4rem
+    }
+  }
+
+  &__item-links-box{
+    position: relative;
+    border-radius: 50%;
+    width: 6.4rem;
+    height: 6.4rem;
+    background-color: #eff1f4;
+    flex-shrink: 0;
+
+    @include breakpoint(laptop) {
+      width: 4.4rem;
+      height: 4.4rem;
+    }
+
+    @include breakpoint(small-mobile) {
+      width: 3.2rem;
+      height: 3.42rem;
+    }
+  }
+
+  &__item-links-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
   }
 
   &__item-title{

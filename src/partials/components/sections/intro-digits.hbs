@@ -16,16 +16,9 @@
         </div>
         <div class="intro-digits__footer">
           <ul class="intro-digits__footer-items">
-            {{#each sections.introDigits}}
+            {{#each introDigits}}
               <li>
-                <div class="intro-digits__footer-item">
-                  <span class="intro-digits__footer-item-title">
-                    {{this.title}}
-                  </span>
-                  <p class="intro-digits__footer-item-desc">
-                    {{this.desc}}
-                  </p>
-                </div>
+                {{> components/numbers}}
               </li>
             {{/each}}
           </ul>
