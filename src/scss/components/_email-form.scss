@@ -1,6 +1,58 @@
 .email-form {
   position: relative;
 
+  &--on-dark{
+    max-width: 59rem;
+
+    &:focus{
+      .email-form__button{
+        background-color: $primary-700;
+      }
+    }
+
+    .input{
+      &:focus~.email-form__button{
+        background-color: $primary-700;
+      }
+    }
+
+    .input.error{
+      .input__element{
+        border-color: $yellow;
+      }
+      .input__validation-message{
+        color: $yellow;
+      }
+      .input__placeholder{
+        color: $yellow !important;
+      }
+    }
+
+    .input__element{
+      &:placeholder-shown ~ .input__placeholder{
+        color: $grayscale-100;
+      }
+
+      &:focus {
+        border-color: $grayscale-100;
+        background-color: $grayscale-100;
+
+        &:placeholder-shown ~ .input__placeholder{
+          color: $grayscale-900;
+        }
+      }
+
+    }
+    
+    .email-form__button{
+      background-color: $grayscale-100;
+
+      svg{
+        stroke: $grayscale-900;
+      }
+    }
+  }
+
   &__button {
     position: absolute;
     top: 0.7rem;

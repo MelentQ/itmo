@@ -35,8 +35,12 @@ document.addEventListener('DOMContentLoaded', function () {
   ordinary3slide();
   tabsSlider();
   presentSlider();
+  
 
 });
+
+// document.fonts.ready.then((res) => {
+// })
 
 function modals() {
   new HystModal({

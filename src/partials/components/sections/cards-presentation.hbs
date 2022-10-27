@@ -3,9 +3,10 @@
 
         <div class="cards-presentation">
             <h2 class="cards-presentation__title title-h2">
-                Возможности бизнеса в сотрудничестве с университетом
+                {{data.headTitle}}
             </h2>
             <div class="cards-presentation__wrapper">
+                {{#if data.contentLeft}}
                 <div class="cards-presentation__content">
                     <div class="cards-presentation__content-box">
                         <span class="cards-presentation__content-span">
@@ -35,20 +36,33 @@
                         </a>
                     </div>
                 </div>
-                <div class="cards-presentation__slider js-present-slider">
+                {{/if}}
+                <div class="cards-presentation__slider {{data.modsSlider}} js-present-slider">
                     <div class="cards-presentation__swiper swiper">
                         <div class="swiper-wrapper">
                             {{#each data.swiperContent}}
                                 <div class="swiper-slide">
+                                    {{#if this.imgLeft}}
+                                        <div class="cards-presentation__swiper-img-box">
+                                            <img src={{this.imgUrl}} alt={{this.imgAlt}}>
+                                        </div>
+                                    {{/if}}
                                     <div class="cards-presentation__swiper-item">
                                         <div class="cards-presentation__swiper-item-box">
                                             <div class="cards-presentation__swiper-top">
-                                                <div class="cards-presentation__swiper-pagination"></div>
-                                                <span class="cards-presentation__swiper-top-text">
-                                                    Готовые базовые курсы
-                                                </span>
+                                                <div class="cards-presentation__swiper-pagination swiper__pagination"></div>
+                                                {{#if this.swiperTopText}}
+                                                    <span class="cards-presentation__swiper-top-text">
+                                                        Готовые базовые курсы
+                                                    </span>
+                                                {{/if}}
                                             </div>
                                             <div class="cards-presentation__swiper-contain">
+                                                {{#if this.dateText}}
+                                                <div>
+                                                    {{this.dateText}}
+                                                </div>
+                                                {{/if}}
                                                 <span>
                                                     {{this.title}}
                                                 </span>
@@ -56,9 +70,11 @@
                                                     {{this.desc}}
                                                 </p>
                                             </div>
-                                            <div class="cards-presentation__swiper-item-img-box">
-                                                <img src={{this.imgUrl}} alt={{this.imgAlt}}>
-                                            </div>
+                                            {{#unless this.imgLeft}}
+                                                <div class="cards-presentation__swiper-item-img-box">
+                                                    <img src={{this.imgUrl}} alt={{this.imgAlt}}>
+                                                </div>
+                                            {{/unless}}
                                         </div>
                                         <ul class="cards-presentation__swiper-item-list">
                                             {{#each this.numbers}}
@@ -67,6 +83,11 @@
                                                 </li>
                                             {{/each}}
                                         </ul>
+                                        {{#if this.button}}
+                                        <a class="cards-presentation__swiper-item-btn button" href="#">
+                                            Подробнее на сайте мероприятия
+                                        </a>
+                                        {{/if}}
                                     </div>
                                 </div>
                             {{/each}}

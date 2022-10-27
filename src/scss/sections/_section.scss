@@ -2,6 +2,51 @@
   position: relative;
   z-index: 10;
 
+  &--feedback-subscription{
+
+    .section__inner{
+      display: flex;
+    }
+    
+    .section__heading{
+      display: none;
+    }
+    .section__content{
+      background-color: $primary-700;
+      padding: 7.2rem 4.8rem 8rem;
+      width: 100%;
+      border-radius: 3.2rem;
+      overflow: hidden;
+      position: relative;
+
+      &::before{
+        content: '';
+        position: absolute;
+        background-image: url('../../img/content/feedback/1.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 198.8rem;
+        height: 173.021rem;
+        top: -24rem;
+        left: -130rem;
+        z-index: 1;
+
+        @include breakpoint(laptop) {
+          top: -48rem;
+        }
+
+        @include breakpoint(mobile) {
+          top: -38rem;
+          left: -127rem;
+        }
+      }
+
+      @include breakpoint(laptop) {
+        padding: 4rem 2.4rem;
+      }
+    }
+  }
+
   &__inner {
     display: grid;
     grid-template-columns: repeat(12, 1fr);

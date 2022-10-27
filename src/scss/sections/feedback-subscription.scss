@@ -1,0 +1,26 @@
+.feedback-subscription{
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    margin-left: auto;
+
+    @include breakpoint(tablet) {
+        width: 100%;
+    }
+
+    &__title{
+        margin-bottom: 6.4rem;
+        color: $grayscale-100;
+
+        @include breakpoint(small-tablet) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__text{
+        @extend %fs-roboto-s;
+        color: $grayscale-100;
+        max-width: 34rem;
+        margin-bottom: 2.4rem;
+    }
+}
