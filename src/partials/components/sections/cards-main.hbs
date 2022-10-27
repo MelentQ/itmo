@@ -3,133 +3,68 @@
 
       <div class="cards-main">
         <h2 class="cards-main__title title-h2">
-          Кейс-стади
+          {{data.headTitle}}
         </h2>
         <div class="cards-main__desc">
           <p>
-            Реализованные кейс-стади под реальные задачи малого, среднего и крупного бизнеса
+            {{data.desc}}
           </p>
         </div>
-        <div class="cards-main__slider">
+        <div class="cards-main__slider {{data.modsSlider}}">
           <div class="ordinary-slider__wrapper">
             <div class="ordinary-slider swiper loading">
               <div class="ordinary-slider__swiper swiper-wrapper">
+                {{#each data.swiperContent}}
                 <div class="ordinary-slider__slide swiper-slide">
                   <div class="ordinary-slider__slide-box">
-                    <img class="ordinary-slider__slide-box-img" src="img/content/cards-main/1.jpg" alt="Лаборатория">
+                    <img class="ordinary-slider__slide-box-img" src={{this.imgUrl}} alt={{this.imgAlt}}>
                     <ul class="ordinary-slider__slide-box-list">
+                      {{#each this.listItems}}
                       <li>
-                        Разработка под заказчика
+                        {{this.text}}
                       </li>
+                      {{/each}}
                     </ul>
                   </div>
                   <div class="ordinary-slider__slide-wrapper">
                     <div class="ordinary-slider__slide-logo">
-                      <img class="ordinary-slider__slide-logo-img" src="img/content/cards-main/logo-company.png" alt="Сбер">
+                      <img class="ordinary-slider__slide-logo-img" src={{this.logoCompany}} alt="Сбер">
                     </div>
                     <div class="ordinary-slider__slide-content">
                       <ul class="ordinary-slider__slide-content-header">
+                        {{#each this.headerList}}
                         <li class="ordinary-slider__slide-content-header-item">
-                          Разработка
+                          {{this.name}}
                         </li>
-                        <li class="ordinary-slider__slide-content-header-item">
-                          2021
-                        </li>
+                        {{/each}}
                       </ul>
                       <a class="ordinary-slider__slide-content-title" href="#">
-                        Разработка личного кабинета для Сбербанка
+                        {{this.title}}
                       </a>
                       {{> components/user-card}}
+                      <div class="ordinary-slider__slide-info">
+                        <div class="ordinary-slider__slide-info-benefit">
+                          Будет полезен:
+                        </div>
+                        <ul class="ordinary-slider__slide-info-list">
+                          <li>
+                            Бакалаврам
+                          </li>
+                          <li>
+                            Магистрам
+                          </li>
+                        </ul>
+                        <div class="ordinary-slider__slide-info-text">
+                          Студенты курса проходят стажировки в компании и к концу обучения готовы стать ее полноценными сотрудниками.
+                        </div>
+                        <a class="ordinary-slider__slide-info-link button" href="#">
+                          Уведомить о запуске курса
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="ordinary-slider__slide swiper-slide">
-                  <div class="ordinary-slider__slide-box">
-                    <img class="ordinary-slider__slide-box-img" src="img/content/cards-main/2.jpg" alt="Лаборатория">
-                    <ul class="ordinary-slider__slide-box-list">
-                      <li>
-                        Разработка под заказчика
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="ordinary-slider__slide-wrapper">
-                    <div class="ordinary-slider__slide-logo">
-                      <img class="ordinary-slider__slide-logo-img" src="img/content/cards-main/logo-company.png" alt="Сбер">
-                    </div>
-                    <div class="ordinary-slider__slide-content">
-                      <ul class="ordinary-slider__slide-content-header">
-                        <li class="ordinary-slider__slide-content-header-item">
-                          Аналитика данных
-                        </li>
-                        <li class="ordinary-slider__slide-content-header-item">
-                          2021
-                        </li>
-                      </ul>
-                      <a class="ordinary-slider__slide-content-title" href="#">
-                        Анализ CRM системы технического отдела Газпрома
-                      </a>
-                      {{> components/user-card}}
-                    </div>
-                  </div>
-                </div>
-                <div class="ordinary-slider__slide swiper-slide">
-                  <div class="ordinary-slider__slide-box">
-                    <img class="ordinary-slider__slide-box-img" src="img/content/cards-main/1.jpg" alt="Лаборатория">
-                    <ul class="ordinary-slider__slide-box-list">
-                      <li>
-                        Разработка под заказчика
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="ordinary-slider__slide-wrapper">
-                    <div class="ordinary-slider__slide-logo">
-                      <img class="ordinary-slider__slide-logo-img" src="img/content/cards-main/logo-company.png" alt="Сбер">
-                    </div>
-                    <div class="ordinary-slider__slide-content">
-                      <ul class="ordinary-slider__slide-content-header">
-                        <li class="ordinary-slider__slide-content-header-item">
-                          Разработка
-                        </li>
-                        <li class="ordinary-slider__slide-content-header-item">
-                          2021
-                        </li>
-                      </ul>
-                      <a class="ordinary-slider__slide-content-title" href="#">
-                        Разработка личного кабинета для Сбербанка
-                      </a>
-                      {{> components/user-card}}
-                    </div>
-                  </div>
-                </div>
-                <div class="ordinary-slider__slide swiper-slide">
-                  <div class="ordinary-slider__slide-box">
-                    <img class="ordinary-slider__slide-box-img" src="img/content/cards-main/2.jpg" alt="Лаборатория">
-                    <ul class="ordinary-slider__slide-box-list">
-                      <li>
-                        Разработка под заказчика
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="ordinary-slider__slide-wrapper">
-                    <div class="ordinary-slider__slide-logo">
-                      <img class="ordinary-slider__slide-logo-img" src="img/content/cards-main/logo-company.png" alt="Сбер">
-                    </div>
-                    <div class="ordinary-slider__slide-content">
-                      <ul class="ordinary-slider__slide-content-header">
-                        <li class="ordinary-slider__slide-content-header-item">
-                          Аналитика данных
-                        </li>
-                        <li class="ordinary-slider__slide-content-header-item">
-                          2021
-                        </li>
-                      </ul>
-                      <a class="ordinary-slider__slide-content-title" href="#">
-                        Анализ CRM системы технического отдела Газпрома
-                      </a>
-                      {{> components/user-card}}
-                    </div>
-                  </div>
-                </div>
+                {{/each}}
               </div>
             </div>
           </div>

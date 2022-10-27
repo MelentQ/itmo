@@ -369,6 +369,123 @@
           ]
         }
       ]
+    },
+    "cardsMain1": {
+      "block": "cards",
+      "dot": true,
+      "title": "",
+      "mods": "",
+      "headTitle": "Кейс-стади",
+      "desc": "Реализованные кейс-стади под реальные задачи малого, среднего и крупного бизнеса",
+      "swiperContent": [
+          {
+              "imgUrl": "img/content/cards-main/1.jpg",
+              "imgAlt": "Лаборатория",
+              "listItems": [
+                  {"text": "Разработка под заказчика"}
+              ],
+              "logoCompany": "img/content/cards-main/logo-company.png",
+              "headerList": [
+                  {"name": "Разработка"},
+                  {"name": "2021"}
+              ],
+              "title": "Разработка личного кабинета для Сбербанка"
+          },
+          {
+              "imgUrl": "img/content/cards-main/2.jpg",
+              "imgAlt": "Лаборатория",
+              "listItems": [
+                  {"text": "Разработка под заказчика"}
+              ],
+              "logoCompany": "img/content/cards-main/logo-company.png",
+              "headerList": [
+                  {"name": "Аналитика данных"},
+                  {"name": "2021"}
+              ],
+              "title": "Анализ CRM системы технического отдела Газпрома"
+          },
+          {
+              "imgUrl": "img/content/cards-main/1.jpg",
+              "imgAlt": "Лаборатория",
+              "listItems": [
+                  {"text": "Разработка под заказчика"}
+              ],
+              "logoCompany": "img/content/cards-main/logo-company.png",
+              "headerList": [
+                  {"name": "Разработка"},
+                  {"name": "2021"}
+              ],
+              "title": "Разработка личного кабинета для Сбербанка"
+          },
+          {
+              "imgUrl": "img/content/cards-main/2.jpg",
+              "imgAlt": "Лаборатория",
+              "listItems": [
+                  {"text": "Разработка под заказчика"}
+              ],
+              "logoCompany": "img/content/cards-main/logo-company.png",
+              "headerList": [
+                  {"name": "Аналитика данных"},
+                  {"name": "2021"}
+              ],
+              "title": "Анализ CRM системы технического отдела Газпрома"
+          }
+      ]
+    },
+    "cardsMain2": {
+      "block": "cards",
+      "dot": true,
+      "title": "Наши курсы уникальны",
+      "mods": "",
+      "modsSlider": "cards-main__slider--other-elem",
+      "headTitle": "Планируемые курсы",
+      "desc": "Текст — зафиксированная на каком-либо материальном носителе человеческая мысль; в общем плане связная и полная последовательность символов. Существуют две основные трактовки понятия «текст»: имманентная и репрезентативная.",
+      "swiperContent": [
+          {
+              "imgUrl": "img/content/cards-main/1.jpg",
+              "imgAlt": "Лаборатория",
+              "listItems": [
+                  {"text": "Бесплатно"}
+              ],
+              "headerList": [
+                  {"name": "Среднее время прохождения — 1 месяц"}
+              ],
+              "title": "Название курса/ мастер-класса"
+          },
+          {
+              "imgUrl": "img/content/cards-main/2.jpg",
+              "imgAlt": "Лаборатория",
+              "listItems": [
+                  {"text": "Бесплатно"}
+              ],
+              "headerList": [
+                {"name": "Среднее время прохождения — 1 месяц"}
+              ],
+              "title": "Название курса/ мастер-класса"
+          },
+          {
+            "imgUrl": "img/content/cards-main/1.jpg",
+            "imgAlt": "Лаборатория",
+            "listItems": [
+                {"text": "Бесплатно"}
+            ],
+            "headerList": [
+                {"name": "Среднее время прохождения — 1 месяц"}
+            ],
+            "title": "Название курса/ мастер-класса"
+        },
+        {
+            "imgUrl": "img/content/cards-main/2.jpg",
+            "imgAlt": "Лаборатория",
+            "listItems": [
+                {"text": "Бесплатно"}
+            ],
+            "headerList": [
+              {"name": "Среднее время прохождения — 1 месяц"}
+            ],
+            "title": "Название курса/ мастер-класса"
+        }
+      ]
     }
   }
 }

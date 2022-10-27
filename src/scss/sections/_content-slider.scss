@@ -42,7 +42,7 @@
   }
 
   &__box {
-    display: grid; 
+    display: grid;
     grid-template-columns: auto 69.5rem;
     column-gap: 2rem;
     position: relative;
@@ -100,7 +100,7 @@
     max-width: 37rem;
     min-width: 0;
     margin-left: auto;
-    
+
     @include breakpoint(tablet) {
       max-width: 60rem;
       margin-left: 0;
@@ -124,7 +124,7 @@
   &__navigation {
     max-width: 33rem;
     margin-left: 40px;
-    
+
     &:hover,
     &:focus {
       background-color: $grayscale-500;
@@ -155,8 +155,8 @@
   }
 
   &__swiper-box{
-    overflow: hidden; 
-    min-width: 0; 
+    overflow: hidden;
+    min-width: 0;
     grid-row: span 2;
 
     @include breakpoint(tablet) {
@@ -202,7 +202,7 @@
 
         @include breakpoint(small-tablet) {
           &::after{
-            display: none;  
+            display: none;
           }
         }
       }
@@ -210,7 +210,7 @@
 
   &__swiper-item-box{
     position: relative;
-    height: 38rem; 
+    height: 38rem;
     background-color: $grayscale-300;
     border-radius: 2rem;
 
@@ -221,9 +221,9 @@
     @include breakpoint(small-mobile) {
       height: 28rem
     }
-    
+
     @media only screen and (max-width: (500px)) {
-      height: 20rem;  
+      height: 20rem;
     }
   }
 

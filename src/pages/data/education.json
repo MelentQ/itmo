@@ -4,6 +4,43 @@
     "block": "cards",
     "dot": true,
     "title": "Сотрудники центра",
-    "mods": ""
+    "mods": "",
+    "swiperContent": [
+      {
+        "imgUrl": "img/content/education/1.jpg",
+        "imgAlt": "Доцент",
+        "link": "#",
+        "name": "Павел Валерьевич Кустарев",
+        "post": "Кандидат технических наук, доцент"
+      },
+      {
+        "imgUrl": "img/content/education/1.jpg",
+        "imgAlt": "Доцент",
+        "link": "#",
+        "name": "Павел Валерьевич Кустарев",
+        "post": "Кандидат технических наук, доцент"
+      },
+      {
+        "imgUrl": "img/content/education/1.jpg",
+        "imgAlt": "Доцент",
+        "link": "#",
+        "name": "Павел Валерьевич Кустарев",
+        "post": "Кандидат технических наук, доцент"
+      },
+      {
+        "imgUrl": "img/content/education/1.jpg",
+        "imgAlt": "Доцент",
+        "link": "#",
+        "name": "Павел Валерьевич Кустарев",
+        "post": "Кандидат технических наук, доцент"
+      },
+      {
+        "imgUrl": "img/content/education/1.jpg",
+        "imgAlt": "Доцент",
+        "link": "#",
+        "name": "Павел Валерьевич Кустарев",
+        "post": "Кандидат технических наук, доцент"
+      }
+    ]
   }
 }
