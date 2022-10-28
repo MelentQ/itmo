@@ -4,12 +4,6 @@
   &--on-dark{
     max-width: 59rem;
 
-    &:focus{
-      .email-form__button{
-        background-color: $primary-700;
-      }
-    }
-
     .input{
       &:focus~.email-form__button{
         background-color: $primary-700;
@@ -43,17 +37,28 @@
       }
 
     }
-    
+
     .email-form__button{
       background-color: $grayscale-100;
+
+      @extend %interactive-svg-stroke-button;
 
       svg{
         stroke: $grayscale-900;
       }
+
+      &--color{
+        background-color: $primary-700;
+
+        svg{
+          stroke: $grayscale-100;
+        }
+      }
+
     }
   }
 
-  &__button {
+  &__button{
     position: absolute;
     top: 0.7rem;
     right: 0.7rem;

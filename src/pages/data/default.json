@@ -715,11 +715,19 @@
                     "desc": "участников"
                 }
             ]
-          }   
+          }
         ]
     },
     "feedbackSubcription": {
       "block": "feedback-subscription",
+      "dot": false,
+      "title": "",
+      "headTitle": "Ближайшие хакатоны",
+      "desc": "",
+      "mods": ""
+    },
+    "feedbackJoin": {
+      "block": "feedback-join",
       "dot": false,
       "title": "",
       "headTitle": "Ближайшие хакатоны",

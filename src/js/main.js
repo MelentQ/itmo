@@ -25,18 +25,18 @@ document.addEventListener('DOMContentLoaded', function () {
   modals();
   forms();
   maps();
-  debug(); // Нажми 5 раз "d" на клавиатуре
-  accordions();
-  searchFields();
-  miniSliders();
-  mobileSlider();
-  ordinarySlider();
-  contentSliders();
-  ordinary3slide();
-  tabsSlider();
-  presentSlider();
-  
+  // debug(); // Нажми 5 раз "d" на клавиатуре
+  // accordions();
+  // searchFields();
+  // miniSliders();
+  // mobileSlider();
+  // ordinarySlider();
+  // contentSliders();
+  // ordinary3slide();
+  // tabsSlider();
+  // presentSlider();
 
+  colorReplacementBtn();
 });
 
 // document.fonts.ready.then((res) => {
@@ -268,5 +268,22 @@ function searchFields() {
       openButton.removeAttribute('disabled');
       closeButton.setAttribute('disabled', 'true');
     });
+  });
+}
+
+
+//функция замены цвета кнопки при клике на инпут
+function colorReplacementBtn(){
+  const parentBlock = document.querySelector('.feedback-subscription');
+
+  const input = parentBlock.querySelector('.input__element');
+  const btn = parentBlock.querySelector('.email-form__button');
+
+  input.addEventListener('focus', function(){
+    btn.classList.add('email-form__button--color');
+  });
+
+  input.addEventListener('blur', function(){
+    btn.classList.remove('email-form__button--color');
   });
 }

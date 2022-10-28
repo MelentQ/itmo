@@ -1,4 +1,58 @@
 .form {
+
+  &--dark{
+    max-width: 50rem;
+    color: $grayscale-100;
+
+    .input__element{
+      color: $grayscale-100;
+      border-bottom: 0.1rem solid $grayscale-100;
+
+      &:placeholder-shown ~ .input__placeholder{
+        color: $grayscale-100;
+      }
+
+      &:focus{
+        border-color: $grayscale-100;
+        & ~ .input__placeholder {
+          color: $grayscale-600;
+        }
+      }
+    }
+
+    .input__placeholder{
+      color: $grayscale-100;
+    }
+
+    .form__footer{
+      .button{
+        background-color: $grayscale-100;
+        color: $primary-700;
+      }
+    }
+
+    .policy{
+      a{
+
+        &:visited{
+          color: $grayscale-200;
+        }
+      }
+    }
+
+    .input.error{
+      .input__element{
+        border-color: $yellow;
+      }
+      .input__validation-message{
+        color: $yellow;
+      }
+      .input__placeholder{
+        color: $yellow !important;
+      }
+    }
+  }
+
   &__heading-block {
     display: flex;
     align-items: flex-start;
@@ -24,6 +78,11 @@
 
   &__heading-label {
     @extend %fs-body-s;
+  }
+
+  &__desc{
+    @extend %fs-roboto-s;
+    margin-bottom: 2.4rem;
   }
 
   &__inputs {

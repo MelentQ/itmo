@@ -1,17 +1,28 @@
-<form class="form js-form" action="/">
+<form class="form {{data}} js-form" action="/">
+    {{#if header}}
     <div class="form__heading-block">
         <h2 class="form__heading">Остались вопросы?</h2>
         <span class="form__heading-label">Задайте их напрямую!</span>
     </div>
-
+    {{/if}}
+    {{#if desc}}
+        <p class="form__desc">
+            Оставьте контактные данные и мы свяжемся с вами чтобы обсудить наше сотрудничество
+        </p>
+    {{/if}}
     <fieldset class="form__inputs">
         {{>components/input data=inputs.name}}
+        {{#if email}}
+            {{>components/input data=inputs.email}}
+        {{/if}}
         {{>components/input data=inputs.phone}}
-        {{>components/input data=inputs.message}}
+        {{#if message}}
+            {{>components/input data=inputs.message}}
+        {{/if}}
     </fieldset>
 
     <div class="form__footer">
-        <button class="button js-form-submit" type="submit">Отправить</button>
+        <button class="button  js-form-submit" type="submit">Отправить</button>
         {{>components/policy}}
     </div>
 </form>
