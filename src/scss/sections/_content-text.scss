@@ -13,8 +13,11 @@
         padding-right: 0;
     }
 
-    h2{
+    &__wrapper{
         max-width: 92.5rem; 
+    }
+
+    h2{
         margin-top: 12rem;
 
         &:first-child{
@@ -38,7 +41,6 @@
     h3{
         @extend %fs-roboto-l;
         margin-bottom: 3.2rem;
-        max-width: 92.5rem;
 
         @include breakpoint(tablet) {
             margin-bottom: 2.5rem;
@@ -48,19 +50,18 @@
     p{
         @extend %fs-roboto-s;
         margin-bottom: 3.2rem;
-        max-width: 92.5rem; 
     }
 
     ul{
-        margin-bottom: 1.6rem;
-        max-width: 92.5rem;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.6rem 4.8rem;
     }
     
 
     li{
         position: relative;
         padding-left: 1.6rem;
-        margin-bottom: 1.6rem;
 
         &::before{
             content: '';
@@ -79,7 +80,7 @@
         }
     }
 
-    ul.content-text__list{
+    .narrow-list{
         max-width: 24rem;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -88,61 +89,68 @@
 
     
     iframe{
-        margin: 6rem 0;
+       
         border-radius: 2.4rem;
-        height: 68rem;
+        overflow: hidden;
+        object-fit: contain;
+    }
+
+    .js-iframe-wrapper{
+        margin: 6rem 0;
+        width: calc(100% + 13.5rem);
 
         @include breakpoint(laptop) {
-            height: 50rem;
             margin: 3rem 0;
+            width: 100%;
         }
 
         @include breakpoint(small-tablet) {
             margin: 2rem 0;
-            height: 35rem;
         }
 
         @include breakpoint(small-mobile) {
-            height: 20rem;
             margin: 2rem 0;
         }
     }
 
     img{
-        width: 100%;
-        height: 68rem;
-        object-fit: cover;
+        width: calc(100% + 13.5rem);
+        max-width: none;
+        height: auto;
+        object-fit: contain;
         object-position: top center;
         border-radius: 2.4rem;
         overflow: hidden;
-        margin: 6rem 0;
+        margin: 6rem -13.5rem 6rem 0;
 
         @include breakpoint(laptop) {
-            height: 50rem;
             margin: 3rem 0;
+            width: 100%;
         }
 
         @include breakpoint(small-tablet) {
-            height: 35rem;
+
         }
 
         @include breakpoint(small-mobile) {
-            height: 20rem;
+ 
             margin: 2rem 0;
         }
     }
 
     table{
         border-collapse: collapse;
+        table-layout: fixed;
         margin-top: 6.4rem;
+        width: calc(100% + 13.5rem);
 
         @include breakpoint(laptop) {
             margin-top: 3rem;
+            width: 100%;
         }
 
         @include breakpoint(small-tablet) {
-            display: block;
-            overflow-x: scroll;
+            overflow-x: auto;
             width: 100%
         }
 
@@ -151,11 +159,9 @@
             padding: 2.4rem;
             border: 0.1rem solid $grayscale-600;
             color: #222222;
-            width: 53rem;
 
             @include breakpoint(small-tablet) {
                 padding: 1.6rem;
-                min-width: 26rem;
             }
         }
 

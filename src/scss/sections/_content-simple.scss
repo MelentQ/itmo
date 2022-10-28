@@ -13,7 +13,6 @@
     }
 
     &__top-swiper{
-        overflow: hidden;
         margin-bottom: 5rem;
 
         @include breakpoint(laptop) {
@@ -24,9 +23,7 @@
             .content-simple__top-swiper-item{
                 background-color: $primary-700;
                 border: 0.1rem solid $primary-700;
-                letter-spacing: 0.01em;
                 color: $grayscale-300;
-                @extend %fs-roboto-xl;
 
                 transition: background-color $tt $te, border-color $tt $te, color $tt $te;
 
@@ -53,8 +50,17 @@
         padding: 0.6rem 1.6rem; 
         border-radius: 2rem;
         background-color: $grayscale-400;
+        border: 0.1rem solid $grayscale-400;
         display: flex;
         justify-content: center;
+        cursor: pointer;
+        @extend %fs-roboto-xl;
+
+        &:hover {
+            background-color: $primary-700;
+            color: $grayscale-300;
+            border: 0.1rem solid $primary-700;
+        }
     }
 
     &__footer-swiper{
@@ -115,6 +121,7 @@
         position: relative;
         border-radius: 2.4rem;
         overflow: hidden;
+        background-color: $grayscale-300;
 
         @include breakpoint(laptop) {
             height: 34.8rem;

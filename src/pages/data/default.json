@@ -722,7 +722,6 @@
       "block": "feedback-subscription",
       "dot": false,
       "title": "",
-      "headTitle": "Ближайшие хакатоны",
       "desc": "",
       "mods": ""
     },
@@ -730,7 +729,13 @@
       "block": "feedback-join",
       "dot": false,
       "title": "",
-      "headTitle": "Ближайшие хакатоны",
+      "desc": "",
+      "mods": ""
+    },
+    "feedbackCall": {
+      "block": "feedback-call",
+      "dot": true,
+      "title": "База есть",
       "desc": "",
       "mods": ""
     }

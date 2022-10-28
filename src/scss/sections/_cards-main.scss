@@ -329,6 +329,12 @@
     }
   }
 
+  &__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   &__info-title{
     margin-bottom: 2px;
   }

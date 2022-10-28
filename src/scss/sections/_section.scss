@@ -59,7 +59,6 @@
     }
     .section__content{
       background-color: $primary-700;
-      background-color: $primary-700;
       padding: 7.2rem 4.8rem 8rem;
       width: 100%;
       border-radius: 3.2rem;
@@ -86,6 +85,18 @@
       }
 
 
+    }
+  }
+
+  &--feedback-call{
+
+    .section__inner{
+      background-color: $primary-700;
+      color: $grayscale-100;
+    }
+
+    .section__heading--dot::before{
+      background-color: $grayscale-100;
     }
   }
 

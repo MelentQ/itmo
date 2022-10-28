@@ -49,5 +49,14 @@ import {
           }
         });
 
+        const contents = document.querySelectorAll('.content-simple__footer-swiper-slide');
+        contents[0].classList.add('active');
+
+        contentSwiper.on('slideChange', () => {
+          contents.forEach(item => item.classList.remove('active'));
+          contents[contentSwiper.activeIndex] ? contents[contentSwiper.activeIndex].classList.add('active') : null;
+          tabsSwiper.slideTo(contentSwiper.activeIndex)
+      })
+
     });
   }

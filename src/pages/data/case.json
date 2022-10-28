@@ -13,10 +13,10 @@
     "block": "centent",
     "dot": true,
     "title": "Ключевая информация",
-    "mods": "section--bg-transparent section--adaptive-without-padding"
+    "mods": "section--bg-transparent section--adaptive-without-padding section--without-right"
   },
   "contentText": {
-    "block": "centent",
+    "block": "content",
     "dot": true,
     "title": "Описание кейса",
     "mods": ""

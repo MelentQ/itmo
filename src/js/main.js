@@ -16,6 +16,7 @@ import mobileSlider from './moduls/mobileSlider';
 import tabsSlider from './moduls/tabsSlider';
 import Accordions from './Accordions';
 import presentSlider from './moduls/presentSlider';
+import editableTextContainer from './moduls/editableTextContainer';
 
 document.addEventListener('DOMContentLoaded', function () {
   window.itmo = {}; // Тут будут лежать всякие функции с фронта
@@ -25,17 +26,19 @@ document.addEventListener('DOMContentLoaded', function () {
   modals();
   forms();
   maps();
-  // debug(); // Нажми 5 раз "d" на клавиатуре
-  // accordions();
-  // searchFields();
-  // miniSliders();
-  // mobileSlider();
-  // ordinarySlider();
-  // contentSliders();
-  // ordinary3slide();
-  // tabsSlider();
-  // presentSlider();
+  debug(); // Нажми 5 раз "d" на клавиатуре
+  accordions();
+  searchFields();
+  miniSliders();
+  mobileSlider();
+  ordinarySlider();
+  contentSliders();
+  ordinary3slide();
+  tabsSlider();
+  presentSlider();
 
+
+  editableTextContainer();
   colorReplacementBtn();
 });
 
@@ -272,7 +275,7 @@ function searchFields() {
 }
 
 
-//функция замены цвета кнопки при клике на инпут
+// функция замены цвета кнопки при клике на инпут
 function colorReplacementBtn(){
   const parentBlock = document.querySelector('.feedback-subscription');
 

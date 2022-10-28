@@ -1,0 +1,9 @@
+.feedback-call{
+
+
+    &__desc{
+        max-width: 50rem;
+        margin-bottom: 8rem;
+        @extend %fs-roboto-s;
+    }
+}
