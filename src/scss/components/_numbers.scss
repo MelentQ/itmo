@@ -1,4 +1,15 @@
 .numbers{
+
+    &--big{
+        
+        .numbers__title{
+            @extend %fs-h-2;
+        }
+
+        .numbers__desc{
+            @extend %fs-roboto-s
+        }
+    }
     
     &__title {
     font-weight: 700;
@@ -6,7 +17,7 @@
     line-height: 1.15;
     letter-spacing: -0.01em;
     text-transform: uppercase;
-    margin-bottom: 4px;
+    margin-bottom: 0.4rem;
 
         @include breakpoint(tablet) {
             font-size: 3rem;
@@ -21,7 +32,9 @@
     font-size: 1.6rem;
     line-height: 1.2;
     letter-spacing: -0.02em;
+    word-break: break-word;
 
     @extend %fs-roboto-xs;
+
     }
 }

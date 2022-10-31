@@ -3,6 +3,7 @@
   text-transform: uppercase;
   margin-bottom: 4rem;
   max-width: 106rem;
+  word-break: break-word;
 
   @include breakpoint(laptop) {
     margin-bottom: 2.4rem;

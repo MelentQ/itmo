@@ -12,12 +12,14 @@
         </p>
     </div>
     {{/if}}
-    <fieldset class="form__inputs">
+    <fieldset class="form__inputs {{#if inputsRow}}form__inputs--row{{/if}}">
         {{>components/input data=inputs.name}}
         {{#if email}}
             {{>components/input data=inputs.email}}
         {{/if}}
+        {{#if phone}}
         {{>components/input data=inputs.phone}}
+        {{/if}}
         {{#if message}}
             {{>components/input data=inputs.message}}
         {{/if}}

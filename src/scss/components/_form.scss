@@ -95,6 +95,14 @@
     @include breakpoint(small-tablet) {
       gap: 0.4rem;
     }
+
+    &--row{
+      flex-direction: row;
+
+      @include breakpoint(laptop) {
+        flex-direction: column;
+      }
+    }
   }
 
   &__footer {
