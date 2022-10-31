@@ -7,26 +7,26 @@
         </h2>
         <div class="content-simple__sliders">
             <div class="content-simple__top-swiper swiper loading">
-                <div class="swiper-wrapper">
+                <ul class="swiper-wrapper">
                     {{#each contentSimple.tabsButtons}}
-                    <div class="content-simple__top-swiper-slide swiper-slide">
+                    <li class="content-simple__top-swiper-slide swiper-slide">
                         <div class="content-simple__top-swiper-item">
                             {{this.name}}
                         </div>
-                    </div>
+                    </li>
                     {{/each}}
-                </div>
+                </ul>
             </div>
 
             <div class="content-simple__footer-swiper
             swiper loading">
-                <div class="swiper-wrapper">
+                <ul class="swiper-wrapper">
                     {{#each contentSimple.swiperContent}}
-                    <div class="content-simple__footer-swiper-slide swiper-slide">
+                    <li class="content-simple__footer-swiper-slide swiper-slide">
                         <div class="content-simple__footer-swiper-box">
-                            <span>
+                            <h3>
                                 {{this.title}}
-                            </span>
+                            </h3>
                             <p>
                                 {{this.text}}
                             </p>
@@ -34,9 +34,9 @@
                         <div class="content-simple__footer-swiper-img-box">
                             <img class="content-simple__footer-swiper-img" src={{this.imgUrl}} alt={{this.imgAlt}}>
                         </div>
-                    </div>
+                    </li>
                     {{/each}}
-                </div>
+                </ul>
             </div>
         </div>
       </div>

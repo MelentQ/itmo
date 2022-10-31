@@ -16,32 +16,34 @@
                             <div class="cards-presentation__content-center-title">
                                 Разработаем курс под ваши цели и задачи
                             </div>
-                            <p class="cards-presentation__content-center-desc">
-                                Проблема нехватки высококвалифицированных кадров – одна из главных на рынке. Курсы позволяют компании повысить квалификацию сотрудников и свою конкурентоспособность.
-                            </p>
-                            <ul class="cards-presentation__content-center-list">
-                                <li>
-                                    преимущество 1
-                                </li>
-                                <li>
-                                    преимущество 2
-                                </li>
-                                <li>
-                                    преимущество 3
-                                </li>
-                            </ul>
+                            <div class="cards-presentation__content-center-box">
+                                <p>
+                                    Проблема нехватки высококвалифицированных кадров – одна из главных на рынке. Курсы позволяют компании повысить квалификацию сотрудников и свою конкурентоспособность.
+                                </p>
+                                <ul>
+                                    <li>
+                                        преимущество 1
+                                    </li>
+                                    <li>
+                                        преимущество 2
+                                    </li>
+                                    <li>
+                                        преимущество 3
+                                    </li>
+                                </ul>
+                            </div>
+                            <a class="cards-presentation__content-center-btn" href="#">
+                                Варианты обучения
+                            </a>
                         </div>
-                        <a class="cards-presentation__content-btn" href="#">
-                            Варианты обучения
-                        </a>
                     </div>
                 </div>
                 {{/if}}
                 <div class="cards-presentation__slider {{data.modsSlider}} js-present-slider">
-                    <div class="cards-presentation__swiper swiper">
-                        <div class="swiper-wrapper">
+                    <div class="cards-presentation__swiper swiper loading">
+                        <ul class="swiper-wrapper">
                             {{#each data.swiperContent}}
-                                <div class="swiper-slide">
+                                <li class="swiper-slide">
                                     {{#if this.imgLeft}}
                                         <div class="cards-presentation__swiper-img-box">
                                             <img src={{this.imgUrl}} alt={{this.imgAlt}}>
@@ -89,9 +91,9 @@
                                         </a>
                                         {{/if}}
                                     </div>
-                                </div>
+                                </li>
                             {{/each}}
-                        </div>
+                        </ul>
                     </div>
                     <div class="cards-presentation__navigation slider-pagination-btns">
                         <button class="slider-pagination-btns__button prev" type="button" title="Prev">
@@ -104,10 +106,10 @@
                                 <use xlink:href="#arrow-slide" />
                             </svg>
                         </button>
-                    </div> 
+                    </div>
                 </div>
             </div>
         </div>
-      
+
     {{/content}}
 {{/extend}}

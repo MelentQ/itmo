@@ -28,12 +28,14 @@
       .button{
         background-color: $grayscale-100;
         color: $primary-700;
+        @extend %interactive-button-on-dark;
       }
     }
 
     .policy{
       a{
 
+        &:link,
         &:visited{
           color: $grayscale-200;
         }

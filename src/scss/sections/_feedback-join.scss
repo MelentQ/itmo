@@ -15,9 +15,11 @@
 
   &__wrapper{
     display: flex;
+    align-items: flex-end;
 
     @include breakpoint(small-tablet) {
       flex-direction: column;
+      align-items: flex-start;
       gap: 4rem;
     }
   }
@@ -54,9 +56,11 @@
   &__box-contacts-tell{
     margin-bottom: 1.2rem;
     @extend %fs-h-4;
+    @extend %interactive;
   }
   &__box-contacts-mail{
     @extend %fs-body-l;
+    @extend %interactive;
   }
   &__contain{
     flex: 0 1 50%;

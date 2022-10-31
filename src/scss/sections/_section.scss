@@ -93,6 +93,23 @@
     .section__inner{
       background-color: $primary-700;
       color: $grayscale-100;
+      position: relative;
+
+      &::before{
+        content: '';
+        position: absolute;
+        width: 142.6rem;
+        height: 82.3rem;
+        background-image: url('../../img/content/feedback/call-bg.svg');
+        right: -56rem;
+        bottom: -23rem;
+        z-index: 1;
+      }
+    }
+
+    .section__content{
+      position: relative;
+      z-index: 2;
     }
 
     .section__heading--dot::before{

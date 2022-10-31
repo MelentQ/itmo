@@ -256,3 +256,20 @@
     background-color: $grayscale-200;
   }
 }
+
+%interactive-button-on-dark{
+  background-color: $grayscale-100;
+  color: $primary-700;
+
+  transition: background-color $tt $te, border-color $tt $te, color $tt $te;
+
+  &:focus {
+    background-color: $grayscale-400;
+    color: $primary-900;
+  }
+
+  &:hover {
+    background-color: $grayscale-200;
+    color: $primary-900;
+  }
+}

@@ -47,7 +47,7 @@
     }
 
     &__top-swiper-item{
-        padding: 0.6rem 1.6rem; 
+        padding: 0.6rem 1.6rem;
         border-radius: 2rem;
         background-color: $grayscale-400;
         border: 0.1rem solid $grayscale-400;
@@ -94,8 +94,9 @@
 
     &__footer-swiper-box{
         flex: 0 1 50%;
+        @extend %fs-roboto-s;
 
-        span{
+        h3{
             display: block;
             @extend %fs-h-4;
             margin-bottom: 1rem;
@@ -103,10 +104,6 @@
             @include breakpoint(tablet) {
                 margin-bottom: 2rem;
             }
-        }
-
-        p{
-            @extend %fs-roboto-s;
         }
 
         @include breakpoint(tablet) {
@@ -139,7 +136,7 @@
             height: 20.4rem;
         }
     }
-    
+
     &__footer-swiper-img{
         position: absolute;
         left: 0;

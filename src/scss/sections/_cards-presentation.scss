@@ -17,7 +17,7 @@
         background-color: $grayscale-100;
         color: $grayscale-100;
     }
-    
+
     &__content-box{
         background-image: url("../../img/content/cards-presentation/content-bg.jpg");
         background-size: cover;
@@ -29,6 +29,7 @@
         align-items: flex-start;
         justify-content: space-between;
         row-gap: 5rem;
+        background-color: $grayscale-300;
         height: 100%;
 
         @include breakpoint(small-tablet) {
@@ -37,16 +38,27 @@
         }
     }
 
+    &__content-span{
+        margin-bottom: 6.6rem;
+
+        @include breakpoint(laptop) {
+            margin-bottom: 0;
+        }
+    }
+
     &__content-center{
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         gap: 2rem;
+        height: 100%;
+        align-items: flex-start;
     }
 
     &__content-center-title{
         @extend %fs-roboto-l;
-        margin-bottom: 1.2rem;   
-        max-width: 34rem; 
+        margin-bottom: 1.2rem;
+        max-width: 34rem;
 
         @include breakpoint(laptop) {
             margin-bottom: 2rem;
@@ -54,29 +66,36 @@
         }
     }
 
-    &__content-center-list{
+    &__content-center-box{
         display: flex;
         flex-direction: column;
-        gap: 0.4rem;
+        gap: 2rem;
+        margin-bottom: auto;
 
-        li{
-            padding-left: 1.5rem;
-            position: relative;
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
 
-            &::before{
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 0.8rem;
-                width: 0.5rem;
-                height: 0.5rem;
-                background-color: $grayscale-100;
-                border-radius: 50%;
+            li{
+                padding-left: 1.5rem;
+                position: relative;
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0.8rem;
+                    width: 0.5rem;
+                    height: 0.5rem;
+                    background-color: $grayscale-100;
+                    border-radius: 50%;
+                }
             }
         }
     }
 
-    &__content-btn{
+    &__content-center-btn{
         display: inline-block;
         @extend %interactive-white-btn;
         padding: 2.1rem 3.2rem;
@@ -84,6 +103,8 @@
         background-color: $grayscale-100;
         color: $primary-900;
         @extend %fs-button-1;
+        text-transform: uppercase;
+        text-align: center;
 
         &:link,
         &:visited {
@@ -93,7 +114,6 @@
         @include breakpoint(small-tablet) {
             margin-top: 2rem;
             width: 100%;
-            text-align: center;
         }
     }
 
@@ -105,10 +125,11 @@
         gap: 5rem;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;     
+        justify-content: space-between;
         position: relative;
         min-width: 0;
         overflow: hidden;
+        height: 100%;
 
         @include breakpoint(small-tablet) {
             gap: 2.4rem;
@@ -139,9 +160,11 @@
             }
 
             .cards-presentation__swiper-item{
-                padding: 2.2rem 2.8rem 4.4rem 0;
+                padding: 3rem 2.8rem 4.4rem 0;
                 flex: 0 1 60%;
                 align-items: flex-start;
+                min-width: auto;
+                gap: 5.6rem;
 
                 @include breakpoint(tablet) {
                     padding: 0;
@@ -168,6 +191,10 @@
                 }
             }
         }
+    }
+
+    &__swiper{
+        height: 100%;
     }
 
     &__swiper-img-box{
@@ -200,12 +227,14 @@
         padding-right: 19.3rem;
         display: flex;
         justify-content: space-between;
-        gap: 8px;
+        align-items: center;
+        gap: 10px;
         grid-column: span 2;
 
         @include breakpoint(small-tablet) {
             padding-right: 0;
             flex-direction: column;
+            align-items: flex-start;
         }
     }
 
@@ -221,18 +250,24 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        gap: 3.6rem;   
+        gap: 3.6rem;
+        min-height: 50rem;
 
         @include breakpoint(laptop) {
             height: auto;
+            min-height: 38rem;
         }
     }
-    
+
     &__swiper-item-box{
         display: grid;
         grid-template-columns: auto 20rem;
         column-gap: 3.6rem;
         row-gap: 11rem;
+
+        @include breakpoint(laptop) {
+            row-gap: 6rem;
+        }
 
         @include breakpoint(small-tablet) {
            grid-template-columns: repeat(1, 1fr);
@@ -249,6 +284,10 @@
             display: inline-block;
             @extend %fs-roboto-l;
             margin-bottom: 3.2rem;
+
+            @include breakpoint(small-tablet) {
+                margin-bottom: 2rem;
+            }
         }
     }
 
@@ -279,7 +318,8 @@
 
     &__swiper-item-list{
         display: flex;
-        gap: 4.8rem;
+        flex-wrap: wrap;
+        gap: 4rem 4.8rem;
 
         @include breakpoint(small-tablet) {
             flex-direction: column;
