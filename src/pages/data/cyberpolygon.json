@@ -1,0 +1,35 @@
+{
+  "title": "Киберполигон",
+  "benefitsArticls": {
+    "block": "benefits",
+    "dot": true,
+    "title": "Преимущества магистратуры",
+    "mods": "section--bg-transparent section--adaptive-without-padding section--without-right",
+    "swiperContent": [
+      {
+        "imgUrl": "img/content/benefits-articls/1.jpg",
+        "altImg": "",
+        "title": "Набор мотивированных ребят, которые знают ФБИТ",
+        "desc": "Текст — зафиксированная на каком-либо материальном носителе человеческая мысль"
+      },
+      {
+        "imgUrl": "img/content/benefits-articls/2.jpg",
+        "altImg": "",
+        "title": "Повышение квалификации сотрудников",
+        "desc": "Текст — зафиксированная на каком-либо материальном носителе человеческая мысль"
+      },
+      {
+        "imgUrl": "img/content/benefits-articls/3.jpg",
+        "altImg": "",
+        "title": "Пентесты системы",
+        "desc": "Текст — зафиксированная на каком-либо материальном носителе человеческая мысль"
+      },
+      {
+        "imgUrl": "img/content/benefits-articls/1.jpg",
+        "altImg": "",
+        "title": "Набор мотивированных ребят, которые знают ФБИТ",
+        "desc": "Текст — зафиксированная на каком-либо материальном носителе человеческая мысль"
+      }
+    ]
+  }
+}

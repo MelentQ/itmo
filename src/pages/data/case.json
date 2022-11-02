@@ -20,5 +20,11 @@
     "dot": true,
     "title": "Описание кейса",
     "mods": ""
+  },
+  "quoteSimple": {
+    "block": "qoute",
+    "dot": true,
+    "title": "",
+    "mods": ""
   }
 }

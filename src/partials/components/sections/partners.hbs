@@ -1,0 +1,79 @@
+{{#extend "section"}}
+    {{#content "content"}}
+
+    <div class="partners">
+      <h2 class="partners__title title-h2">
+        Мы любим сотрудничество
+      </h2>
+      <div class="partners__wrapper js-init-tabs">
+        {{#if data.notTabs}}
+        <ul class="partners__tabs">
+          <li class="partners__tab-wrapper">
+            <button class="partners__tab js-tab-btn" type="button">
+              Компании партнеры
+            </button>
+          </li>
+          <li class="partners__tab-wrapper">
+            <button class="partners__tab js-tab-btn" type="button">
+              Компании клиенты
+            </button>
+          </li>
+        </ul>
+        {{/if}}
+        <div class="partners__sliders">
+          <div class="partners__slider js-tab-body">
+            <div class="partners__swiper swiper loading">
+              <div class="swiper-wrapper">
+                {{#each data.partnersContent}}
+                <div class="swiper-slide">
+                  <div class="partners__swiper-item">
+                    <img src={{this.urlImg}} alt={{this.altImg}}>
+                  </div>
+                </div>
+                {{/each}}
+              </div>
+            </div>
+            <div class="partners__navigation slider-pagination-btns">
+                <button class="slider-pagination-btns__button prev" type="button" title="Prev">
+                    <svg width="8" height="16">
+                        <use xlink:href="#arrow-slide" />
+                    </svg>
+                </button>
+                <button class="slider-pagination-btns__button next" type="button" title="Next">
+                    <svg width="8" height="16">
+                        <use xlink:href="#arrow-slide" />
+                    </svg>
+                </button>
+            </div>
+          </div>
+          <div class="partners__slider js-tab-body">
+            <div class="partners__swiper swiper loading">
+              <div class="swiper-wrapper">
+                {{#each data.clientContent}}
+                <div class="swiper-slide">
+                  <div class="partners__swiper-item">
+                    <img src={{this.urlImg}} alt={{this.altImg}}>
+                  </div>
+                </div>
+                {{/each}}
+              </div>
+            </div>
+            <div class="partners__navigation slider-pagination-btns">
+                <button class="slider-pagination-btns__button prev" type="button" title="Prev">
+                    <svg width="8" height="16">
+                        <use xlink:href="#arrow-slide" />
+                    </svg>
+                </button>
+                <button class="slider-pagination-btns__button next" type="button" title="Next">
+                    <svg width="8" height="16">
+                        <use xlink:href="#arrow-slide" />
+                    </svg>
+                </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{/content}}
+{{/extend}}

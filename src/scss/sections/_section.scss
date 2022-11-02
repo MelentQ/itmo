@@ -117,15 +117,27 @@
     }
   }
 
-  &--numbers-main{
-    
+  &--numbers-main,
+  &--qoute{
+
     .section__inner{
       background-image: url('../../img/content/numbers-main/gradient.png');
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: 60%;
       background-position: right center;
       width: 100%;
       height: 100%;
+
+      @include breakpoint(small-tablet) {
+        background-image: none;
+      }
+    }
+  }
+
+  &--partners{
+
+    .section__inner{
+      overflow: hidden;
     }
   }
 

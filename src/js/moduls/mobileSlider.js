@@ -12,7 +12,6 @@ export default function mobileSlider() {
             speed: 500,
             slidesPerView: 1,
             spaceBetween: 8,
-            centeredSlides: true,
             autoHeight: true,
             breakpoints: {
                 768: {

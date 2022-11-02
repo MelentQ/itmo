@@ -33,5 +33,100 @@
     {"text": "Реальные внедрения"},
     {"text": "Разработки по внешним заказам"},
     {"text": "Гособоронзаказ"}
-  ]
+  ],
+  "partners": {
+    "block": "partners",
+    "dot": true,
+    "title": "Сотрудничаем с лидерами рынка",
+    "mods": "",
+    "notTabs": false,
+    "partnersContent": [
+      {
+        "urlImg": "img/content/partners/1.png",
+        "altImg": ""
+      },
+      {
+        "urlImg": "img/content/partners/2.png",
+        "altImg": ""
+      },
+      {
+        "urlImg": "img/content/partners/3.png",
+        "altImg": ""
+      },
+      {
+        "urlImg": "img/content/partners/4.png",
+        "altImg": ""
+      },
+      {
+        "urlImg": "img/content/partners/5.png",
+        "altImg": ""
+      },
+      {
+        "urlImg": "img/content/partners/6.png",
+        "altImg": ""
+      },
+      {
+        "urlImg": "img/content/partners/7.png",
+        "altImg": ""
+      },
+      {
+        "urlImg": "img/content/partners/8.png",
+        "altImg": ""
+      },
+      {
+        "urlImg": "img/content/partners/5.png",
+        "altImg": ""
+      },
+      {
+        "urlImg": "img/content/partners/6.png",
+        "altImg": ""
+      }
+    ],
+    "clientContent": [
+      {
+        "urlImg": "img/content/partners/1.png",
+        "altImg": ""
+      },
+      {
+        "urlImg": "img/content/partners/2.png",
+        "altImg": ""
+      },
+      {
+        "urlImg": "img/content/partners/3.png",
+        "altImg": ""
+      },
+      {
+        "urlImg": "img/content/partners/4.png",
+        "altImg": ""
+      },
+      {
+        "urlImg": "img/content/partners/5.png",
+        "altImg": ""
+      },
+      {
+        "urlImg": "img/content/partners/6.png",
+        "altImg": ""
+      },
+      {
+        "urlImg": "img/content/partners/7.png",
+        "altImg": ""
+      },
+      {
+        "urlImg": "img/content/partners/8.png",
+        "altImg": ""
+      },
+      {
+        "urlImg": "img/content/partners/4.png",
+        "altImg": ""
+      },
+      {
+        "urlImg": "img/content/partners/5.png",
+        "altImg": ""
+      },
+      {
+        "urlImg": "img/content/partners/6.png",
+        "altImg": ""
+      }
+    ]
+  }
 }

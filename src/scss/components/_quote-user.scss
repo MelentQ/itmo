@@ -1,0 +1,45 @@
+.quote-user{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(30rem, 56rem));
+  gap: 2rem 14rem;
+  align-items: top;
+
+  @include breakpoint(laptop) {
+    gap: 2rem 6rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  &--column{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+
+  &__box{
+    padding-left: 4rem;
+    position: relative;
+
+    &::before{
+      content: '';
+      position: absolute;
+      background-image: url('../../img/content/quote/head.svg');
+      width: 2.4rem;
+      height: 1.8rem;
+      left: 0;
+      top: 0.5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding-left: 0;
+      padding-top: 4.4rem;
+      top: 0;
+    }
+  }
+
+  .user-card__info-title{
+    @extend %fs-roboto-s;
+  }
+}
+

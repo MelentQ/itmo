@@ -1,0 +1,34 @@
+{{#extend "section"}}
+    {{#content "content"}}
+
+      <div class="benefits-articls">
+        <h2 class="benefits-articls__title title-h2">
+          Зачем нужен киберполигон?
+        </h2>
+        <div class="benefits-articls__slider">
+          <div class="benefits-articls__swiper swiper loading js-mobile-slider">
+            <ul class="swiper-wrapper">
+              {{#each data.swiperContent}}
+              <li class="swiper-slide">
+                <div class="benefits-articls__swiper-item">
+                  <div class="benefits-articls__swiper-item-img-box">
+                    <img class="benefits-articls__swiper-item-img" src={{this.imgUrl}} alt={{this.altImg}}>
+                  </div>
+                  <div class="benefits-articls__swiper-item-content">
+                    <span>
+                      {{this.title}}
+                    </span>
+                    <p>
+                      {{this.desc}}
+                    </p>
+                  </div>
+                </div>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    {{/content}}
+{{/extend}}

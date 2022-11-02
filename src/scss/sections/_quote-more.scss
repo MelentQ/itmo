@@ -1,0 +1,54 @@
+.quote-more{
+
+  &__title{
+    margin-bottom: 6rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__slider{
+    padding-top: 10rem;
+    position: relative;
+
+    @include breakpoint(tablet) {
+      padding-top: 6rem;
+    }
+
+    @media only screen and (max-width: (800px)) {
+      padding-top: 0;
+    }
+  }
+
+  &__swiper{
+    overflow: hidden;
+  }
+
+  &__slider-item{
+    max-width: 52rem;
+
+    @media only screen and (max-width: (800px)) {
+      max-width: 100%;
+    }
+  }
+
+  &__navigation{
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    @media only screen and (max-width: (800px)) {
+      position: relative;
+      margin-top: 4rem;
+    }
+  }
+
+  .quote-user__user{
+    order: -1;
+
+    @media only screen and (max-width: (800px)) {
+      order: 1;
+    }
+  }
+}

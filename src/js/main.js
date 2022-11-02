@@ -17,6 +17,9 @@ import tabsSlider from './moduls/tabsSlider';
 import Accordions from './Accordions';
 import presentSlider from './moduls/presentSlider';
 import editableTextContainer from './moduls/editableTextContainer';
+import tabs from './moduls/tabs';
+import partnersSlider from './moduls/partnersSlider';
+import simpleSlider from './moduls/simpleSlider';
 
 document.addEventListener('DOMContentLoaded', function () {
   window.itmo = {}; // Тут будут лежать всякие функции с фронта
@@ -36,8 +39,10 @@ document.addEventListener('DOMContentLoaded', function () {
   ordinary3slide();
   tabsSlider();
   presentSlider();
+  simpleSlider();
 
-
+  tabs();
+  partnersSlider();
   editableTextContainer();
   colorReplacementBtn();
 });
