@@ -25,10 +25,12 @@
       content: '';
       position: absolute;
       background-image: url('../../img/content/quote/head.svg');
+      background-size: cover;
       width: 2.4rem;
       height: 1.8rem;
       left: 0;
       top: 0.5rem;
+      flex-shrink: 0;
     }
 
     @include breakpoint(small-tablet) {

@@ -89,6 +89,21 @@
         }
       }
     }
+
+    &--mini{
+      .ordinary-slider__slide-logo,
+      .user-card {
+        display: none;
+      }
+
+      .cards-main__navigation {
+
+        @include breakpoint(laptop) {
+          top: -7.7rem;
+          margin-top: 0;
+        }
+      }
+    }
   }
 
   &__navigation{

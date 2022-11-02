@@ -487,6 +487,63 @@
         }
       ]
     },
+    "cardsMain3": {
+      "block": "cards",
+      "dot": true,
+      "title": "Последние публикации",
+      "mods": "",
+      "modsSlider": "cards-main__slider--mini",
+      "headTitle": "Новости и статьи",
+      "desc": "",
+      "swiperContent": [
+          {
+              "imgUrl": "img/content/cards-main/1.jpg",
+              "imgAlt": "Лаборатория",
+              "listItems": [
+                  {"text": "Стартап и бизнес"}
+              ],
+              "headerList": [
+                  {"name": "Разработка"},
+                  {"name": "2021"}
+              ],
+              "title": "Разработка личного кабинета для Сбербанка"
+          },
+          {
+              "imgUrl": "img/content/cards-main/2.jpg",
+              "imgAlt": "Лаборатория",
+              "listItems": [
+                  {"text": "Стартап и бизнес"}
+              ],
+              "headerList": [
+                  {"name": "Разработка"},
+                  {"name": "2021"}
+              ],
+              "title": "Анализ CRM системы технического отдела Газпрома"
+          },
+          {
+            "imgUrl": "img/content/cards-main/1.jpg",
+            "imgAlt": "Лаборатория",
+            "listItems": [
+                {"text": "Стартап и бизнес"}
+            ],
+            "headerList": [
+                {"name": "Среднее время прохождения — 1 месяц"}
+            ],
+            "title": "Название курса/ мастер-класса"
+        },
+        {
+            "imgUrl": "img/content/cards-main/2.jpg",
+            "imgAlt": "Лаборатория",
+            "listItems": [
+                {"text": "Стартап и бизнес"}
+            ],
+            "headerList": [
+              {"name": "Среднее время прохождения — 1 месяц"}
+            ],
+            "title": "Название курса/ мастер-класса"
+        }
+      ]
+    },
     "cardsPresentation1": {
       "block": "cards",
       "dot": true,

@@ -8,15 +8,18 @@ export default function simpleSlider() {
   simpleSlider.forEach(slider => {
     new Swiper(slider.querySelector('.quote-more__swiper'), {
       speed: 500,
-      slidesPerView: 1,
+      slidesPerView: 2,
       spaceBetween: 50,
       modules: [Navigation],
       breakpoints: {
+        280: {
+          slidesPerView: 1
+        },
         800: {
-          slidesPerView: 2,
+          slidesPerView: 2
         },
         1200: {
-          spaceBetween: 155,
+          spaceBetween: 155
         }
       },
       navigation: {

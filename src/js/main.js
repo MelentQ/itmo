@@ -20,6 +20,8 @@ import editableTextContainer from './moduls/editableTextContainer';
 import tabs from './moduls/tabs';
 import partnersSlider from './moduls/partnersSlider';
 import simpleSlider from './moduls/simpleSlider';
+import fancyboxVideo from './moduls/fancybox-video';
+import singleSlider from './moduls/singleSlider';
 
 document.addEventListener('DOMContentLoaded', function () {
   window.itmo = {}; // Тут будут лежать всякие функции с фронта
@@ -40,7 +42,9 @@ document.addEventListener('DOMContentLoaded', function () {
   tabsSlider();
   presentSlider();
   simpleSlider();
+  singleSlider();
 
+  fancyboxVideo();
   tabs();
   partnersSlider();
   editableTextContainer();
@@ -284,14 +288,14 @@ function searchFields() {
 function colorReplacementBtn(){
   const parentBlock = document.querySelector('.feedback-subscription');
 
-  const input = parentBlock.querySelector('.input__element');
-  const btn = parentBlock.querySelector('.email-form__button');
+  // const input = parentBlock.querySelector('.input__element');
+  // const btn = parentBlock.querySelector('.email-form__button');
 
-  input.addEventListener('focus', function(){
-    btn.classList.add('email-form__button--color');
-  });
+  // input.addEventListener('focus', function(){
+  //   btn.classList.add('email-form__button--color');
+  // });
 
-  input.addEventListener('blur', function(){
-    btn.classList.remove('email-form__button--color');
-  });
+  // input.addEventListener('blur', function(){
+  //   btn.classList.remove('email-form__button--color');
+  // });
 }
