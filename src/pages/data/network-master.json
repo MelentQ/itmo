@@ -32,6 +32,39 @@
             "desc": ""
         }
       ]
+    },
+    "benefitsMain2": {
+      "block": "network-master",
+      "dot": true,
+      "title": "Преимущества магистратуры",
+      "mods": "section--bg-transparent section--adaptive-without-padding",
+      "btnLink": true,
+      "texts": [
+        {
+            "urlImg": "img/content/benefits-main/1.svg",
+            "altImg": "Icon",
+            "title": "Регулярно побеждают на соревнованиях по информационной безопасности",
+            "desc": "“Всероссийские межвузовские киберучения”, “КиберСПбГУТ 2022”, “Кубок CTF России”, “Student CTF”, “Kuban CSC”"
+        },
+        {
+            "urlImg": "img/content/benefits-main/2.svg",
+            "altImg": "Icon",
+            "title": "Разрабатывают реальные продукты",
+            "desc": "“Программа для определения версии opensource-ПО на сайте”, “Аналог SauronEye для PDF, “Парсер syscache с проверкой хэшей по AV/TI” , собственные беспилотные дроны с регистрацией в Росавиации"
+        },
+        {
+            "urlImg": "img/content/benefits-main/3.svg",
+            "altImg": "Icon",
+            "title": "Участвуют в научных конференциях со своими проектами и разработками",
+            "desc": "“Конференция БИТ с АРСИБ”, “Научная конференция по функциональной безопасности и индустрии 4.0. с АО “НИИАС”"
+        },
+        {
+            "urlImg": "img/content/benefits-main/4.svg",
+            "altImg": "Icon",
+            "title": "Проходят полноценные киберучения на Национальном Киберполигоне",
+            "desc": ""
+        }
+      ]
     }
   }
   

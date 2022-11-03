@@ -43,89 +43,226 @@
     "partnersContent": [
       {
         "urlImg": "img/content/partners/1.png",
-        "altImg": ""
+        "altImg": "",
+        "link": "#"
       },
       {
         "urlImg": "img/content/partners/2.png",
-        "altImg": ""
+        "altImg": "",
+        "link": "#"
       },
       {
         "urlImg": "img/content/partners/3.png",
-        "altImg": ""
+        "altImg": "",
+        "link": "#"
       },
       {
         "urlImg": "img/content/partners/4.png",
-        "altImg": ""
+        "altImg": "",
+        "link": "#"
       },
       {
         "urlImg": "img/content/partners/5.png",
-        "altImg": ""
+        "altImg": "",
+        "link": "#"
       },
       {
         "urlImg": "img/content/partners/6.png",
-        "altImg": ""
+        "altImg": "",
+        "link": "#"
       },
       {
         "urlImg": "img/content/partners/7.png",
-        "altImg": ""
+        "altImg": "",
+        "link": "#"
       },
       {
         "urlImg": "img/content/partners/8.png",
-        "altImg": ""
+        "altImg": "",
+        "link": "#"
       },
       {
         "urlImg": "img/content/partners/5.png",
-        "altImg": ""
+        "altImg": "",
+        "link": "#"
       },
       {
         "urlImg": "img/content/partners/6.png",
-        "altImg": ""
+        "altImg": "",
+        "link": "#"
       }
     ],
     "clientContent": [
       {
         "urlImg": "img/content/partners/1.png",
-        "altImg": ""
+        "altImg": "",
+        "link": "#"
       },
       {
         "urlImg": "img/content/partners/2.png",
-        "altImg": ""
+        "altImg": "",
+        "link": "#"
       },
       {
         "urlImg": "img/content/partners/3.png",
-        "altImg": ""
+        "altImg": "",
+        "link": "#"
       },
       {
         "urlImg": "img/content/partners/4.png",
-        "altImg": ""
+        "altImg": "",
+        "link": "#"
       },
       {
         "urlImg": "img/content/partners/5.png",
-        "altImg": ""
+        "altImg": "",
+        "link": "#"
       },
       {
         "urlImg": "img/content/partners/6.png",
-        "altImg": ""
+        "altImg": "",
+        "link": "#"
       },
       {
         "urlImg": "img/content/partners/7.png",
-        "altImg": ""
+        "altImg": "",
+        "link": "#"
       },
       {
         "urlImg": "img/content/partners/8.png",
-        "altImg": ""
+        "altImg": "",
+        "link": "#"
       },
       {
         "urlImg": "img/content/partners/4.png",
-        "altImg": ""
+        "altImg": "",
+        "link": "#"
       },
       {
         "urlImg": "img/content/partners/5.png",
-        "altImg": ""
+        "altImg": "",
+        "link": "#"
       },
       {
         "urlImg": "img/content/partners/6.png",
-        "altImg": ""
+        "altImg": "",
+        "link": "#"
+      }
+    ]
+  },
+  "partners2": {
+    "block": "partners",
+    "dot": true,
+    "title": "Сотрудничаем с лидерами рынка",
+    "mods": "",
+    "notTabs": false,
+    "partnersContent": [
+      {
+        "urlImg": "img/content/partners/1.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/2.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/3.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/4.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/5.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/6.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/7.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/8.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/5.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/6.png",
+        "altImg": "",
+        "link": "#"
+      }
+    ],
+    "clientContent": [
+      {
+        "urlImg": "img/content/partners/1.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/2.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/3.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/4.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/5.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/6.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/7.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/8.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/4.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/5.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/6.png",
+        "altImg": "",
+        "link": "#"
       }
     ]
   }

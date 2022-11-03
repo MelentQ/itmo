@@ -7,18 +7,7 @@
       </h2>
       <div class="partners__wrapper js-init-tabs">
         {{#if data.notTabs}}
-        <ul class="partners__tabs">
-          <li class="partners__tab-wrapper">
-            <button class="partners__tab js-tab-btn" type="button">
-              Компании партнеры
-            </button>
-          </li>
-          <li class="partners__tab-wrapper">
-            <button class="partners__tab js-tab-btn" type="button">
-              Компании клиенты
-            </button>
-          </li>
-        </ul>
+          {{>components/tabs-buttons button1="Компании партнеры" button2="Компании клиенты"}}
         {{/if}}
         <div class="partners__sliders">
           <div class="partners__slider js-tab-body">
@@ -26,9 +15,9 @@
               <ul class="swiper-wrapper">
                 {{#each data.partnersContent}}
                 <li class="swiper-slide">
-                  <div class="partners__swiper-item">
+                  <a class="partners__swiper-item" href={{this.link}}>
                     <img src={{this.urlImg}} alt={{this.altImg}}>
-                  </div>
+                  </a>
                 </li>
                 {{/each}}
               </ul>
