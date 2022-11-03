@@ -21,7 +21,12 @@
 
   &--white {
     background-color: $grayscale-100;
-    color: $primary-700;
+    border: none;
+
+    &:link,
+    &:visited {
+        color: $primary-700;
+    }
   }
 
   &:focus {

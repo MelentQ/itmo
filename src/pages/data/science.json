@@ -39,7 +39,7 @@
     "dot": true,
     "title": "Сотрудничаем с лидерами рынка",
     "mods": "",
-    "notTabs": false,
+    "notTabs": true,
     "partnersContent": [
       {
         "urlImg": "img/content/partners/1.png",

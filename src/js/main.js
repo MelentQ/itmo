@@ -22,6 +22,7 @@ import partnersSlider from './moduls/partnersSlider';
 import simpleSlider from './moduls/simpleSlider';
 import fancyboxVideo from './moduls/fancybox-video';
 import singleSlider from './moduls/singleSlider';
+import timer from './moduls/timer';
 
 document.addEventListener('DOMContentLoaded', function () {
   window.itmo = {}; // Тут будут лежать всякие функции с фронта
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
   simpleSlider();
   singleSlider();
 
+  timer();
   fancyboxVideo();
   tabs();
   partnersSlider();
@@ -288,14 +290,18 @@ function searchFields() {
 function colorReplacementBtn(){
   const parentBlock = document.querySelector('.feedback-subscription');
 
-  // const input = parentBlock.querySelector('.input__element');
-  // const btn = parentBlock.querySelector('.email-form__button');
+  if(!parentBlock){
+    return;
+  }
 
-  // input.addEventListener('focus', function(){
-  //   btn.classList.add('email-form__button--color');
-  // });
+  const input = parentBlock.querySelector('.input__element');
+  const btn = parentBlock.querySelector('.email-form__button');
 
-  // input.addEventListener('blur', function(){
-  //   btn.classList.remove('email-form__button--color');
-  // });
+  input.addEventListener('focus', function(){
+    btn.classList.add('email-form__button--color');
+  });
+
+  input.addEventListener('blur', function(){
+    btn.classList.remove('email-form__button--color');
+  });
 }

@@ -141,6 +141,45 @@
     }
   }
 
+  &--banners{
+
+    .section__inner{
+      background: linear-gradient(250.55deg, #E6BAB7 -9.92%, #B7A7F5 88.06%);
+      position: relative;
+
+      @include breakpoint(small-tablet) {
+        background: linear-gradient(180deg, #E6BAB7 0%, #B7A7F5 100%); 
+      }
+
+      &::before{
+        content: '';
+        position: absolute;
+        width: 198.8rem;
+        height: 173.1rem;
+        background-image: url('../../img/content/banners/bg-img.svg');
+        background-size: cover;
+        left: -88rem;
+        bottom: -124rem;
+        z-index: 1;
+        opacity: 0.15;
+
+        @include breakpoint(laptop) {
+          background-size: contain;
+          width: 142.8rem;
+          height: 171.1rem;
+          left: -79rem;
+          bottom: -121rem;
+        }
+      }
+    }
+
+    .section__heading,
+    .section__content{
+      position: relative;
+      z-index: 2;
+    }
+  }
+
   &__inner {
     display: grid;
     grid-template-columns: repeat(12, 1fr);

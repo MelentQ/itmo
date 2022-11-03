@@ -25,6 +25,8 @@
     }
 
     .form__footer{
+      max-width: 48rem;
+      
       .button{
         background-color: $grayscale-100;
         color: $primary-700;

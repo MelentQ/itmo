@@ -1,3 +1,93 @@
 .banners{
   
+    &__title{
+        max-width: 70rem;
+        @extend %fs-h-3;
+    }
+
+    &__wrapper{
+        display: flex;
+        gap: 4rem 11rem;
+
+        @include breakpoint(small-tablet) {
+            flex-direction: column;
+        }
+    }
+
+    &__box{
+        max-width: 36.6rem;
+        width: 100%;
+
+        @include breakpoint(small-tablet) {
+            max-width: 100%;
+        }
+    }
+
+    &__box-date{
+        margin-top: 1.6rem;
+        display: flex;
+        justify-content: space-between;
+        margin-left: -2.9rem;
+
+        @include breakpoint(small-tablet) {
+            margin-left: 0;
+        }
+
+        span{
+            @extend %fs-h-2;
+            padding-bottom: 2.5rem;
+            position: relative;
+            text-align: center;
+
+            &::before {
+                content: attr(data-title);
+                display: block;
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                transform: translateX(-50%);
+                @extend %fs-roboto-xl;
+                text-align: center;
+            }
+        }
+    }
+
+    &__box-date-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        flex-grow: 1;
+
+        &::before{
+            content: '';
+            position: absolute;
+            width: 0.1rem;
+            height: 4rem;
+            background-color: rgba(33, 34, 46, 0.1);
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+        }
+
+        &:last-child{
+            &::before{
+                display: none;
+            }
+        }
+    }
+
+    &__box-date-desc{
+        @extend %fs-roboto-xl;
+        text-align: center;
+    }
+
+    &__box-btn{
+        display: inline-block;
+        margin-top: 2.4rem;
+
+        @include breakpoint(small-tablet) {
+            width: 100%;
+        }
+    }
 }

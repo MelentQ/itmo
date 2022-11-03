@@ -1,5 +1,13 @@
 .benefits-articls{
 
+  &__title{
+    margin-bottom: 4.8rem;
+
+    @include breakpoint(laptop){
+      margin-bottom: 4rem;
+    }
+  }
+
   &__swiper{
 
     @include breakpoint(small-tablet){
