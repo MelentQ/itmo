@@ -23,15 +23,15 @@
         <div class="partners__sliders">
           <div class="partners__slider js-tab-body">
             <div class="partners__swiper swiper loading">
-              <div class="swiper-wrapper">
+              <ul class="swiper-wrapper">
                 {{#each data.partnersContent}}
-                <div class="swiper-slide">
+                <li class="swiper-slide">
                   <div class="partners__swiper-item">
                     <img src={{this.urlImg}} alt={{this.altImg}}>
                   </div>
-                </div>
+                </li>
                 {{/each}}
-              </div>
+              </ul>
             </div>
             <div class="partners__navigation slider-pagination-btns">
                 <button class="slider-pagination-btns__button prev" type="button" title="Prev">
@@ -48,15 +48,15 @@
           </div>
           <div class="partners__slider js-tab-body">
             <div class="partners__swiper swiper loading">
-              <div class="swiper-wrapper">
+              <ul class="swiper-wrapper">
                 {{#each data.clientContent}}
-                <div class="swiper-slide">
+                <li class="swiper-slide">
                   <div class="partners__swiper-item">
                     <img src={{this.urlImg}} alt={{this.altImg}}>
                   </div>
-                </div>
+                </li>
                 {{/each}}
-              </div>
+              </ul>
             </div>
             <div class="partners__navigation slider-pagination-btns">
                 <button class="slider-pagination-btns__button prev" type="button" title="Prev">
