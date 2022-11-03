@@ -6,6 +6,7 @@
     text-transform: uppercase;
     @extend %fs-button-2;
     transition: $tt $te, border-color $tt $te, color $tt $te;
+    text-align: center;
 
     &::before{
         content: '';
@@ -30,6 +31,12 @@
         top: 50%;
         transform: translateY(-50%);
         left: 1.6rem;
+    }
+
+    &--download{
+        &::after{
+            background-image: url('../../img/download.svg');
+        }
     }
 
     &:hover{

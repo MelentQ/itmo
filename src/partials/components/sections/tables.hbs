@@ -6,48 +6,30 @@
             Направления подготовки
         </h2>
         <div class="tables__box">
+            {{#each data.data}}
             <div class="tables__box-row">
                 <span>
-                    10.03.01
+                    {{this.date}}
                 </span>
                 <h3 class="tables__box-row-title">
-                    Информационная безопасность
+                    {{this.title}}
                 </h3>
                 <div>
-                    85 бюджетных мест
+                    {{this.text1}}
                 </div>
                 <div>
-                    90 контрактных мест
+                    {{this.text2}}
                 </div>
             </div>
-            <div class="tables__box-row">
-                <span>
-                    10.03.01
-                </span>
-                <h3 class="tables__box-row-title">
-                    Информационная безопасность
-                </h3>
-                <div>
-                    85 бюджетных мест
-                </div>
-                <div>
-                    90 контрактных мест
-                </div>
-            </div>
-            <div class="tables__box-row">
-                <span>
-                    10.03.01
-                </span>
-                <h3 class="tables__box-row-title">
-                    Информационная безопасность
-                </h3>
-                <div>
-                    85 бюджетных мест
-                </div>
-                <div>
-                    90 контрактных мест
-                </div>
-            </div>
+            {{/each}}
+        </div>
+        <div class="tables__links">
+            <a class="tables__link button" href="#">
+                Подать документы
+            </a>
+            <a class="tables__link-down round-buttons round-buttons--download" href="#" download>
+                Скачать учебный план
+            </a>
         </div>
       </div>
 
