@@ -21,6 +21,10 @@
     padding-left: 4rem;
     position: relative;
 
+    blockquote{
+      @extend %fs-roboto-s;
+    }
+
     &::before{
       content: '';
       position: absolute;
@@ -37,6 +41,16 @@
       padding-left: 0;
       padding-top: 4.4rem;
       top: 0;
+    }
+  }
+
+  .user-card__logo{
+    height: 6.4rem;
+    width: 6.4rem;
+
+    @include breakpoint(small-tablet) {
+      height: 4rem;
+      width: 4rem;
     }
   }
 

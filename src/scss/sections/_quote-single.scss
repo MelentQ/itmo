@@ -160,4 +160,14 @@
             gap: 2rem;
         }
     }
+
+    .user-card__logo{
+        height: 6.4rem;
+        width: 6.4rem;
+
+        @include breakpoint(small-tablet) {
+          height: 4rem;
+          width: 4rem;
+        }
+    }
 }

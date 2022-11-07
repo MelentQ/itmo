@@ -5,6 +5,7 @@ import {
 
 export default function partnersSlider() {
   const partnersSlider = document.querySelectorAll('.partners__slider');
+
   partnersSlider.forEach(slider => {
     new Swiper(slider.querySelector('.partners__swiper'), {
       speed: 500,

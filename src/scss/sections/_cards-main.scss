@@ -91,6 +91,13 @@
     }
 
     &--mini{
+      .ordinary-slider__slide-content-title{
+        margin-bottom: 0;
+
+        @include breakpoint(tablet) {
+          margin-bottom: 2rem;
+        }
+      }
       .ordinary-slider__slide-logo,
       .user-card {
         display: none;
@@ -235,6 +242,10 @@
 
   &__slide-content{
     width: 100%;
+
+    & > *:last-child{
+      margin-bottom: 0;
+    }
   }
 
   &__slide-content-header{

@@ -5,24 +5,24 @@
         <h2 class="tables__title title-h2">
             Направления подготовки
         </h2>
-        <div class="tables__box">
+        <table class="tables__box">
             {{#each data.data}}
-            <div class="tables__box-row">
-                <span>
+            <tr class="tables__box-row">
+                <td>
                     {{this.date}}
-                </span>
-                <h3 class="tables__box-row-title">
+                </td>
+                <td class="tables__box-row-title">
                     {{this.title}}
-                </h3>
-                <div>
+                </td>
+                <td class="tables__box-row-span">
                     {{this.text1}}
-                </div>
-                <div>
+                </td>
+                <td class="tables__box-row-span">
                     {{this.text2}}
-                </div>
-            </div>
+                </td>
+            </tr>
             {{/each}}
-        </div>
+        </table>
         <div class="tables__links">
             <a class="tables__link button" href="#">
                 Подать документы

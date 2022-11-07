@@ -29,6 +29,11 @@
       object-position: top center;
       object-fit: cover;
     }
+
+    @include breakpoint(small-tablet) {
+      height: 4rem;
+      width: 4rem;
+    }
   }
 
   &__info {

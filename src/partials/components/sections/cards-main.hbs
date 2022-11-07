@@ -12,7 +12,7 @@
         </div>
         <div class="cards-main__slider {{data.modsSlider}}">
           <div class="ordinary-slider__wrapper">
-            <div class="ordinary-slider swiper loading">
+            <div class="ordinary-slider swiper swiper loading">
               <div class="ordinary-slider__swiper swiper-wrapper">
                 {{#each data.swiperContent}}
                 <div class="ordinary-slider__slide swiper-slide">
@@ -41,7 +41,7 @@
                       <a class="ordinary-slider__slide-content-title" href="#">
                         {{this.title}}
                       </a>
-                      {{> components/user-card}}
+                        {{> components/user-card}}
                       <div class="ordinary-slider__slide-info">
                         <div class="ordinary-slider__slide-info-benefit">
                           Будет полезен:

@@ -1,18 +1,16 @@
 export default function timer(){
 
   const id = document.querySelector('#timer');
-  
+
   if(!id){
     return;
   }
 
+  id.classList.remove('loading');
+
   const deadlineTime = id.getAttribute("data-time");
 
-
-
   const deadline = new Date(deadlineTime);
-
-  console.log(deadlineTime);
 
   let timerId = null;
   // склонение числительных
