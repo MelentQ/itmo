@@ -7,6 +7,10 @@ export default function partnersSlider() {
   const partnersSlider = document.querySelectorAll('.partners__slider');
 
   partnersSlider.forEach(slider => {
+
+    const nextEl = slider.querySelector(".next");
+    const prevEl = slider.querySelector(".prev");
+
     new Swiper(slider.querySelector('.partners__swiper'), {
       speed: 500,
       slidesPerView: 2,
@@ -33,8 +37,8 @@ export default function partnersSlider() {
         }
       },
       navigation: {
-        nextEl: '.partners__slider .next',
-        prevEl: '.partners__slider .prev'
+        nextEl: nextEl,
+        prevEl: prevEl
       },
       on: {
         init: function (swiper) {

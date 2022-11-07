@@ -1,5 +1,12 @@
 {
     "title": "Сетевая магистратура",
+    "introSimple": {
+      "breadcrumbs": [
+        {"name": "Главная"},
+        {"name": "Бизнес"},
+        {"name": "Кейс-стади"}
+      ]
+    },
     "benefitsMain": {
       "block": "network-master",
       "dot": true,

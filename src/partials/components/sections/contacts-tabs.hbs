@@ -1,0 +1,79 @@
+{{#extend "section"}}
+    {{#content "content"}}
+
+      <div class="contacts-tabs js-tabs-slider-main">
+        <h2 class="contacts-tabs__title title-h2">
+            Контакты
+        </h2>
+        <div class="contacts-tabs__tabs swiper loading">
+            <ul class="swiper-wrapper">
+                {{#each data.tabs}}
+                <li class="swiper-slide">
+                    <button class="contacts-tabs__tabs-item" type="button">
+                        {{this.name}}
+                    </button>
+                </li>
+                {{/each}}
+            </ul>
+            {{!-- <div class="contacts-tabs__navigation">
+                <button class="slider-pagination-btns__button prev" type="button" title="Prev">
+                    <svg width="8" height="16">
+                        <use xlink:href="#arrow-slide" />
+                    </svg>
+                </button>
+                <button class="slider-pagination-btns__button next" type="button" title="Next">
+                    <svg width="8" height="16">
+                        <use xlink:href="#arrow-slide" />
+                    </svg>
+                </button>
+            </div> --}}
+        </div>
+        <div class="contacts-tabs__wrapper">
+            <div class="contacts-tabs__inner">
+                <div class="contacts-tabs__active swiper loading">
+                    <ul class="swiper-wrapper">
+                        {{#each data.swiperContent}}
+                        <li class="contacts-tabs__active-slide swiper-slide">
+                            <div class="contacts-tabs__active-item">
+                                <a class="contacts-tabs__active-tel" href="tel:{{this.tel}}">
+                                    {{this.tel}}
+                                </a>
+                                <ul class="contacts-tabs__active-info-list">
+                                    <li>
+                                        <span class="contacts-tabs__active-info-label">Адрес</span>
+                                        <div class="contacts-tabs__active-info-content">
+                                            <p>{{this.address}}</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="contacts-tabs__active-info-label">Электронная почта</span>
+                                        <div class="contacts-tabs__active-info-content">
+                                            <a href="mailto:{{this.email}}">{{this.email}}</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="contacts-tabs__inner-info">
+                    <div>
+                        {{>components/socials}}
+                        <span class="contacts-tabs__social-label">
+                            Мы всегда ответим в мессенджерах и соц. сетях
+                        </span>
+                    </div>
+                    <div class="contacts-tabs__illustration-wrapper">
+                        <img class="contacts-tabs__illustration" src="img/content/illustrations/contacts.svg" width="385" height="300" alt="Illustration">
+                    </div>
+                </div>
+            </div>
+            <div class="contacts-tabs__form">
+                {{>components/form data="form--dark" header=true message=true phone=true}}
+            </div>
+        </div>
+      </div>
+
+    {{/content}}
+{{/extend}}

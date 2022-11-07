@@ -30,6 +30,7 @@
         top: -24rem;
         left: -130rem;
         z-index: 1;
+        pointer-events: none;
 
         @include breakpoint(laptop) {
           top: -48rem;
@@ -81,6 +82,7 @@
           top: -35rem;
           left: -104rem;
           z-index: 1;
+          pointer-events: none;
         }
       }
 
@@ -104,6 +106,7 @@
         right: -56rem;
         bottom: -23rem;
         z-index: 1;
+        pointer-events: none;
       }
     }
 
@@ -127,6 +130,7 @@
       background-position: right center;
       width: 100%;
       height: 100%;
+      pointer-events: none;
 
       @include breakpoint(small-tablet) {
         background-image: none;
@@ -162,6 +166,7 @@
         bottom: -124rem;
         z-index: 1;
         opacity: 0.15;
+        pointer-events: none;
 
         @include breakpoint(laptop) {
           background-size: contain;

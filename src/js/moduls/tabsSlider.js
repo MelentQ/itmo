@@ -1,6 +1,5 @@
 import {
     Swiper,
-    Controller,
     EffectFade,
     Thumbs
   } from 'swiper';
@@ -56,7 +55,7 @@ import {
           contents.forEach(item => item.classList.remove('active'));
           contents[contentSwiper.activeIndex] ? contents[contentSwiper.activeIndex].classList.add('active') : null;
           tabsSwiper.slideTo(contentSwiper.activeIndex)
-      })
+        })
 
     });
   }

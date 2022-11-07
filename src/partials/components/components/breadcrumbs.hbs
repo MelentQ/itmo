@@ -1,19 +1,11 @@
  <div class="breadcrumbs">
   <ul class="breadcrumbs__list">
+    {{#each data.breadcrumbs}}
     <li>
       <a class="breadcrumbs__link" href="#">
-        Главная
+        {{this.name}}
       </a>
     </li>
-    <li>
-      <a class="breadcrumbs__link" href="#">
-        Бизнес
-      </a>
-    </li>
-    <li>
-      <a class="breadcrumbs__link" href="#">
-        Кейс-стади
-      </a>
-    </li>
+    {{/each}}
   </ul>
 </div>

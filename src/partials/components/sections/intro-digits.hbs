@@ -1,7 +1,7 @@
 <section class="intro-digits">
   <div class="container">
     <div class="intro-digits__inner">
-      {{> components/breadcrumbs}}
+      {{> components/breadcrumbs }}
       <div class="intro-digits__wrapper">
         <span class="intro-digits__span">
           Требует инвестиций
@@ -16,7 +16,7 @@
         </div>
         <div class="intro-digits__footer">
           <ul class="intro-digits__footer-items">
-            {{#each introDigits}}
+            {{#each data.data}}
               <li>
                 {{> components/numbers}}
               </li>

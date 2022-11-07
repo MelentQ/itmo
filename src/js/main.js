@@ -22,6 +22,7 @@ import partnersSlider from './moduls/partnersSlider';
 import simpleSlider from './moduls/simpleSlider';
 import fancyboxVideo from './moduls/fancybox-video';
 import singleSlider from './moduls/singleSlider';
+import tabsSliderMain from './moduls/tabsSliderMain';
 import timer from './moduls/timer';
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
   presentSlider();
   simpleSlider();
   singleSlider();
+  tabsSliderMain();
 
   timer();
   fancyboxVideo();
