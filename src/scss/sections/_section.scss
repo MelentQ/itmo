@@ -199,6 +199,29 @@
     }
   }
 
+  &--filter{
+    z-index: 11;
+  }
+
+  &--contactsTabs{
+    @include breakpoint(small-tablet) {
+      .section__heading{
+        border-radius: 2.4rem 2.4rem 0 0;
+        background-color: $grayscale-100;
+        padding: 4rem 2.4rem 0;
+      }
+      .section__inner{
+        background-color: transparent;
+        gap: 0;
+      }
+      .section__content {
+        padding: 0;
+      }
+    }
+  }
+
+
+
   &__inner {
     display: grid;
     grid-template-columns: repeat(12, 1fr);

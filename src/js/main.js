@@ -24,6 +24,7 @@ import fancyboxVideo from './moduls/fancybox-video';
 import singleSlider from './moduls/singleSlider';
 import tabsSliderMain from './moduls/tabsSliderMain';
 import timer from './moduls/timer';
+import choicesSelector from './moduls/choices-select'
 
 document.addEventListener('DOMContentLoaded', function () {
   window.itmo = {}; // Тут будут лежать всякие функции с фронта
@@ -51,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
   fancyboxVideo();
   tabs();
   partnersSlider();
+  choicesSelector();
   editableTextContainer();
   colorReplacementBtn();
 });

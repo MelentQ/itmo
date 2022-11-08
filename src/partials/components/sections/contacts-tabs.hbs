@@ -2,34 +2,34 @@
     {{#content "content"}}
 
       <div class="contacts-tabs js-tabs-slider-main">
-        <h2 class="contacts-tabs__title title-h2">
-            Контакты
-        </h2>
-        <div class="contacts-tabs__tabs swiper loading">
-            <ul class="swiper-wrapper">
-                {{#each data.tabs}}
-                <li class="contacts-tabs__tabs-slide swiper-slide">
-                    <button class="contacts-tabs__tabs-item" type="button">
-                        {{this.name}}
-                    </button>
-                </li>
-                {{/each}}
-            </ul>
-            {{!-- <div class="contacts-tabs__navigation">
-                <button class="slider-pagination-btns__button prev" type="button" title="Prev">
-                    <svg width="8" height="16">
-                        <use xlink:href="#arrow-slide" />
-                    </svg>
-                </button>
-                <button class="slider-pagination-btns__button next" type="button" title="Next">
-                    <svg width="8" height="16">
-                        <use xlink:href="#arrow-slide" />
-                    </svg>
-                </button>
-            </div> --}}
-        </div>
         <div class="contacts-tabs__wrapper">
             <div class="contacts-tabs__inner">
+                <h2 class="contacts-tabs__title title-h2">
+                    Контакты
+                </h2>
+                <div class="contacts-tabs__tabs swiper loading">
+                    <ul class="swiper-wrapper">
+                        {{#each data.tabs}}
+                        <li class="contacts-tabs__tabs-slide swiper-slide">
+                            <button class="contacts-tabs__tabs-item" type="button">
+                                {{this.name}}
+                            </button>
+                        </li>
+                        {{/each}}
+                    </ul>
+                    {{!-- <div class="contacts-tabs__navigation">
+                        <button class="slider-pagination-btns__button prev" type="button" title="Prev">
+                            <svg width="8" height="16">
+                                <use xlink:href="#arrow-slide" />
+                            </svg>
+                        </button>
+                        <button class="slider-pagination-btns__button next" type="button" title="Next">
+                            <svg width="8" height="16">
+                                <use xlink:href="#arrow-slide" />
+                            </svg>
+                        </button>
+                    </div> --}}
+                </div>
                 <div class="contacts-tabs__active swiper loading">
                     <ul class="swiper-wrapper">
                         {{#each data.swiperContent}}

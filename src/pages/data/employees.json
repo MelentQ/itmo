@@ -1,0 +1,54 @@
+{
+    "title": "Сотрудники",
+    "galleryUsers": {
+      "block": "galleryUsers",
+      "dot": false,
+      "title": "",
+      "mods": "section--bg-transparent section--adaptive-without-padding",
+      "listContent": [
+        {
+            "urlImg": "img/content/education/1.jpg",
+            "altImg": "Учитель",
+            "link": "#",
+            "title": "Павел Валерьевич Кустарев",
+            "post": "Кандидат технических наук, доцент"
+        },
+        {
+            "urlImg": "img/content/education/2.jpg",
+            "altImg": "Учитель",
+            "link": "#",
+            "title": "Яковлев Петр Иванович",
+            "post": "Кандидат технических наук, доцент"
+        },
+        {
+            "urlImg": "img/content/education/3.jpg",
+            "altImg": "Учитель",
+            "link": "#",
+            "title": "Якупова Ольга Викторовна",
+            "post": "Кандидат технических наук, доцент"
+        },
+        {
+            "urlImg": "img/content/education/2.jpg",
+            "altImg": "Учитель",
+            "link": "#",
+            "title": "Яковлев Петр Иванович",
+            "post": "Кандидат технических наук, доцент"
+        },
+        {
+            "urlImg": "img/content/education/3.jpg",
+            "altImg": "Учитель",
+            "link": "#",
+            "title": "Якупова Ольга Викторовна",
+            "post": "Кандидат технических наук, доцент"
+        },
+        {
+            "urlImg": "img/content/education/1.jpg",
+            "altImg": "Учитель",
+            "link": "#",
+            "title": "Павел Валерьевич Кустарев",
+            "post": "Кандидат технических наук, доцент"
+        }
+      ]
+    }
+  }
+  

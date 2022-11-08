@@ -15,7 +15,7 @@ import {
           speed: 500,
           slidesPerView: "auto",
           watchSlidesProgress: true,
-          spaceBetween: 0,
+          spaceBetween: 5,
           observer: true,
           observeParents: true,
           navigation: {
