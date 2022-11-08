@@ -1,0 +1,35 @@
+{{#extend "section"}}
+    {{#content "content"}}
+
+      <div class="documents">
+        <h2 class="documents title-h2">
+          {{data.titleMain}}
+        </h2>
+        <ul class="documents__wrapper">
+          {{#each data.listInfo}}
+          <li>
+            <div class="documents__item">
+              <div class="documents__item-img-box">
+                <img src={{this.imgUrl}} alt="icon">
+              </div>
+              <div class="documents__item-content">
+                <div class="documents__item-title">
+                  {{this.title}}
+                </div>
+                <ul class="documents__item-list">
+                  {{#each this.listItem}}
+                  <li>
+                      {{this.name}}
+                  </li>
+                  {{/each}}
+                </ul>
+                <a class="documents__item-link {{#if this.thirdPartyResource}}documents__item-link--rotation-45{{/if}}" href={{this.link}} {{#unless this.thirdPartyResource}}download{{/unless}}>{{this.linkName}}</a>
+              </div>
+            </div>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+
+    {{/content}}
+{{/extend}}

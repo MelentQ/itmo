@@ -57,13 +57,14 @@ import {
           }
         });
 
-        const contents = document.querySelectorAll('.contacts-tabs__active-slide');
+        const contents = document.querySelectorAll('.contacts-tabs__tabs-slide');
         contents[0].classList.add('active');
 
-        activeSwiper.on('slideChange', () => {
+        tabsSwiper.on('slideChange', () => {
           contents.forEach(item => item.classList.remove('active'));
-          contents[activeSwiper.activeIndex] ? contents[activeSwiper.activeIndex].classList.add('active') : null;
-          tabsSwiper.slideTo(activeSwiper.activeIndex)
+          contents[tabsSwiper.activeIndex] ? contents[tabsSwiper.activeIndex].classList.add('active') : null;
+          activeSwiper.slideTo(tabsSwiper.activeIndex)
         })
     });
   }
+
