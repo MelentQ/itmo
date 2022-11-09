@@ -1,0 +1,127 @@
+.documents-list{
+
+    &--not-lines{
+        .documents-list__item{
+            border: none;
+        }
+    }
+
+    
+
+    &__item{
+        padding: 4rem 0;
+        border-top: 0.1rem solid $grayscale-500;
+        border-bottom: 0.1rem solid $grayscale-500;
+        display: flex;
+    
+        &:last-child{
+          border-top: 0;
+        }
+    
+        @include breakpoint(laptop) {
+          padding: 3rem 0;
+        }
+    
+        @include breakpoint(tablet) {
+          padding: 2rem 0;
+        }
+    }
+    
+    &__item-img-box{
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+        background-color: $grayscale-100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-right: 2.4rem;
+    
+        img{
+          width: 2.8rem;
+          height: 3.4rem;
+          object-fit: cover;
+        }
+    
+        @include breakpoint(tablet) {
+          width: 6.4rem;
+          height: 6.4rem;
+          margin-right: 1.6rem;
+    
+          img{
+            width: 21.8px;
+            height: 25.6px;
+          }
+        }
+    }
+    
+    &__item-title{
+        @extend %fs-roboto-xs;
+        margin-bottom: 0.8rem;
+    }
+    
+    &__item-list{
+        @extend %fs-body-xs;
+        color: $grayscale-600;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 2.3rem;
+    
+        li{
+          padding-right: 2.8rem;
+          position: relative;
+          &::after{
+            content: '';
+            position: absolute;
+            right: 1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0.4rem;
+            height: 0.4rem;
+            border-radius: 50%;
+            background-color: $grayscale-600;
+          }
+    
+          &:last-child{
+            padding-right: 0;
+            &::after{
+              display: none;
+            }
+          }
+        }
+    
+        @include breakpoint(tablet) {
+          margin-bottom: 1.6rem;
+        }
+    }
+    
+    &__item-link{
+        margin-left: 2.8rem;
+        text-decoration: underline;
+        position: relative;
+    
+        @extend %fs-body-s;
+    
+        @extend %interactive;
+    
+        &::before{
+          content: '';
+          position: absolute;
+          background-image: url('../../img/download-black.svg');
+          width: 1.6rem;
+          height: 1.7rem;
+          background-size: cover;
+          left: -2.8rem;
+          top: 0;
+        }
+    
+        &--rotation-45{
+    
+          &::before{
+            background-image: url('../../img/download-black-135.svg');
+          }
+        }
+    }
+}

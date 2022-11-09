@@ -2,6 +2,11 @@
   position: relative;
   z-index: 10;
 
+  .breadcrumbs{
+    color: $grayscale-600;
+    margin-bottom: 0;
+  }
+
   &--feedback-subscription{
 
     .section__inner{
@@ -220,8 +225,6 @@
     }
   }
 
-
-
   &__inner {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -282,7 +285,7 @@
     grid-column: span 10;
     min-width: 0;
 
-    padding: 7.2rem 4.8rem 8rem 0rem;
+    padding: 7.2rem 4rem 8rem 0rem;
 
     @include breakpoint(laptop) {
       grid-column: span 1;

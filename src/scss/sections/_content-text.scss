@@ -18,6 +18,12 @@
     }
 
     h2{
+        @extend %fs-h-2;
+        text-transform: uppercase;
+        margin-bottom: 4rem;
+        max-width: 106rem;
+        word-break: break-word;
+
         margin-top: 12rem;
 
         &:first-child{
@@ -26,6 +32,8 @@
 
         @include breakpoint(laptop) {
             margin-top: 8rem;
+            margin-bottom: 2.4rem;
+            font-size: 2.8rem;
         }
 
         @include breakpoint(tablet) {
@@ -34,13 +42,36 @@
         }
 
         @include breakpoint(mobile) {
-            margin-top: 4rem;;
+            margin-top: 4rem;
+        }
+
+        @include breakpoint(supersmall-mobile) {
+            font-size: 2.2rem;
         }
     }
 
     h3{
+        @extend %fs-h-3;
+        text-transform: uppercase;
+        margin-bottom: 4rem;
+        max-width: 106rem;
+        word-break: break-word;
+
+        margin-top: 8rem;
+
+        @include breakpoint(laptop) {
+            margin-top: 6rem;
+            margin-bottom: 2.4rem;
+        }
+
+        @include breakpoint(mobile) {
+            margin-top: 6.4rem;
+        }
+    }
+
+    h4{
         @extend %fs-roboto-l;
-        margin-bottom: 3.2rem;
+        margin: 3.2rem 0;
 
         @include breakpoint(tablet) {
             margin-bottom: 2.5rem;
@@ -52,14 +83,14 @@
         margin-bottom: 3.2rem;
     }
 
-    ul{
+    ul:not(.documents-list, .documents-list__item-list){
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 1.6rem 4.8rem;
     }
     
 
-    li{
+    li:not(.documents-list li){
         position: relative;
         padding-left: 1.6rem;
 
@@ -113,7 +144,7 @@
         }
     }
 
-    img{
+    img:not(.documents-list__item-img-box img){
         width: calc(100% + 13.5rem);
         max-width: none;
         height: auto;
@@ -142,6 +173,7 @@
         border-collapse: collapse;
         table-layout: fixed;
         margin-top: 6.4rem;
+        margin-right: -5rem;
         width: calc(100% + 13.5rem);
 
         @include breakpoint(laptop) {
@@ -172,5 +204,30 @@
         td{
             @extend %fs-roboto-xl;
         }
+    }
+
+    &__btn{
+        margin-top: 4rem;
+
+        &.round-buttons::after {
+            background-image: url(../../img/arrow-down-white.svg);
+        }
+
+        @include breakpoint(small-tablet) {
+            &.round-buttons{
+                display: block;
+            }
+            margin-top: 3.2rem;
+        }
+    }
+
+    .documents-list{
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .documents-list__item{
+        padding: 0;
     }
 }
