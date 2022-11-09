@@ -16,11 +16,11 @@
         border-radius: 1.8rem;
         margin-bottom: 2.4rem;
         position: relative;
-        height: 55rem;  
+        height: 55rem;
         background-color: $grayscale-300;
 
         @include breakpoint(laptop) {
-            height: 43rem;  
+            height: 43rem;
         }
     }
 
@@ -59,6 +59,15 @@
         @include breakpoint(laptop) {
             position: static;
             margin-top: 2rem;
+        }
+    }
+
+    &__link{
+        display: inline-block;
+        margin-top: 6.4rem;
+
+        @include breakpoint(laptop) {
+            display: none;
         }
     }
 }
