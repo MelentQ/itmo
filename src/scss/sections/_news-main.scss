@@ -32,6 +32,10 @@
         background-color: $grayscale-300;
         overflow: hidden;
 
+        @include breakpoint(mobile) {
+            padding-bottom: 66%;
+        }
+
         img{
             position: absolute;
             left: 0;

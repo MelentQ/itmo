@@ -1,0 +1,93 @@
+.error-page{
+
+    &__inner{
+        overflow: hidden;
+        padding: 8.8rem 0 27rem;
+        border-radius: 3.2rem;
+        background-color: $primary-700;
+        color: $grayscale-100;
+
+        position: relative;
+        overflow: hidden;
+
+        @include breakpoint(laptop) {
+            padding: 4rem 0 20rem;
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            background-image: url('../../img/error-page-img.svg');
+            width: 107.2rem;
+            height: 111.7rem;
+            right: -19rem;
+            bottom: -43rem;
+            background-size: cover;
+
+            @include breakpoint(laptop) {
+                width: 66rem;
+                height: 70rem;
+                right: -16rem;
+                bottom: -29rem;
+            }
+
+            @include breakpoint(mobile) {
+                width: 36rem;
+                height: 38rem;
+                right: -9rem;
+                bottom: -15rem;
+            }
+        }
+    }
+
+    &__title{
+        margin: 0 4.8rem 4.8rem;
+        font-weight: 700;
+        font-size: 18rem;
+        line-height: 1;
+
+        span{
+            color: #FF6584;
+        }
+
+        @include breakpoint(laptop) {
+            margin: 0 2.4rem 3rem;
+            font-size: 6rem;
+        }
+    }
+
+    &__description-block{
+        position: relative;
+        z-index: 3;
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        gap: 2rem;
+    }
+
+    &__description{
+        grid-column: 2/-1;
+        max-width: 52rem;
+        margin-right: 4rem;
+        letter-spacing: -.02em;
+        @extend %fs-roboto-l;
+
+        @include breakpoint(laptop) {
+            margin: 0 2.4rem 0;
+        }
+
+        @include breakpoint(small-tablet) {
+            grid-column: span 7;
+            max-width: 100%;
+        }
+    }
+
+    &__link{
+        display: inline-block;
+        margin-top: 5.6rem;
+
+        @include breakpoint(small-tablet) {
+            margin-top: 3rem;
+            width: 100%;
+        }
+    }
+}

@@ -13,7 +13,7 @@
   width: 4.6rem;
   height: 4.6rem;
 
-  overflow: hidden;
+  // overflow: hidden;
 
   &.active {
     flex-grow: 1;
@@ -83,8 +83,8 @@
 
     width: 100%;
 
-    opacity: 0;
-    visibility: hidden;
+    // opacity: 0;
+    // visibility: hidden;
     pointer-events: none;
 
     &.active {

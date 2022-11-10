@@ -1,0 +1,141 @@
+.news-content{
+    display: flex;  
+    align-items: flex-start;
+    gap: 6.4rem 15.6rem;
+    justify-content: space-between;
+  
+    @include breakpoint(laptop) {
+        column-gap: 10rem;
+    }
+  
+    @include breakpoint(tablet) {
+        column-gap: 7rem;
+    }
+  
+    @include breakpoint(tablet) {
+        flex-direction: column;
+    }
+  
+    .content-text{
+      flex: 0 1 61%;
+      max-width: 100%;
+      min-width: 0;
+    }
+  
+    .content-text__wrapper{
+      max-width: 100%;
+    }
+  
+    &__inner{
+      flex: 0 1 26%;
+  
+      @include breakpoint(tablet) {
+        flex: 0 1 100%;
+        width: 100%;
+      }
+  
+      .swiper-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+  
+        @include breakpoint(tablet) {
+          flex-direction: row;
+          gap: 0;
+        }
+      }
+    }
+  
+    &__inner-title{
+      display: inline-block;
+      @extend %fs-h-5;
+      margin-bottom: 3.2rem;
+    }
+  
+    &__inner-slider{
+      min-width: 0;
+    }
+  
+    &__inner-swiper{
+      @include breakpoint(tablet) {
+        margin-right: 8rem;
+        width: auto;
+      }
+    }
+  
+    &__inner-swiper-item{
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  
+    &__inner-swiper-item-box{
+      width: 26rem;
+      height: 16rem;
+      border-radius: 1.8rem;
+      overflow: hidden;
+      position: relative;
+  
+      @include breakpoint(tablet) {
+        width: 100%;
+        padding-bottom: 66%;
+      }
+  
+      img{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  
+    &__inner-swiper-item-list{
+      position: absolute;
+      top: 0.8rem;
+      left: 0.8rem;
+      right: 0.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+  
+      li{
+        padding: 0.6rem 1.6rem;
+        border-radius: 2rem;
+        background-color: $grayscale-100;
+      }
+    }
+  
+    &__inner-swiper-item-content{
+      div{
+        @extend %fs-body-xs;
+        margin-bottom: 0.4rem;
+      }
+      span{
+        display: block;
+        @extend %fs-roboto-s;
+        word-break: break-word;
+        width: 100%;
+      }
+    }
+  
+    &__btn{
+      margin-top: 3.2rem;
+
+      &.round-buttons{
+        @include breakpoint(tablet) {
+           display: none;
+        }
+
+      }
+
+      &.round-buttons::after {
+        background-image: url("../../img/arrow-down-white.svg");
+        transform: rotate(270deg);
+        top: 33%;
+       }
+
+    }
+  }
+  
+  

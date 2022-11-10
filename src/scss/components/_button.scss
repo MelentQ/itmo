@@ -29,6 +29,11 @@
     }
   }
 
+  &--white-dark-boder{
+    background-color: transparent;
+    border: 0.1rem solid $grayscale-100;
+  }
+
   &:focus {
     background-color: $primary-400;
     border-color: $primary-400;

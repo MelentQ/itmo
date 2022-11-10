@@ -25,6 +25,8 @@ import singleSlider from './moduls/singleSlider';
 import tabsSliderMain from './moduls/tabsSliderMain';
 import timer from './moduls/timer';
 import choicesSelector from './moduls/choices-select'
+import oneSlideSlider from './moduls/oneSlideSlider';
+import mobileSliderNews from './moduls/mobileSliderNews';
 
 document.addEventListener('DOMContentLoaded', function () {
   window.itmo = {}; // Тут будут лежать всякие функции с фронта
@@ -47,6 +49,8 @@ document.addEventListener('DOMContentLoaded', function () {
   simpleSlider();
   singleSlider();
   tabsSliderMain();
+  oneSlideSlider();
+  mobileSliderNews();
 
   timer();
   fancyboxVideo();
