@@ -1,7 +1,7 @@
 import {
     Swiper,
-    Controller,
     EffectFade,
+    Navigation,
     Thumbs
   } from 'swiper';
 
@@ -15,7 +15,8 @@ import {
           speed: 500,
           slidesPerView: "auto",
           watchSlidesProgress: true,
-          spaceBetween: 5,
+          spaceBetween: 0,
+          modules: [Navigation],
           observer: true,
           observeParents: true,
           navigation: {

@@ -7,6 +7,44 @@
     margin-bottom: 0;
   }
 
+  &--bg-transparent{
+
+    .section__inner{
+      background-color: transparent;
+    }
+  }
+
+  &--without-right{
+
+    .section__content{
+      padding: 7.2rem 0rem 8rem 0rem;
+
+      @include breakpoint(laptop) {
+        grid-column: span 1;
+        padding: 0rem 2.4rem 4rem;
+      }
+    }
+  }
+
+  &--adaptive-without-padding{
+
+    .section__heading{
+
+      @include breakpoint(laptop) {
+        padding: 4rem 0 0;
+      }
+    }
+    .section__content{
+
+      @include breakpoint(laptop) {
+        grid-column: span 1;
+        padding: 0rem 0rem 4rem;
+      }
+    }
+  }
+
+
+
   &--feedback-subscription{
 
     .section__inner{
@@ -221,6 +259,21 @@
       }
       .section__content {
         padding: 0;
+
+        .contacts-tabs__title{
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+
+  &--search-list{
+    @include breakpoint(small-tablet) {
+      .section__heading {
+        display: none;
+      }
+      .section__content{
+        padding: 0;
       }
     }
   }
@@ -290,42 +343,6 @@
     @include breakpoint(laptop) {
       grid-column: span 1;
       padding: 0rem 2.4rem 4rem;
-    }
-  }
-
-  &--bg-transparent{
-
-    .section__inner{
-      background-color: transparent;
-    }
-  }
-
-  &--without-right{
-
-    .section__content{
-      padding: 7.2rem 0rem 8rem 0rem;
-
-      @include breakpoint(laptop) {
-        grid-column: span 1;
-        padding: 0rem 2.4rem 4rem;
-      }
-    }
-  }
-
-  &--adaptive-without-padding{
-
-    .section__heading{
-
-      @include breakpoint(laptop) {
-        padding: 4rem 0 0;
-      }
-    }
-    .section__content{
-
-      @include breakpoint(laptop) {
-        grid-column: span 1;
-        padding: 0rem 0rem 4rem;
-      }
     }
   }
 }

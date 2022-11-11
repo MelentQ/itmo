@@ -1,0 +1,103 @@
+.search-list{
+
+    &__wrapper{
+        max-width: 106rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5.6rem;
+
+        @include breakpoint(small-tablet) {
+            row-gap: 3.2rem;
+        }
+    }
+
+
+    &__inner{
+        &>li{
+            padding: 4rem 0;
+            border-bottom: 0.1rem solid rgba(33, 34, 46, 0.1);
+
+            @include breakpoint(laptop) {
+                padding: 3rem 0;
+            }
+
+            @include breakpoint(small-tablet) {
+                padding: 2rem 0;
+            }
+
+            &:first-child{
+                padding-top: 0;
+            }
+        }
+    }
+
+    &__inner-item{
+        padding-left: 4.8rem;
+        position: relative;
+
+        &::before{
+            content: '';
+            position: absolute;
+            background-image: url('../../img/arrow-link-135.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 2.4rem;
+            height: 2.4rem;
+            left: 0;
+            top: -0.2rem;
+
+            @include breakpoint(small-tablet) {
+                width: 1.6rem;
+                height: 1.6rem;
+            }
+        }
+
+        @include breakpoint(small-tablet) {
+            padding-left: 3.2rem;
+        }
+    }
+
+    &__inner-title{
+        @extend %fs-roboto-m;
+        margin-bottom: 1.6rem;
+        display: block;
+
+        @extend %interactive;
+
+        @include breakpoint(small-tablet) {
+            font-size: 1.6rem
+        }
+    }
+
+    &__inner-info{
+        @extend %fs-body-s;
+        display: flex;
+        flex-wrap: wrap;
+
+        li{
+            color: $grayscale-600;
+            padding-right: 2.8rem;
+            position: relative;
+
+            &::after{
+                content: "";
+                position: absolute;
+                width: 0.4rem;
+                min-height: 0.4rem;
+                border-radius: 50%;
+                flex-shrink: 0;
+                background-color: $grayscale-600;
+                right: 1.2rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &:last-child{
+                &::after{
+                    display: none;
+                }
+            }
+        }
+    }
+}

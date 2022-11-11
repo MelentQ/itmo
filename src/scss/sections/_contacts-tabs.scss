@@ -201,4 +201,35 @@
             display: none;
         }
     }
+
+    &__navigation{
+        display: none;
+        position: absolute;
+        z-index: 20;
+        left: 0;
+        right: 0;
+        justify-content: space-between;
+        padding: 1rem 1.2rem;
+
+        svg{
+            stroke: #000;
+        }
+
+        .prev{
+
+        }
+
+        .next{
+            transform: rotate(180deg);
+        }
+
+        @include breakpoint(mobile) {
+            display: flex;
+        }
+    }
+
+    &__navigation-button{
+        padding: 1rem;
+        border-radius: 50%;
+    }
 }

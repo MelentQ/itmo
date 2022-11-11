@@ -1,0 +1,31 @@
+.pagination{
+
+    &__list{
+        display: flex;
+        align-items: center;
+        column-gap: 0.4rem;
+
+        @include breakpoint(small-mobile) {
+            justify-content: space-between;
+        }
+    }
+
+    &__list-link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @extend %fs-button-1;
+        color: $primary-500;
+        border-radius: 999px;
+        width: 6.4rem;
+        height: 4rem;
+
+        &--active{
+            background-color: $grayscale-100;
+        }
+
+        @include breakpoint(small-mobile) {
+            height: 3.2rem;
+        }
+    }
+}

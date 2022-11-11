@@ -1,5 +1,11 @@
 .search-field {
   position: relative;
+  color: $grayscale-900;
+
+  &:active,
+  &:visited{
+    color: $grayscale-900;
+  }
 
   @extend %fs-body-s;
   line-height: 1;
@@ -101,7 +107,7 @@
   }
 
   &__error {
-    display: block;
+    display: none;
     color: $grayscale-600;
     @extend %fs-body-s;
     padding: 0 3.4rem;
@@ -116,6 +122,20 @@
     flex-direction: column;
     overflow-y: auto;
     max-height: 18.2rem;
+
+    scrollbar-width: 10px;
+    scrollbar-color: $grayscale-300 transparent;
+    &::-webkit-scrollbar {
+      width: 0.4rem;
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: 1rem;
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $grayscale-300;
+      border-radius: 1rem;
+    }
 
     li{
       margin-bottom: 2rem;
@@ -167,7 +187,7 @@
       content: "";
       position: absolute;
       width: 0.65rem;
-      height: 0.65rem;
+      min-height: 0.65rem;
       border-radius: 50%;
       flex-shrink: 0;
       background-color: $grayscale-600;

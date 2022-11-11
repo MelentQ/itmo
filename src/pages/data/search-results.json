@@ -1,0 +1,9 @@
+{
+    "title": "Результат поиска",
+    "searchList": {
+      "block": "search-list",
+      "dot": false,
+      "title": "",
+      "mods": "section--bg-transparent section--adaptive-without-padding"
+    }
+}

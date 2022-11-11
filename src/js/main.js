@@ -276,6 +276,7 @@ function searchFields() {
     const openButton = container.querySelector('.search-field__button--open');
     const closeButton = container.querySelector('.search-field__button--close');
     const input = container.querySelector('.search-field__element');
+    const resultSearch = container.querySelector('.search-field__result');
 
     openButton.addEventListener('click', () => {
       document.body.classList.add('js-search-filed-opened');
@@ -289,10 +290,28 @@ function searchFields() {
       document.body.classList.remove('js-search-filed-opened');
       openButton.removeAttribute('disabled');
       closeButton.setAttribute('disabled', 'true');
+      resultSearch.classList.remove('active');
     });
 
 
-    
+    let timeout = null;
+
+    input.addEventListener('keyup', function(){
+
+      clearTimeout(timeout);
+
+      timeout = setTimeout(function(){
+        resultSearch.classList.add('active');
+      }, 500)
+
+      if(input.value == ''){
+        return resultSearch.classList.remove('active');
+      }
+    });
+
+
+
+
   });
 }
 

@@ -8,15 +8,16 @@
         margin-bottom: 3.2rem;
     }
 
-    &__form{
-        fieldset{
-            display: flex;
-            gap: 0.8rem 1.4rem; 
-
-            @include breakpoint(small-tablet) {
-                flex-direction: column;
-            }
+    &__form-selects{
+        display: flex;
+        gap: 0.8rem 1.4rem; 
+    
+        @include breakpoint(small-tablet) {
+            flex-direction: column;
         }
+    }
+
+    &__form{
 
         .choices{
             max-width: 30rem;
@@ -156,6 +157,69 @@
         align-items: center;
         svg{
             stroke: $grayscale-600;
+        }
+    }
+
+
+    &__footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 3.2rem;
+        gap: 2rem;
+
+        @include breakpoint(laptop) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__footer-list{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.4rem 0.8rem;
+        max-width: 78rem;
+    }
+
+    &__footer-list-link{
+        display: inline-block;
+        @extend %fs-roboto-xs;
+        padding: 0.6rem 1.6rem;
+        background-color: $grayscale-300;
+        border-radius: 2rem;
+
+        transition: background-color $tt $te, border-color $tt $te, color $tt $te;
+    
+        &:hover {
+            background-color: $primary-700;
+            border-color: $primary-700;
+            color: $grayscale-300;
+        }
+        
+        &.active{
+            background-color: $primary-700;
+            color: $grayscale-300;
+        }
+    }
+
+    &__footer-reset{
+        margin-left: auto;
+        @extend %fs-body-s;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+
+        @extend %interactive;
+
+        svg{
+            margin-left: 0.8rem;
+            margin-bottom: 0.3rem;
+        }
+
+        @include breakpoint(small-tablet) {
+            margin-left: 0;
         }
     }
 }
