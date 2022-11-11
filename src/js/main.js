@@ -290,11 +290,14 @@ function searchFields() {
       openButton.removeAttribute('disabled');
       closeButton.setAttribute('disabled', 'true');
     });
+
+
+    
   });
 }
 
 
-// функция замены цвета кнопки при клике на инпут
+// функция замена цвета кнопки при клике на инпут
 function colorReplacementBtn(){
   const parentBlock = document.querySelector('.feedback-subscription');
 
