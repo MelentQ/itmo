@@ -1,0 +1,269 @@
+{
+  "title": "Наука",
+  "contentDevelopment": {
+    "block": "content",
+    "dot": true,
+    "title": "Фокусируемся на развитии",
+    "mods": "section--bg-transparent section--adaptive-without-padding",
+    "directions": [
+      {
+        "urlImg": "img/content/content-development/1.svg",
+        "altImg": "Технологии AI",
+        "text": "Технологии AI"
+      },
+      {
+        "urlImg": "img/content/content-development/2.svg",
+        "altImg": "IoT и роботизированные системы",
+        "text": "IoT и роботизированные системы"
+      },
+      {
+        "urlImg": "img/content/content-development/3.svg",
+        "altImg": "Облачные технологии",
+        "text": "Облачные технологии в контексте развития сетей 5G"
+      },
+      {
+        "urlImg": "img/content/content-development/4.svg",
+        "altImg": "Компьютерные системы",
+        "text": "Компьютерные системы"
+      }
+    ]
+  },
+  "contentResult": [
+    {"text": "31% работ Федерального уровня"},
+    {"text": "Реальные внедрения"},
+    {"text": "Разработки по внешним заказам"},
+    {"text": "Гособоронзаказ"}
+  ],
+  "partners": {
+    "block": "partners",
+    "dot": true,
+    "title": "Сотрудничаем с лидерами рынка",
+    "mods": "",
+    "notTabs": true,
+    "partnersContent": [
+      {
+        "urlImg": "img/content/partners/1.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/2.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/3.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/4.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/5.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/6.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/7.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/8.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/5.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/6.png",
+        "altImg": "",
+        "link": "#"
+      }
+    ],
+    "clientContent": [
+      {
+        "urlImg": "img/content/partners/1.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/2.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/3.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/4.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/5.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/6.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/7.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/8.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/4.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/5.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/6.png",
+        "altImg": "",
+        "link": "#"
+      }
+    ]
+  },
+  "partners2": {
+    "block": "partners",
+    "dot": true,
+    "title": "Сотрудничаем с лидерами рынка",
+    "mods": "",
+    "notTabs": false,
+    "partnersContent": [
+      {
+        "urlImg": "img/content/partners/1.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/2.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/3.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/4.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/5.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/6.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/7.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/8.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/5.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/6.png",
+        "altImg": "",
+        "link": "#"
+      }
+    ],
+    "clientContent": [
+      {
+        "urlImg": "img/content/partners/1.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/2.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/3.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/4.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/5.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/6.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/7.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/8.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/4.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/5.png",
+        "altImg": "",
+        "link": "#"
+      },
+      {
+        "urlImg": "img/content/partners/6.png",
+        "altImg": "",
+        "link": "#"
+      }
+    ]
+  }
+}

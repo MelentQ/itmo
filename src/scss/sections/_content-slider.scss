@@ -1,0 +1,282 @@
+.content-slider {
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 8.5rem;
+    margin-bottom: 8rem;
+
+    li {
+      display: flex;
+      align-items: center;
+      flex: 33.33;
+
+      @include breakpoint(small-tablet) {
+        margin-bottom: 10px;
+      }
+
+      picture {
+        margin-right: 2.4rem;
+      }
+    }
+
+    @include breakpoint(small-tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__list-img {
+    border-radius: 53%;
+    box-shadow: -5px 10px 24px rgba(55, 56, 123, 0.3);
+    min-width: 7.2rem;
+    height: 7.2rem;
+
+    @include breakpoint(laptop) {
+      min-width: 3.2rem;
+      height: 3.2rem;
+    }
+  }
+
+  &__list-item {
+    @extend %fs-roboto-s;
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: auto 69.5rem;
+    column-gap: 2rem;
+    position: relative;
+    padding: 6rem 0 6rem 6rem;
+    background-color: #fff;
+    margin-right: -4rem;
+    border-radius: 3.2rem 0px 0px 3.2rem;
+
+    @media only screen and (min-width: (1680px)) {
+      border-radius: 3.2rem;
+      margin-right: 0;
+    }
+
+    @include breakpoint(laptop) {
+      padding: 4rem 0 4rem 4rem;
+      grid-template-columns: auto 60.5rem;
+    }
+
+    @include breakpoint(tablet) {
+      display: block;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 2.4rem;
+      margin-right: 0;
+      border-radius: 3.2rem;
+    }
+  }
+
+  &__box-title {
+    display: inline-block;
+    @extend %fs-h-4;
+    max-width: 49rem;
+    text-transform: uppercase;
+
+    @include breakpoint(laptop) {
+      margin-bottom: 3.2rem;
+    }
+
+    @include breakpoint(tablet) {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__slider-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__slider-navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-width: 37rem;
+    min-width: 0;
+    margin-left: auto;
+
+    @include breakpoint(tablet) {
+      max-width: 60rem;
+      margin-left: 0;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 32px;
+    margin-bottom: 83px;
+    @extend %fs-roboto-xs;
+
+    @include breakpoint(tablet) {
+      margin-right: 0;
+      margin-bottom: 2rem;
+      justify-content: flex-start;
+    }
+  }
+
+  &__navigation {
+    max-width: 33rem;
+    margin-left: 40px;
+
+    &:hover,
+    &:focus {
+      background-color: $grayscale-500;
+    }
+
+    &:active {
+      background-color: $grayscale-200;
+    }
+
+    @include breakpoint(tablet) {
+      margin-left: 0;
+    }
+
+  }
+
+  &__navigation-button {
+    height: 4.2rem;
+    width: 4.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.next {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__swiper-box{
+    overflow: hidden;
+    min-width: 0;
+    grid-row: span 2;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2rem;
+      max-width: 100%;
+      order:-1
+    }
+
+  }
+
+  &__swiper {
+    margin-left: auto;
+    margin-right: 12.5rem;
+    width: auto;
+
+    @include breakpoint(laptop) {
+      margin-right: 10.5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-right: 0;
+    }
+  }
+
+  &__swiper-item {
+    position: relative;
+
+      &.swiper-slide-next{
+        position: relative;
+        transition: all $tt $te;
+
+        &::after {
+          content: '';
+          position: absolute;
+          z-index: 2;
+          background: linear-gradient(0deg, rgba(37, 37, 68, 0.8), rgba(37, 37, 68, 0.8));
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 2rem;
+        }
+
+        @include breakpoint(small-tablet) {
+          &::after{
+            display: none;
+          }
+        }
+      }
+  }
+
+  &__swiper-item-box{
+    position: relative;
+    height: 38rem;
+    background-color: $grayscale-300;
+    border-radius: 2rem;
+
+    @include breakpoint(laptop) {
+      height: 34rem;
+    }
+
+    @include breakpoint(small-mobile) {
+      height: 28rem
+    }
+
+    @media only screen and (max-width: (500px)) {
+      height: 20rem;
+    }
+  }
+
+  &__swiper-item-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 2rem;
+  }
+
+  .swiper-pagination-total {
+    display: none;
+  }
+
+  &__text-block {
+    width: 33rem;
+    overflow: hidden;
+    margin-bottom: 3.2rem;
+
+    @include breakpoint(laptop) {
+      margin-bottom: 2rem;
+      width: 100%;
+    }
+
+    .swiper-wrapper{
+      counter-reset: list;
+    }
+    .swiper-slide{
+      position: relative;
+      padding-left: 4rem;
+
+      &:before {
+        counter-increment: list;
+        content: counter(list, decimal-leading-zero) '';
+        position: absolute;
+        left: 0;
+        z-index: 10;
+        @extend %fs-roboto-xl;
+       }
+
+       @include breakpoint(tablet) {
+        padding-left: 0;
+        padding-top: 3.7rem;
+
+        &:before {
+          top: 0;
+         }
+      }
+    }
+  }
+
+}

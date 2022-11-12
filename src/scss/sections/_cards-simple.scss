@@ -1,0 +1,73 @@
+.cards-simple{
+
+    &__slider-box{
+        min-width: 0;
+    }
+
+    &__slider{
+        position: relative;
+    }
+
+    &__swiper{
+        overflow: hidden;
+    }
+
+    &__slide-img-box{
+        border-radius: 1.8rem;
+        margin-bottom: 2.4rem;
+        position: relative;
+        height: 55rem;
+        background-color: $grayscale-300;
+
+        @include breakpoint(laptop) {
+            height: 43rem;
+        }
+    }
+
+    &__slide-img{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        border-radius: 1.8rem;
+    }
+
+    &__slide-name{
+        @extend %fs-roboto-m;
+        margin-bottom: 1.2rem;
+
+        @extend %interactive;
+
+        &::after{
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+        }
+    }
+
+    &__navigation{
+        position: absolute;
+        right: 0;
+        top: -10.7rem;
+
+        @include breakpoint(laptop) {
+            position: static;
+            margin-top: 2rem;
+        }
+    }
+
+    &__link{
+        display: inline-block;
+        margin-top: 6.4rem;
+
+        @include breakpoint(laptop) {
+            display: none;
+        }
+    }
+}

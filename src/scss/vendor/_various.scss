@@ -1,0 +1,33 @@
+.title-h2{
+  @extend %fs-h-2;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+  max-width: 106rem;
+  word-break: break-word;
+
+  @include breakpoint(laptop) {
+    margin-bottom: 2.4rem;
+    font-size: 2.8rem;
+  }
+
+  @include breakpoint(supersmall-mobile) {
+    font-size: 2.2rem;
+  }
+}
+
+.desc{
+  @extend %fs-roboto-s;
+    letter-spacing: -0.02em;
+    max-width: 520px;
+    margin-bottom: 6.4rem;
+
+    @include breakpoint(small-tablet) {
+      font-size: 1.6rem;
+      margin-bottom: 4rem;
+      max-width: 100%;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 1.6rem;
+    }
+}

@@ -1,0 +1,36 @@
+.blockquote{
+    background-color: $grayscale-200;
+    border-radius: 1.8rem;
+    padding: 3.2rem 3.2rem 3.2rem 8rem;
+    position: relative;
+
+    @include breakpoint(small-tablet) {
+        padding: 6.8rem 2.4rem 2.4rem;   
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        background-image: url(../../img/content/quote/head.svg);
+        background-size: cover;
+        width: 2.4rem;
+        height: 1.8rem;
+        left: 3.2rem;
+        top: 3.2rem;
+        flex-shrink: 0;
+
+        @include breakpoint(small-tablet) {
+            left: 2.4rem;
+            top: 2.4rem;
+        }
+    }
+
+    span{
+        display: inline-block;
+        @extend %fs-body-xs;
+        margin-bottom: 1.6rem;
+    }
+    blockquote{
+        @extend %fs-roboto-s;
+    }
+}

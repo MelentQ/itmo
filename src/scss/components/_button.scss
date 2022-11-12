@@ -1,20 +1,37 @@
 .button {
   justify-content: center;
+  text-align: center;
   padding: 2rem 3.1rem;
   background-color: $primary-700;
   border: 0.1rem solid $primary-700;
   border-radius: 999rem;
+  color: $grayscale-100;
 
   text-transform: uppercase;
   letter-spacing: 0.01em;
-  color: $grayscale-100;
   @extend %fs-button-1;
+  line-height: 1.2;
+
+  &:link,
+  &:visited {
+      color: $grayscale-100;
+  }
 
   transition: background-color $tt $te, border-color $tt $te, color $tt $te;
 
   &--white {
     background-color: $grayscale-100;
-    color: $primary-700;
+    border: none;
+
+    &:link,
+    &:visited {
+        color: $primary-700;
+    }
+  }
+
+  &--white-dark-boder{
+    background-color: transparent;
+    border: 0.1rem solid $grayscale-100;
   }
 
   &:focus {

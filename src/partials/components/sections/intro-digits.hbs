@@ -1,0 +1,32 @@
+<section class="intro-digits">
+  <div class="container">
+    <div class="intro-digits__inner">
+      {{> components/breadcrumbs }}
+      <div class="intro-digits__wrapper">
+        <span class="intro-digits__span">
+          Требует инвестиций
+        </span>
+        <h1 class="intro-digits__title">
+          Разработка личного кабинета для  StarLine
+        </h1>
+        <div class="intro-digits__desc">
+          <p>
+            Текст — зафиксированная на каком-либо материальном носителе человеческая мысль;
+          </p>
+        </div>
+        <div class="intro-digits__footer">
+          <ul class="intro-digits__footer-items">
+            {{#each data.data}}
+              <li>
+                {{> components/numbers}}
+              </li>
+            {{/each}}
+          </ul>
+          <div class="intro-digits__footer-box">
+            <img class="intro-digits__footer-boxImg" src="img/content/intro-digits/starline.png" alt="StarLine">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

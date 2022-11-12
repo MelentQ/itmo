@@ -1,0 +1,23 @@
+{{#extend "section"}}
+    {{#content "content"}}
+
+      <ul class="gallery-users">
+        {{#each data.listContent}}
+        <li>
+            <div class="gallery-users__item">
+                <div class="gallery-users__item-img-box">
+                    <img src={{this.urlImg}} alt={{this.altImg}}>
+                </div>
+                <a href={{this.link}}>
+                    {{this.title}}
+                </a>
+                <span>
+                    {{this.post}}
+                </span>
+            </div>
+        </li>
+        {{/each}}
+      </ul>
+
+    {{/content}}
+{{/extend}}

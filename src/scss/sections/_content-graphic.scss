@@ -1,0 +1,116 @@
+.content-graphic {
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 7.5rem;
+
+  @include breakpoint(laptop) {
+    column-gap: 1rem;
+  }
+
+  @include breakpoint(tablet) {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 2rem;
+  }
+
+  &__content {
+    max-width: 60rem;
+
+    @include breakpoint(tablet) {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    @extend %fs-h-3;
+    text-transform: uppercase;
+    margin-bottom: 2.4rem;
+    max-width: 60rem;
+
+    @include breakpoint(laptop) {
+      font-size: 2.8rem;
+    }
+
+  }
+
+  &__desc {
+    @extend %fs-roboto-l;
+    max-width: 52rem;
+    margin-bottom: 3rem;
+
+    @include breakpoint(tablet) {
+      max-width: 80rem;
+    }
+  }
+
+  &__img-box {
+    grid-row: span 13;
+
+    @include breakpoint(tablet) {
+      max-width: 50rem;
+      display: flex;
+    }
+  }
+
+  &__img {
+
+    @include breakpoint(tablet) {
+      object-fit: contain;
+    }
+  }
+
+  &__list-img {
+    margin-right: 1.6rem;
+
+    @include breakpoint(mobile) {
+      margin-right: 1.2rem;
+    }
+  }
+
+  &__link {
+    margin-top: 4rem;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1;
+    display: inline-flex;
+    text-align: center;
+
+    &:link,
+    &:visited {
+      color: #fff;
+    }
+
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+  }
+
+  &__data {
+    display: flex;
+    margin-top: 4rem;
+
+    li {
+      width: 100%;
+      max-width: 260px;
+
+      &:first-child {
+        margin-right: 2.4rem;
+      }
+    }
+
+    @include breakpoint(mobile) {
+      grid-row: span 2;
+    }
+  }
+
+  &__data-number {
+    @extend %fs-h-2;
+    margin-bottom: 1.2rem;
+  }
+
+  &__data-text {
+    @extend %fs-roboto-xs;
+    line-height: 1.2;
+  }
+
+}

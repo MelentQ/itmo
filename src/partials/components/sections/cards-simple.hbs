@@ -1,0 +1,52 @@
+{{#extend "section"}}
+    {{#content "content"}}
+
+        <div class="cards-simple">
+            <h2 class="cards-simple__title title-h2">
+                {{data.mainTitle}}
+            </h2>
+            <div class="cards-simple__desc desc">
+                {{data.desc}}
+            </div>
+            <div class="cards-simple__slider-box">
+                <div class="cards-simple__slider">
+                    <div class="cards-simple__swiper swiper loading">
+                        <ul class="cards-simple__list swiper-wrapper">
+                            {{#each data.swiperContent}}
+                                <li class="cards-simple__slide swiper-slide">
+                                    <div class="cards-simple__slide-img-box">
+                                        <img class="cards-simple__slide-img" src={{this.imgUrl}} alt={{this.imgAlt}}>
+                                    </div>
+                                    <a class="cards-simple__slide-name" href={{this.link}}>
+                                        {{this.name}}
+                                    </a>
+                                    <span class="cards-simple__slide-span">
+                                        {{this.post}}
+                                    </span>
+                                </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    <div class="cards-simple__navigation slider-pagination-btns">
+                        <button class="slider-pagination-btns__button prev" type="button" title="Prev">
+                            <svg width="8" height="16">
+                                <use xlink:href="#arrow-slide" />
+                            </svg>
+                        </button>
+                        <button class="slider-pagination-btns__button next" type="button" title="Next">
+                            <svg width="8" height="16">
+                                <use xlink:href="#arrow-slide" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {{#if data.linkBtn}}
+            <a class="cards-simple__link button" href="#">
+                Все сотрудники центра
+            </a>
+            {{/if}}
+        </div>
+
+    {{/content}}
+{{/extend}}

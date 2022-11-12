@@ -1,0 +1,88 @@
+.feedback-join{
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+      background-color: transparent;
+      -webkit-text-fill-color: $grayscale-100;
+      -webkit-box-shadow: 0 0 0 30px $primary-700 inset !important;
+  }
+
+  &__wrapper{
+    display: flex;
+    align-items: flex-end;
+
+    @include breakpoint(small-tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4rem;
+    }
+  }
+  &__box{
+    flex: 0 1 50%;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    height: 40rem;
+
+    @include breakpoint(laptop) {
+      flex: 0 1 100%;
+    }
+
+    img{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+
+      @include breakpoint(small-tablet) {
+        display: none;
+      }
+    }
+  }
+  &__box-contacts{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    color: $grayscale-100;
+  }
+  &__box-contacts-tell{
+    margin-bottom: 1.2rem;
+    @extend %fs-h-4;
+    @extend %interactive;
+  }
+  &__box-contacts-mail{
+    @extend %fs-body-l;
+    @extend %interactive;
+  }
+  &__contain{
+    flex: 0 1 50%;
+
+    @include breakpoint(laptop) {
+      flex: 0 1 100%;
+    }
+
+    @include breakpoint(small-tablet) {
+      order: -1;
+    }
+  }
+  &__contain-title{
+    margin-bottom: 8rem;
+    color: $grayscale-100;
+
+    @include breakpoint(laptop) {
+      margin-bottom: 6.4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 4rem;
+    }
+  }
+}

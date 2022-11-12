@@ -1,0 +1,65 @@
+.gallery-users{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6rem 2rem;
+
+    @include breakpoint(tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint(mobile) {
+        gap: 3.2rem 2rem;
+    }
+
+    &__item{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+
+        a{
+            @extend %fs-roboto-m;
+            word-break: break-word;
+
+            @extend %interactive;
+            
+            &::before{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        span{
+            word-break: break-word;
+            @include breakpoint(mobile) {
+                font-size: 1.4rem;
+                gap: 0.8rem;
+            }
+        }
+    }
+
+    &__item-img-box{
+        position: relative;
+        padding-bottom: 120%;
+        border-radius: 1.8rem;
+        margin-bottom: 1.2rem;
+        background-color: $grayscale-100;
+        overflow: hidden;
+
+        @include breakpoint(mobile) {
+            border-radius: 1.2rem;
+        }
+
+        img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

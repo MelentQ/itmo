@@ -1,0 +1,38 @@
+{
+  "title": "Страница кейса",
+  "introDigits": {
+    "data": [
+      {
+      "title": "25 000 000 ₽",
+      "desc": "Размер инвестиций"
+      },
+      {
+        "title": "7 лет",
+        "desc": "Срок окупаемости"
+      }
+    ],
+    "breadcrumbs": [
+      {"name": "Главная"},
+      {"name": "Бизнес"},
+      {"name": "Кейс-стади"}
+    ]
+  },
+  "contentData": {
+    "block": "centent",
+    "dot": true,
+    "title": "Ключевая информация",
+    "mods": "section--bg-transparent section--adaptive-without-padding section--without-right"
+  },
+  "contentText": {
+    "block": "content",
+    "dot": true,
+    "title": "Описание кейса",
+    "mods": ""
+  },
+  "quoteSimple": {
+    "block": "quote",
+    "dot": true,
+    "title": "",
+    "mods": ""
+  }
+}

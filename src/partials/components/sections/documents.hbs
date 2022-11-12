@@ -1,0 +1,17 @@
+{{#extend "section"}}
+    {{#content "content"}}
+
+      <div class="documents">
+        <h2 class="documents title-h2">
+          {{data.titleMain}}
+        </h2>
+        {{> components/document-list}}
+        {{#if data.btn}}
+        <a class="documents__link round-buttons round-buttons--dark" href="#">
+          Загрузить еще
+        </a>
+        {{/if}}
+      </div>
+
+    {{/content}}
+{{/extend}}

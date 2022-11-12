@@ -1,0 +1,37 @@
+{{#extend "section"}}
+    {{#content "content"}}
+
+      <div class="tables">
+        <h2 class="tables__title title-h2">
+            Направления подготовки
+        </h2>
+        <table class="tables__box">
+            {{#each data.data}}
+            <tr class="tables__box-row">
+                <td>
+                    {{this.date}}
+                </td>
+                <td class="tables__box-row-title">
+                    {{this.title}}
+                </td>
+                <td class="tables__box-row-span">
+                    {{this.text1}}
+                </td>
+                <td class="tables__box-row-span">
+                    {{this.text2}}
+                </td>
+            </tr>
+            {{/each}}
+        </table>
+        <div class="tables__links">
+            <a class="tables__link button" href="#">
+                Подать документы
+            </a>
+            <a class="tables__link-down round-buttons round-buttons--download" href="#" download>
+                Скачать учебный план
+            </a>
+        </div>
+      </div>
+
+    {{/content}}
+{{/extend}}

@@ -1,0 +1,37 @@
+{{#extend "section"}}
+    {{#content "content"}}
+
+      <div class="content-graphic">
+        <h3 class="content-graphic__title">
+          разрабатываем курсы под нужды бизнеса и студентов
+        </h3>
+        <div class="content-graphic__img-box">
+          <img class="content-graphic__img" src="img/content-graphic__img.svg" alt="">
+        </div>
+        <div class="content-graphic__content">
+          <div class="content-graphic__desc">
+            <p>
+              Текст — зафиксированная на каком-либо материальном носителе человеческая мысль; в общем плане связная и полная последовательность символов.
+            </p>
+          </div>
+          {{> components/list-text data=contentGraphic.capabilities mods="--mod-1 --mod-2"}}
+          <ul class="content-graphic__data">
+            {{#each contentGraphic.data}}
+              <li>
+                <div class="content-graphic__data-number">
+                  {{this.number}}
+                </div>
+                <span class="content-graphic__data-text">
+                  {{this.text}}
+                </span>
+              </li>
+            {{/each}}
+          </ul>
+          <a class="content-graphic__link button" href="#">
+            Подробнее
+          </a>
+        </div>
+      </div>
+
+    {{/content}}
+{{/extend}}

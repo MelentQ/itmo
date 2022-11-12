@@ -1,0 +1,22 @@
+.feedback-call{
+
+    .form--dark{
+        max-width: 100%;
+
+        @include breakpoint(laptop) {
+            max-width: 50rem;
+        }
+    }
+    
+    .form__desc{
+        max-width: 50rem;
+    }
+
+    .form__inputs{
+        max-width: 79rem;
+    }
+
+    .input{
+        width: 100%;
+    }
+}

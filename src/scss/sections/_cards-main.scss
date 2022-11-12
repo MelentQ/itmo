@@ -1,0 +1,326 @@
+.cards-main{
+
+  &__inner{
+    background: #fff;
+    border-radius: 3.2rem;
+    display: flex;
+    align-items: flex-start;
+    padding: 7.2rem 0 8rem 4.8rem;
+
+    @include breakpoint(laptop) {
+      flex-direction: column;
+      padding: 4.2rem 0 4rem 2.8rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 2.4rem;
+    }
+  }
+
+  &__desc{
+    @extend %fs-roboto-s;
+    max-width: 52rem;
+    margin-bottom: 6.4rem;
+
+    @include breakpoint(laptop) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__slider{
+    position: relative;
+
+    &--other-elem{
+      .ordinary-slider__slide-content-title{
+        &::after{
+          display: none;
+        }
+      }
+
+      .ordinary-slider__slide-logo,
+      .user-card{
+        display: none;
+      }
+
+      .ordinary-slider__slide-info-benefit{
+        display: block;
+        @extend %fs-body-s;
+        color: $grayscale-600;
+        margin-bottom: 0.8rem;
+      }
+
+      .ordinary-slider__slide-info-list{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 2.4rem;
+
+        li{
+          border: 0.1rem solid $grayscale-900;
+          border-radius: 2rem;
+          padding: 0.6rem 1.6rem;
+        }
+      }
+      .ordinary-slider__slide-info-text{
+        display: block;
+        max-width: 33rem;
+
+        @include breakpoint(tablet) {
+          max-width: 60rem;
+        }
+      }
+      .ordinary-slider__slide-info-link{
+        display: inline-block;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+
+        &:link,
+        &:visited {
+            color: $grayscale-100;
+        }
+
+        @include breakpoint(tablet) {
+          margin-top: 2rem;
+        }
+
+        @include breakpoint(small-tablet) {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+
+    &--mini{
+      .ordinary-slider__slide-content-title{
+        margin-bottom: 0;
+
+        @include breakpoint(tablet) {
+          margin-bottom: 2rem;
+        }
+      }
+      .ordinary-slider__slide-logo,
+      .user-card {
+        display: none;
+      }
+
+      .cards-main__navigation {
+
+        @include breakpoint(laptop) {
+          top: -7.7rem;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  &__navigation{
+    position: absolute;
+    right: 0;
+    top: -10.7rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 2rem;
+      position: static;
+    }
+  }
+}
+
+
+
+.ordinary-slider{
+  overflow: hidden;
+
+  &__wrapper{
+    min-width: 0;
+  }
+
+  &__slide{
+    position: relative;
+  }
+
+  &__slide-box{
+    position: relative;
+    border-radius: 1.8rem;
+    margin-bottom: 2.4rem;
+    height: 38rem;
+    background-color: $grayscale-300;
+
+    @include breakpoint(laptop) {
+      height: 31rem;
+    }
+
+    @include breakpoint(tablet) {
+      margin-bottom: none;
+    }
+
+    @include breakpoint(small-mobile) {
+      height: 28rem
+    }
+
+    @media only screen and (max-width: (500px)) {
+      height: 20rem;
+    }
+  }
+
+  &__slide-box-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 1.8rem;
+  }
+
+  &__slide-box-list{
+    position: absolute;
+    top: 2.4rem;
+    left: 2.4rem;
+    right: 2.4rem;
+    @extend %fs-roboto-xl;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0.8rem;
+    column-gap: 2.4rem;
+
+    @include breakpoint(tablet) {
+      top: 1rem;
+      left: 1rem;
+      right: 1rem;
+      column-gap: 1rem;
+    }
+
+    li{
+      padding: 0.6rem 1.6rem;
+      border-radius: 2rem;
+      background-color: #fff;
+    }
+
+  }
+
+  &__slide-wrapper{
+    display: flex;
+    column-gap: 4rem;
+
+    @include breakpoint(laptop) {
+      column-gap: 2.5rem;
+    }
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__slide-logo{
+    background-color: $grayscale-300;
+    position: relative;
+    border-radius: 50%;
+    min-width: 8rem;
+    height: 8rem;
+    background-color: $grayscale-300;
+
+    @include breakpoint(laptop) {
+      min-width: 6rem;
+      height: 6rem;
+    }
+
+    @include breakpoint(tablet) {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__slide-logo-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+  }
+
+  &__slide-content{
+    width: 100%;
+
+    & > *:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  &__slide-content-header{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.8rem 0 1.6rem;
+    row-gap: 0.8rem;
+
+    @include breakpoint(tablet) {
+      margin: 0 0 0.8rem;
+    }
+  }
+
+  &__slide-content-header-item{
+    padding-right: 2.8rem;
+    position: relative;
+
+    &::after{
+      content: '';
+      position: absolute;
+      right: 1.2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0.4rem;
+      height: 0.4rem;
+      border-radius: 50%;
+      background-color: $grayscale-900;
+    }
+
+    &:last-child{
+      padding-right: 0;
+      &::after{
+        display: none;
+      }
+    }
+  }
+
+  &__slide-content-title{
+    display: block;
+    @extend %fs-roboto-l;
+    margin-bottom: 3.2rem;
+
+    @extend %interactive;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2rem;
+    }
+
+    &::after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__slide-content-line{
+    height: 1px;
+    max-width: 27rem;
+    width: 100%;
+    background-color: $grayscale-900;
+    opacity: 0.1;
+    margin-bottom: 2.4rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__slide-info-benefit,
+  &__slide-info-list,
+  &__slide-info-text,
+  &__slide-info-link{
+    display: none;
+  }
+}

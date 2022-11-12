@@ -1,0 +1,257 @@
+.cards-articls{
+  width: 100%;
+
+  &--3-items{
+    .cards-articls__desc{
+      display: none;
+    }
+    .cards-articls__items{
+      grid-template-columns: repeat(3, 1fr);
+
+      @include breakpoint(tablet) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .cards-articls__item-box{
+        padding: 0 0 80%;
+
+        @include breakpoint(small-tablet) {
+          padding: 0 0 74%;
+        }
+      }
+    }
+
+    .cards-articls__item-text{
+      display: block;
+    }
+  }
+
+  &--background-item{
+    .cards-articls__item{
+      background-color: $grayscale-200;
+    }
+    .cards-articls__item-box{
+      background-color: $grayscale-100;
+    }
+    .cards-articls__item-title{
+      @include breakpoint(tablet) {
+        padding-top: 3.3rem;
+        
+      }
+
+      svg{
+        display: none;
+      }
+    }
+  }
+
+  &__inner{
+    display: flex;
+    align-items: flex-start;
+    padding: 7.2rem 0 8rem 4.8rem;
+
+    @include breakpoint(laptop) {
+      flex-direction: column;
+      padding: 4.2rem 0 4rem 2.8rem;
+
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 2.4rem 0;
+    }
+
+  }
+
+  &__desc{
+    max-width: 52rem;
+    margin-bottom: 6.4rem;
+    @extend %fs-roboto-l;
+
+    @include breakpoint(laptop) {
+      margin-bottom: 4.4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    counter-reset: list2;
+
+    @include breakpoint(small-tablet) {
+      display: flex;
+      gap: 0;
+    }
+  }
+
+  &__item{
+    background-color: #fff;
+    border-radius: 2.4rem;
+    padding: 1.2rem 1.2rem 3.2rem;
+    max-width: 65.5rem;
+    position: relative;
+    transition: all $tt $te;
+
+    @include breakpoint(small-tablet) {
+      max-width: 100%;
+      padding: 2.4rem;  
+    }
+  }
+
+  &__item-box{
+    display: block;
+    border-radius: 1.8rem;
+    margin-bottom: 2.4rem;
+    position: relative;
+    padding: 0rem 0rem 52% 0rem;
+    counter-increment: list2;
+    background-color: $grayscale-300;
+
+    &::before{
+      content: counter(list2, decimal-leading-zero) '';
+      position: absolute;
+      z-index: 10;
+      @extend %fs-roboto-xs;
+      bottom: -4.6rem;
+      left: 0;
+    } 
+
+    @include breakpoint(laptop) {
+      margin-bottom: 2rem;
+      &::before{
+        bottom: -4rem;
+      }
+    }
+  }
+
+  &__item-text{
+    display: none;
+    padding-left: 6.4rem; 
+    margin-top: 1.6rem;
+
+    @extend %fs-roboto-xl;
+
+    @include breakpoint(laptop) {
+      padding-left: 3.4rem;
+    }
+
+    @include breakpoint(tablet) {
+      padding-left: 0;
+    }
+  }
+
+  &__item-img{
+    border-radius: 1.8rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+  &__item-links{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    top: 0.8rem;
+    left: 0.8rem;
+
+    @include breakpoint(laptop) {
+      gap: 0.6rem
+    }
+
+    @include breakpoint(small-mobile) {
+      gap: 0.4rem
+    }
+  }
+
+  &__item-links-box{
+    position: relative;
+    border-radius: 50%;
+    width: 6.4rem;
+    height: 6.4rem;
+    background-color: #eff1f4;
+    flex-shrink: 0;
+
+    @include breakpoint(laptop) {
+      width: 4.4rem;
+      height: 4.4rem;
+    }
+
+    @include breakpoint(small-mobile) {
+      width: 3.2rem;
+      height: 3.42rem;
+    }
+  }
+
+  &__item-links-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+  }
+
+  &__item-title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @extend %fs-roboto-l;
+    padding-left: 6.4rem;
+
+    &::after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+
+    svg{
+      transition: all $tt $te;
+    }
+
+    &:hover{
+      svg{
+        transform: rotate(45deg);
+      }
+    }
+
+    @include breakpoint(laptop) {
+      padding-left: 3.4rem;
+    }
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      align-items: stretch;
+      padding-left: 0;
+      top: 0;
+
+      svg{
+        order: -1;
+        margin-left: auto;
+        margin-bottom: 1.2rem;
+      }
+    }
+
+  }
+
+  &__swiper{
+    width: auto;
+  }
+
+  &__item{
+
+    @include breakpoint(small-tablet) {
+
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{{#extend "section"}}
+    {{#content "content"}}
+
+    <div class="cards-articls {{data.modsSwiper}}">
+      <h2 class="cards-articls__title title-h2">
+        помогаем развиваться бизнесу
+      </h2>
+      <div class="cards-articls__desc">
+        <p>
+          Текст — зафиксированная на каком-либо материальном носителе человеческая мысль.
+        </p>
+      </div>
+      <div class="cards-articls__swiper js-mobile-slider swiper loading">
+        <ul class="cards-articls__items swiper-wrapper">
+          {{#each data.swiperContent}}
+          <li class="cards-articls__item swiper-slide">
+            <div class="cards-articls__item-box">
+              <img class="cards-articls__item-img" src={{this.imgUrl}} alt={{this.imgAlt}}>
+              {{#if this.linksLogo}} 
+              <div class="cards-articls__item-links">
+                {{#each this.linksLogo}}
+                <a class="cards-articls__item-links-box" href="#">
+                  <img class="cards-articls__item-links-img" src="img/content/cards-main/logo-company.png" alt="Сбер">
+                </a>
+                {{/each}}
+              </div>
+              {{/if}} 
+            </div>
+            <a class="cards-articls__item-title" href={{this.link}}>
+              {{this.title}}
+              <svg width="24" height="24">
+                <use xlink:href="#arrow-link-45" />
+              </svg>
+            </a>
+            <p class="cards-articls__item-text">
+                {{this.text}}
+            </p>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+
+    {{/content}}
+{{/extend}}

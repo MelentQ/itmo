@@ -1,5 +1,11 @@
 .search-field {
   position: relative;
+  color: $grayscale-900;
+
+  &:active,
+  &:visited{
+    color: $grayscale-900;
+  }
 
   @extend %fs-body-s;
   line-height: 1;
@@ -13,7 +19,7 @@
   width: 4.6rem;
   height: 4.6rem;
 
-  overflow: hidden;
+  // overflow: hidden;
 
   &.active {
     flex-grow: 1;
@@ -87,6 +93,12 @@
     visibility: hidden;
     pointer-events: none;
 
+    margin-top: 0.2rem;
+    z-index: 120;
+    background-color: $grayscale-100;
+    border-radius: 2rem;
+    padding: 2.4rem 1.6rem;
+
     &.active {
       opacity: 1;
       visibility: visible;
@@ -96,11 +108,98 @@
 
   &__error {
     display: none;
+    color: $grayscale-600;
+    @extend %fs-body-s;
+    padding: 0 3.4rem;
+
+    @include breakpoint(laptop) {
+      padding: 0;
+    }
   }
 
   &__result-list {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 18.2rem;
+
+    scrollbar-width: 10px;
+    scrollbar-color: $grayscale-300 transparent;
+    &::-webkit-scrollbar {
+      width: 0.4rem;
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: 1rem;
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $grayscale-300;
+      border-radius: 1rem;
+    }
+
+    li{
+      margin-bottom: 2rem;
+    }
   }
 
   &__result-link {
+    @extend %fs-body-s;
+    padding-left: 3.4rem;
+    position: relative;
+    transform: all $tt $te;
+
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -0.2rem;
+      background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.05664 3.99561H13.9433V14.3317' stroke='%23A4A5BB' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M13.9433 3.99561L4.05664 13.8823' stroke='%23A4A5BB' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+      width: 1.8rem;
+      height: 1.8rem;
+      background-size: cover;
+      transform: all $tt $te;
+    }
+
+    &:hover{
+      color: $primary-500;
+
+      &::before{
+        background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.05664 3.99561H13.9433V14.3317' stroke='%234F51AE' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M13.9433 3.99561L4.05664 13.8823' stroke='%234F51AE' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+      }
+    }
+  }
+
+  &__result-total{
+    border-top: 0.1px solid $grayscale-400;
+    padding: 2rem 1.6rem 0 1.6rem;
+
+    @include breakpoint(laptop) {
+      padding: 2rem 0 0;
+    }
+  }
+
+  &__result-total-text{
+    color: $grayscale-600;
+    padding-right: 3.05rem;
+    position: relative;
+
+    &::after{
+      content: "";
+      position: absolute;
+      width: 0.65rem;
+      min-height: 0.65rem;
+      border-radius: 50%;
+      flex-shrink: 0;
+      background-color: $grayscale-600;
+      right: 1.2rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__result-total-link{
+    border-bottom: 0.1rem solid $grayscale-900;
+
+    @extend %interactive;
   }
 }

@@ -1,0 +1,16 @@
+.documents{
+
+  &__link{
+    margin-top: 4rem;
+    display: inline-block;
+
+    &.round-buttons::after {
+      background-image: url("../../img/download.svg");
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-top: 2rem;
+      width: 100%;
+    }
+  }
+}

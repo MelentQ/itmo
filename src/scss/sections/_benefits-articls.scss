@@ -1,0 +1,94 @@
+.benefits-articls{
+
+  &__title{
+    margin-bottom: 4.8rem;
+
+    @include breakpoint(laptop){
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__swiper{
+
+    @include breakpoint(small-tablet){
+      margin-right: 12rem;
+      width: auto;
+    }
+  }
+
+  .swiper-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,52rem));
+    margin-right: 8.7rem;
+    gap: 7.5rem 15.5rem;
+
+    @include breakpoint(laptop){
+      margin-right: 0;
+      gap: 3.5rem 5.5rem;
+    }
+
+    @include breakpoint(small-tablet){
+      display: flex;
+      gap: 0;
+      margin-right: 0;
+    }
+  }
+
+  &__swiper-item{
+    display: flex;
+    align-items: center;
+    gap: 2rem 2.4rem;
+
+    @include breakpoint(tablet){
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__swiper-item-img-box{
+    min-width: 22rem;
+    height: 14rem;
+    border-radius: 1.2rem;
+    background-color: #D9D9D9;
+    position: relative;
+    overflow: hidden;
+
+    @include breakpoint(tablet){
+      width: 100%;
+    }
+
+    @include breakpoint(small-tablet){
+      min-width: auto;
+    }
+  }
+
+  &__swiper-item-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__swiper-item-content{
+
+    span{
+      display: block;
+      @extend %fs-roboto-s;
+      margin-bottom: 2.4rem;
+
+      @include breakpoint(tablet){
+        margin-bottom: 2rem;
+      }
+    }
+
+    p{
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.2;
+      color: $grayscale-600;
+    }
+  }
+
+}

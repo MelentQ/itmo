@@ -1,0 +1,35 @@
+{
+    "title": "Образование",
+    "contactsTabs": {
+      "block": "contactsTabs",
+      "dot": false,
+      "title": "",
+      "mods": "",
+      "breadcrumbs": [
+        {"name": "Главная"}
+      ],
+      "tabs": [
+        {"name": "Приемная"},
+        {"name": "Деловые контакты"},
+        {"name": "Пресса"}
+      ],
+      "swiperContent": [
+        {
+          "tel": "+7 (812) 312–32–69",
+          "address": "Песочная наб., 14 лит. А, Санкт-Петербург",
+          "email": "fbititmo@gmail.com"
+        },
+        {
+          "tel": "+7 (812) 909–90–98",
+          "address": "Песочная наб., 14 лит. А, Санкт-Петербург",
+          "email": "fbititmo@gmail.com"
+        },
+        {
+          "tel": "+7 (812) 312–32–69",
+          "address": "Песочная наб., 14 лит. А, Санкт-Петербург",
+          "email": "fbititmo@gmail.com"
+        }
+      ]
+    }
+  }
+  

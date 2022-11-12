@@ -1,0 +1,40 @@
+{{#extend "section"}}
+    {{#content "content"}}
+
+    <div class="numbers-main">
+      <h2 class="numbers-main__title title-h2">
+        О центре
+      </h2>
+      <div class="numbers-main__wrapper">
+        <div class="numbers-main__info">
+          <div class="numbers-main__info-desc desc">
+            <p>
+              В состав центра входят известные ученые, опытные преподаватели и практикующие специалисты ведущих компаний отрасли информационной безопасности, проектирования и конструирования
+            </p>
+          </div>
+          <div class="numbers-main__info-box">
+            <img class="numbers-main__info-box-img" src="img/content/numbers-main/1.jpg" alt="">
+            <a class="numbers-main__info-box-link" href="#">
+              <svg width="16" height="17">
+                  <use xlink:href="#arrow-link-45-blue" />
+              </svg>
+              Подробнее о центре
+            </a>
+          </div>
+          <a class="numbers-main__info-link round-buttons" href="#">
+            Презентация о нас
+          </a>
+        </div>
+        <ul class="numbers-main__items">
+          {{#each data.numbers}}
+              <li>
+                {{> components/numbers  mod="numbers--big"}}
+              </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+
+
+    {{/content}}
+{{/extend}}

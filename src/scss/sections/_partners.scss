@@ -1,0 +1,79 @@
+.partners{
+
+  &__title{
+    margin-bottom: 4rem;
+  }
+
+  &__sliders{
+    position: relative;
+  }
+
+  &__slider{
+    padding-right: 17.2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease,visibility .3s ease;
+
+    &.active {
+      position: relative;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @include breakpoint(tablet){
+      padding-right: 13.2rem;
+    }
+
+    @include breakpoint(mobile){
+      padding-right: 0;
+    }
+  }
+
+  &__swiper{
+    overflow: hidden;
+
+    @include breakpoint(mobile){
+      overflow: visible;
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__navigation{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include breakpoint(mobile){
+      margin-top: 4.5rem;
+      position: relative;
+      transform: translateY(0);
+    }
+  }
+
+  &__swiper-item{
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    background-color: $grayscale-300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+
+    @include breakpoint(laptop){
+      width: 9rem;
+      height: 9rem;
+    }
+
+
+    img{
+      mix-blend-mode: darken;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{{#extend "section"}}
+    {{#content "content"}}
+
+        <div class="benefits-main">
+            <h2 class="benefits-main__title title-h2">
+                Наши студенты лучшие в отрасли
+            </h2>
+            <ul class="benefits-main__items">
+                {{#each data.texts}}
+                <li>
+                    <div class="benefits-main__items-contain">
+                        <div class="benefits-main__item-img-box">
+                            <img src={{this.urlImg}} alt={{this.altImg}}>
+                        </div>
+                        <span>
+                            {{this.title}}
+                        </span>
+                    </div>
+                    <p>
+                        {{this.desc}}
+                    </p>
+                </li>
+                {{/each}}
+            </ul>
+            {{#if data.btnLink}}
+            <a class="benefits-main__link button" href="#">
+                Узнать больше о курсах центра
+            </a>
+            {{/if}}
+        </div>
+
+    {{/content}}
+{{/extend}}

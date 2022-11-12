@@ -1,12 +1,15 @@
-<section class="section section--{{data.block}}">
+<section class="section section--{{data.block}} {{data.mods}}">
     <div class="container">
         <div class="section__inner">
             <div class="section__heading {{#if data.dot}}section__heading--dot{{/if}}">
                 <h2>{{data.title}}</h2>
+                {{#if data.breadcrumbs}}
+                    {{> components/breadcrumbs}}
+                {{/if}}
             </div>
             <div class="section__content">
                 {{#block "content"}}
-
+                    
                 {{/block}}
             </div>
         </div>

@@ -223,6 +223,740 @@
         }
       ],
       "illustration": "img/content/illustrations/contacts.svg"
+    },
+    "cardsArticle1": {
+      "block": "",
+      "dot": true,
+      "title": "",
+      "mods": "section--bg-transparent section--without-right section--adaptive-without-padding",
+      "modsSwiper": "",
+      "linksLogo": false,
+      "swiperContent": [
+        {
+          "title": "Сетевая магистратура для бизнеса",
+          "imgUrl": "img/content/cards-articls/1.png",
+          "imgAlt": "Иллюстрация",
+          "link": ""
+        },
+        {
+          "title": "Дополнительное профессиональное образование",
+          "imgUrl": "img/content/cards-articls/1.png",
+          "imgAlt": "Иллюстрация",
+          "link": ""
+        },
+        {
+          "title": "Киберполигон",
+          "imgUrl": "img/content/cards-articls/1.png",
+          "imgAlt": "Иллюстрация",
+          "link": ""
+        },
+        {
+          "title": "Совместные хакатоны",
+          "imgUrl": "img/content/cards-articls/1.png",
+          "imgAlt": "Иллюстрация",
+          "link": ""
+        }
+      ]
+    },
+    "cardsArticle2": {
+      "block": "",
+      "dot": true,
+      "title": "Направления деятельности",
+      "mods": "section--bg-transparent section--without-right section--adaptive-without-padding",
+      "modsSwiper": "cards-articls--3-items",
+      "linksLogo": false,
+      "swiperContent": [
+        {
+          "title": "Сетевая магистратура для бизнеса",
+          "imgUrl": "img/content/cards-articls/1.png",
+          "imgAlt": "Иллюстрация",
+          "link": "",
+          "text": "Технологии AI"
+        },
+        {
+          "title": "Дополнительное профессиональное образование",
+          "imgUrl": "img/content/cards-articls/2.png",
+          "imgAlt": "Иллюстрация",
+          "link": "",
+          "text": "IoT и роботизированные системы"
+        },
+        {
+          "title": "Киберполигон",
+          "imgUrl": "img/content/cards-articls/3.png",
+          "imgAlt": "Иллюстрация",
+          "link": "",
+          "text": "Облачные технологии в контексте развития сетей 5G"
+        }
+      ]
+    },
+    "cardsArticle3": {
+      "block": "",
+      "dot": true,
+      "title": "Возможности бизнеса",
+      "mods": "",
+      "modsSwiper": "cards-articls--3-items cards-articls--background-item",
+      "swiperContent": [
+        {
+          "title": "Сетевая магистратура для бизнеса",
+          "imgUrl": "img/content/cards-articls/1.png",
+          "imgAlt": "Иллюстрация",
+          "link": "",
+          "text": "Технологии AI",
+          "linksLogo": [
+            {
+              "link": "",
+              "imgUrl": "img/content/cards-main/logo-company.png",
+              "imgAlt": "Сбер"
+            },
+            {
+              "link": "",
+              "imgUrl": "img/content/cards-main/logo-company.png",
+              "imgAlt": "Сбер"
+            },
+            {
+              "link": "",
+              "imgUrl": "img/content/cards-main/logo-company.png",
+              "imgAlt": "Сбер"
+            }
+          ]
+        },
+        {
+          "title": "Дополнительное профессиональное образование",
+          "imgUrl": "img/content/cards-articls/2.png",
+          "imgAlt": "Иллюстрация",
+          "link": "",
+          "text": "IoT и роботизированные системы",
+          "linksLogo": [
+            {
+              "link": "",
+              "imgUrl": "img/content/cards-main/logo-company.png",
+              "imgAlt": "Сбер"
+            },
+            {
+              "link": "",
+              "imgUrl": "img/content/cards-main/logo-company.png",
+              "imgAlt": "Сбер"
+            },
+            {
+              "link": "",
+              "imgUrl": "img/content/cards-main/logo-company.png",
+              "imgAlt": "Сбер"
+            }
+          ]
+        },
+        {
+          "title": "Киберполигон",
+          "imgUrl": "img/content/cards-articls/3.png",
+          "imgAlt": "Иллюстрация",
+          "link": "",
+          "text": "Облачные технологии в контексте развития сетей 5G",
+          "linksLogo": [
+            {
+              "link": "",
+              "imgUrl": "img/content/cards-main/logo-company.png",
+              "imgAlt": "Сбер"
+            },
+            {
+              "link": "",
+              "imgUrl": "img/content/cards-main/logo-company.png",
+              "imgAlt": "Сбер"
+            },
+            {
+              "link": "",
+              "imgUrl": "img/content/cards-main/logo-company.png",
+              "imgAlt": "Сбер"
+            }
+          ]
+        }
+      ]
+    },
+    "cardsMain1": {
+      "block": "cards",
+      "dot": true,
+      "title": "",
+      "mods": "",
+      "headTitle": "Кейс-стади",
+      "desc": "Реализованные кейс-стади под реальные задачи малого, среднего и крупного бизнеса",
+      "swiperContent": [
+          {
+              "imgUrl": "img/content/cards-main/1.jpg",
+              "imgAlt": "Лаборатория",
+              "listItems": [
+                  {"text": "Разработка под заказчика"}
+              ],
+              "logoCompany": "img/content/cards-main/logo-company.png",
+              "headerList": [
+                  {"name": "Разработка"},
+                  {"name": "2021"}
+              ],
+              "title": "Разработка личного кабинета для Сбербанка"
+          },
+          {
+              "imgUrl": "img/content/cards-main/2.jpg",
+              "imgAlt": "Лаборатория",
+              "listItems": [
+                  {"text": "Разработка под заказчика"}
+              ],
+              "logoCompany": "img/content/cards-main/logo-company.png",
+              "headerList": [
+                  {"name": "Аналитика данных"},
+                  {"name": "2021"}
+              ],
+              "title": "Анализ CRM системы технического отдела Газпрома"
+          },
+          {
+              "imgUrl": "img/content/cards-main/1.jpg",
+              "imgAlt": "Лаборатория",
+              "listItems": [
+                  {"text": "Разработка под заказчика"}
+              ],
+              "logoCompany": "img/content/cards-main/logo-company.png",
+              "headerList": [
+                  {"name": "Разработка"},
+                  {"name": "2021"}
+              ],
+              "title": "Разработка личного кабинета для Сбербанка"
+          },
+          {
+              "imgUrl": "img/content/cards-main/2.jpg",
+              "imgAlt": "Лаборатория",
+              "listItems": [
+                  {"text": "Разработка под заказчика"}
+              ],
+              "logoCompany": "img/content/cards-main/logo-company.png",
+              "headerList": [
+                  {"name": "Аналитика данных"},
+                  {"name": "2021"}
+              ],
+              "title": "Анализ CRM системы технического отдела Газпрома"
+          }
+      ]
+    },
+    "cardsMain2": {
+      "block": "cards",
+      "dot": true,
+      "title": "Наши курсы уникальны",
+      "mods": "",
+      "modsSlider": "cards-main__slider--other-elem",
+      "headTitle": "Планируемые курсы",
+      "desc": "Текст — зафиксированная на каком-либо материальном носителе человеческая мысль; в общем плане связная и полная последовательность символов. Существуют две основные трактовки понятия «текст»: имманентная и репрезентативная.",
+      "swiperContent": [
+          {
+              "imgUrl": "img/content/cards-main/1.jpg",
+              "imgAlt": "Лаборатория",
+              "listItems": [
+                  {"text": "Бесплатно"}
+              ],
+              "headerList": [
+                  {"name": "Среднее время прохождения — 1 месяц"}
+              ],
+              "title": "Название курса/ мастер-класса"
+          },
+          {
+              "imgUrl": "img/content/cards-main/2.jpg",
+              "imgAlt": "Лаборатория",
+              "listItems": [
+                  {"text": "Бесплатно"}
+              ],
+              "headerList": [
+                {"name": "Среднее время прохождения — 1 месяц"}
+              ],
+              "title": "Название курса/ мастер-класса"
+          },
+          {
+            "imgUrl": "img/content/cards-main/1.jpg",
+            "imgAlt": "Лаборатория",
+            "listItems": [
+                {"text": "Бесплатно"}
+            ],
+            "headerList": [
+                {"name": "Среднее время прохождения — 1 месяц"}
+            ],
+            "title": "Название курса/ мастер-класса"
+        },
+        {
+            "imgUrl": "img/content/cards-main/2.jpg",
+            "imgAlt": "Лаборатория",
+            "listItems": [
+                {"text": "Бесплатно"}
+            ],
+            "headerList": [
+              {"name": "Среднее время прохождения — 1 месяц"}
+            ],
+            "title": "Название курса/ мастер-класса"
+        }
+      ]
+    },
+    "cardsMain3": {
+      "block": "cards",
+      "dot": true,
+      "title": "Последние публикации",
+      "mods": "",
+      "modsSlider": "cards-main__slider--mini",
+      "headTitle": "Новости и статьи",
+      "desc": "",
+      "swiperContent": [
+          {
+              "imgUrl": "img/content/cards-main/1.jpg",
+              "imgAlt": "Лаборатория",
+              "listItems": [
+                  {"text": "Стартап и бизнес"}
+              ],
+              "headerList": [
+                  {"name": "Разработка"},
+                  {"name": "2021"}
+              ],
+              "title": "Разработка личного кабинета для Сбербанка"
+          },
+          {
+              "imgUrl": "img/content/cards-main/2.jpg",
+              "imgAlt": "Лаборатория",
+              "listItems": [
+                  {"text": "Стартап и бизнес"}
+              ],
+              "headerList": [
+                  {"name": "Разработка"},
+                  {"name": "2021"}
+              ],
+              "title": "Анализ CRM системы технического отдела Газпрома"
+          },
+          {
+            "imgUrl": "img/content/cards-main/1.jpg",
+            "imgAlt": "Лаборатория",
+            "listItems": [
+                {"text": "Стартап и бизнес"}
+            ],
+            "headerList": [
+                {"name": "Среднее время прохождения — 1 месяц"}
+            ],
+            "title": "Название курса/ мастер-класса"
+        },
+        {
+            "imgUrl": "img/content/cards-main/2.jpg",
+            "imgAlt": "Лаборатория",
+            "listItems": [
+                {"text": "Стартап и бизнес"}
+            ],
+            "headerList": [
+              {"name": "Среднее время прохождения — 1 месяц"}
+            ],
+            "title": "Название курса/ мастер-класса"
+        }
+      ]
+    },
+    "cardsPresentation1": {
+      "block": "cards",
+      "dot": true,
+      "title": "Возможности бизнеса",
+      "headTitle": "Возможности бизнеса в сотрудничестве с университетом",
+      "desc": "",
+      "mods": "section--bg-transparent section--without-right section--adaptive-without-padding",
+      "modsSlider": "",
+      "contentLeft": true,
+      "imgLeft": false,
+      "swiperContent": [
+            {
+                "title": "Программа для подготовки по кибербезопасности и информационной безопасности",
+                "desc": "Текст — зафиксированная на каком-либо материальном носителе человеческая мысль;",
+                "imgUrl": "img/content/content-text/1.jpg",
+                "imgAlt": "",
+                "swiperTopText": true,
+                "button": false,
+                "numbers": [
+                    {
+                        "title": "150 000 ₽",
+                        "desc": "стоимость курса"
+                    },
+                    {
+                        "title": "10",
+                        "desc": "модулей"
+                    },
+                    {
+                        "title": "6 месяцев",
+                        "desc": "среднее время прохождения"
+                    }
+                ]
+            },
+            {
+                "title": "Программа для подготовки по кибербезопасности и информационной безопасности",
+                "desc": "Текст — зафиксированная на каком-либо материальном носителе человеческая мысль;",
+                "imgUrl": "img/content/content-text/1.jpg",
+                "imgAlt": "",
+                "swiperTopText": true,
+                "button": false,
+                "numbers": [
+                    {
+                        "title": "150 000 ₽",
+                        "desc": "стоимость курса"
+                    },
+                    {
+                        "title": "10",
+                        "desc": "модулей"
+                    },
+                    {
+                        "title": "6 месяцев",
+                        "desc": "среднее время прохождения"
+                    }
+                ]
+            },
+            {
+                "title": "Программа для подготовки по кибербезопасности и информационной безопасности",
+                "desc": "Текст — зафиксированная на каком-либо материальном носителе человеческая мысль;",
+                "imgUrl": "img/content/content-text/1.jpg",
+                "imgAlt": "",
+                "swiperTopText": true,
+                "button": false,
+                "numbers": [
+                    {
+                        "title": "150 000 ₽",
+                        "desc": "стоимость курса"
+                    },
+                    {
+                        "title": "10",
+                        "desc": "модулей"
+                    },
+                    {
+                        "title": "6 месяцев",
+                        "desc": "среднее время прохождения"
+                    }
+                ]
+            },
+            {
+                "title": "Программа для подготовки по кибербезопасности и информационной безопасности",
+                "desc": "Текст — зафиксированная на каком-либо материальном носителе человеческая мысль;",
+                "imgUrl": "img/content/content-text/1.jpg",
+                "imgAlt": "",
+                "swiperTopText": true,
+                "button": false,
+                "numbers": [
+                    {
+                        "title": "150 000 ₽",
+                        "desc": "стоимость курса"
+                    },
+                    {
+                        "title": "10",
+                        "desc": "модулей"
+                    },
+                    {
+                        "title": "6 месяцев",
+                        "desc": "среднее время прохождения"
+                    }
+                ]
+            },
+            {
+                "title": "Программа для подготовки по кибербезопасности и информационной безопасности",
+                "desc": "Текст — зафиксированная на каком-либо материальном носителе человеческая мысль;",
+                "imgUrl": "img/content/content-text/1.jpg",
+                "imgAlt": "",
+                "swiperTopText": true,
+                "button": false,
+                "numbers": [
+                    {
+                        "title": "150 000 ₽",
+                        "desc": "стоимость курса"
+                    },
+                    {
+                        "title": "10",
+                        "desc": "модулей"
+                    },
+                    {
+                        "title": "6 месяцев",
+                        "desc": "среднее время прохождения"
+                    }
+                ]
+            }
+        ]
+    },
+    "cardsPresentation2": {
+      "block": "cards",
+      "dot": true,
+      "title": "",
+      "headTitle": "Ближайшие хакатоны",
+      "desc": "",
+      "mods": "section--bg-transparent section--without-right section--adaptive-without-padding",
+      "modsSlider": "cards-presentation__slider--big",
+      "contentLeft": false,
+      "swiperContent": [
+            {
+              "title": "Программа для подготовки по кибербезопасности и информационной безопасности",
+              "desc": "Текст — зафиксированная на каком-либо материальном носителе человеческая мысль;",
+              "imgUrl": "img/content/cards-presentation/1.jpg",
+              "imgAlt": "",
+              "imgLeft": true,
+              "swiperTopText": false,
+              "dateText": "15 - 17 февраля, 2022",
+              "button": true,
+              "numbers": [
+                  {
+                      "title": "3 000 000 ₽",
+                      "desc": "призовой фонд"
+                  },
+                  {
+                      "title": "15",
+                      "desc": "заданий"
+                  },
+                  {
+                      "title": "1500",
+                      "desc": "участников"
+                  }
+              ]
+          },
+          {
+            "title": "Программа для подготовки по кибербезопасности и информационной безопасности",
+            "desc": "Текст — зафиксированная на каком-либо материальном носителе человеческая мысль;",
+            "imgUrl": "img/content/cards-presentation/1.jpg",
+            "imgAlt": "",
+            "imgLeft": true,
+            "swiperTopText": false,
+            "dateText": "15 - 17 февраля, 2022",
+            "button": true,
+            "numbers": [
+                {
+                    "title": "3 000 000 ₽",
+                    "desc": "призовой фонд"
+                },
+                {
+                    "title": "15",
+                    "desc": "заданий"
+                },
+                {
+                    "title": "1500",
+                    "desc": "участников"
+                }
+            ]
+          },
+          {
+            "title": "Программа для подготовки по кибербезопасности и информационной безопасности",
+            "desc": "Текст — зафиксированная на каком-либо материальном носителе человеческая мысль;",
+            "imgUrl": "img/content/cards-presentation/1.jpg",
+            "imgAlt": "",
+            "imgLeft": true,
+            "swiperTopText": false,
+            "dateText": "15 - 17 февраля, 2022",
+            "button": true,
+            "numbers": [
+                {
+                    "title": "3 000 000 ₽",
+                    "desc": "призовой фонд"
+                },
+                {
+                    "title": "15",
+                    "desc": "заданий"
+                },
+                {
+                    "title": "1500",
+                    "desc": "участников"
+                }
+            ]
+          },
+          {
+            "title": "Программа для подготовки по кибербезопасности и информационной безопасности",
+            "desc": "Текст — зафиксированная на каком-либо материальном носителе человеческая мысль;",
+            "imgUrl": "img/content/cards-presentation/1.jpg",
+            "imgAlt": "",
+            "imgLeft": true,
+            "swiperTopText": false,
+            "dateText": "15 - 17 февраля, 2022",
+            "button": true,
+            "numbers": [
+                {
+                    "title": "3 000 000 ₽",
+                    "desc": "призовой фонд"
+                },
+                {
+                    "title": "15",
+                    "desc": "заданий"
+                },
+                {
+                    "title": "1500",
+                    "desc": "участников"
+                }
+            ]
+          }
+        ]
+    },
+    "feedbackSubcription": {
+      "block": "feedback-subscription",
+      "dot": false,
+      "title": "",
+      "desc": "",
+      "mods": ""
+    },
+    "feedbackJoin": {
+      "block": "feedback-join",
+      "dot": false,
+      "title": "",
+      "desc": "",
+      "mods": ""
+    },
+    "feedbackCall": {
+      "block": "feedback-call",
+      "dot": true,
+      "title": "База есть",
+      "desc": "",
+      "mods": ""
+    },
+    "filter": {
+      "block": "filter",
+      "dot": false,
+      "title": "",
+      "mods": "",
+      "breadcrumbs": [
+        {"name": "Главная"},
+        {"name": "Наука"}
+      ],
+      "titleMain": "Научные публикации",
+      "desc": "Реализованные кейс-стади под реальные задачи малого, среднего и крупного бизнеса"
+    },
+    "filter2": {
+      "block": "filter",
+      "dot": false,
+      "title": "",
+      "mods": "",
+      "breadcrumbs": [
+        {"name": "Главная"},
+        {"name": "Наука"}
+      ],
+      "titleMain": "Сотрудники",
+      "desc": "Реализованные кейс-стади под реальные задачи малого, среднего и крупного бизнеса"
+    },
+    "cardsSimple": {
+      "block": "cards",
+      "dot": true,
+      "title": "Сотрудники центра",
+      "mods": "",
+      "mainTitle": "Научно-преподавательский состав",
+      "desc": "Все сотрудники нашего центра активно участвуют в исследовательских проектах в области защиты информации.",
+      "linkBtn": false,
+      "swiperContent": [
+        {
+          "imgUrl": "img/content/education/1.jpg",
+          "imgAlt": "Доцент",
+          "link": "#",
+          "name": "Павел Валерьевич Кустарев",
+          "post": "Кандидат технических наук, доцент"
+        },
+        {
+          "imgUrl": "img/content/education/2.jpg",
+          "imgAlt": "Доцент",
+          "link": "#",
+          "name": "Яковлев Петр Иванович",
+          "post": "Кандидат технических наук, доцент"
+        },
+        {
+          "imgUrl": "img/content/education/3.jpg",
+          "imgAlt": "Доцент",
+          "link": "#",
+          "name": "Якупова Ольга Викторовна",
+          "post": "Кандидат технических наук, доцент"
+        },
+        {
+          "imgUrl": "img/content/education/1.jpg",
+          "imgAlt": "Доцент",
+          "link": "#",
+          "name": "Павел Валерьевич Кустарев",
+          "post": "Кандидат технических наук, доцент"
+        },
+        {
+          "imgUrl": "img/content/education/1.jpg",
+          "imgAlt": "Доцент",
+          "link": "#",
+          "name": "Павел Валерьевич Кустарев",
+          "post": "Кандидат технических наук, доцент"
+        }
+      ]
+    },
+    "cardsSimple2": {
+      "block": "cards",
+      "dot": true,
+      "title": "Сотрудники центра",
+      "mods": "",
+      "mainTitle": "Научно-преподавательский состав",
+      "desc": "Все сотрудники нашего центра активно участвуют в исследовательских проектах в области защиты информации.",
+      "linkBtn": true,
+      "swiperContent": [
+        {
+          "imgUrl": "img/content/education/1.jpg",
+          "imgAlt": "Доцент",
+          "link": "#",
+          "name": "Павел Валерьевич Кустарев",
+          "post": "Кандидат технических наук, доцент"
+        },
+        {
+          "imgUrl": "img/content/education/2.jpg",
+          "imgAlt": "Доцент",
+          "link": "#",
+          "name": "Яковлев Петр Иванович",
+          "post": "Кандидат технических наук, доцент"
+        },
+        {
+          "imgUrl": "img/content/education/3.jpg",
+          "imgAlt": "Доцент",
+          "link": "#",
+          "name": "Якупова Ольга Викторовна",
+          "post": "Кандидат технических наук, доцент"
+        },
+        {
+          "imgUrl": "img/content/education/1.jpg",
+          "imgAlt": "Доцент",
+          "link": "#",
+          "name": "Павел Валерьевич Кустарев",
+          "post": "Кандидат технических наук, доцент"
+        },
+        {
+          "imgUrl": "img/content/education/1.jpg",
+          "imgAlt": "Доцент",
+          "link": "#",
+          "name": "Павел Валерьевич Кустарев",
+          "post": "Кандидат технических наук, доцент"
+        }
+      ]
+    },
+    "cardsSimple3": {
+      "block": "cards",
+      "dot": true,
+      "title": "Компанда проекта",
+      "mods": "",
+      "mainTitle": "Участники проекта от ИТМО",
+      "desc": "Все сотрудники нашего центра активно участвуют в исследовательских проектах в области защиты информации.",
+      "linkBtn": false,
+      "swiperContent": [
+        {
+          "imgUrl": "img/content/education/1.jpg",
+          "imgAlt": "Доцент",
+          "link": "#",
+          "name": "Павел Валерьевич Кустарев",
+          "post": "Кандидат технических наук, доцент"
+        },
+        {
+          "imgUrl": "img/content/education/2.jpg",
+          "imgAlt": "Доцент",
+          "link": "#",
+          "name": "Яковлев Петр Иванович",
+          "post": "Кандидат технических наук, доцент"
+        },
+        {
+          "imgUrl": "img/content/education/3.jpg",
+          "imgAlt": "Доцент",
+          "link": "#",
+          "name": "Якупова Ольга Викторовна",
+          "post": "Кандидат технических наук, доцент"
+        },
+        {
+          "imgUrl": "img/content/education/1.jpg",
+          "imgAlt": "Доцент",
+          "link": "#",
+          "name": "Павел Валерьевич Кустарев",
+          "post": "Кандидат технических наук, доцент"
+        },
+        {
+          "imgUrl": "img/content/education/1.jpg",
+          "imgAlt": "Доцент",
+          "link": "#",
+          "name": "Павел Валерьевич Кустарев",
+          "post": "Кандидат технических наук, доцент"
+        }
+      ]
     }
   }
 }

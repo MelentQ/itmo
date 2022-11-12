@@ -1,0 +1,88 @@
+.content-development{
+  width: 100%;
+
+  &__content{
+    display: flex;
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__content-left{
+    margin-right: 5.6rem;
+    padding-right: 5.6rem;
+    border-right: 0.1rem solid rgba(55, 56, 123, 0.1);
+
+    @include breakpoint(tablet) {
+      margin-right: 0;
+      padding-right: 0;
+      border-right: 0;
+      margin-bottom: 3.2rem;
+      padding-bottom: 3.2rem;
+      border-bottom: 0.1rem solid rgba(55, 56, 123, 0.1);
+    }
+  }
+
+  &__desc{
+    @extend %fs-roboto-l;
+    max-width: 52rem;
+    margin-bottom: 4rem;
+
+    @include breakpoint(tablet) {
+      max-width: 80rem;
+    }
+  }
+
+  &__list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 79.4rem;
+    gap: 2.4rem 5.6rem;
+
+    @include breakpoint(small-tablet) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1.2rem 5.6rem;
+    }
+
+    li{
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__list-box{
+    margin-right: 2.4rem;
+    flex-shrink: 0;
+    width: 7.2rem;
+    height: 7.2rem;
+    background-color: $grayscale-100;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include breakpoint(laptop) {
+      width: 6.4rem;
+      height: 6.4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-right: 1.6rem;
+    }
+  }
+
+  &__list-text{
+    @extend %fs-roboto-s;
+  }
+
+  &__result-title {
+    display: block;
+    @extend %fs-h-5;
+    max-width: 23rem;
+    margin-bottom: 2.4rem;
+    text-transform: uppercase;
+  }
+
+}

@@ -1,0 +1,93 @@
+{{#extend "section"}}
+    {{#content "content"}}
+
+    <div class="quote-single">
+        <h2 class="quote-single__title title-h2">
+            Отзывы выпускников
+        </h2>
+        <div class="quote-single__slider">
+            <div class="quote-single__navigation slider-pagination-btns">
+                <button class="slider-pagination-btns__button prev" type="button" title="Prev">
+                    <svg width="8" height="16">
+                        <use xlink:href="#arrow-slide" />
+                    </svg>
+                </button>
+                <button class="slider-pagination-btns__button next" type="button" title="Next">
+                    <svg width="8" height="16">
+                        <use xlink:href="#arrow-slide" />
+                    </svg>
+                </button>
+            </div>
+            <div class="quote-single__swiper-text swiper loading">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <div class="quote-single__item">
+                            {{> components/quote-user column=true}}
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="quote-single__item">
+                            {{> components/quote-user column=true}}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="quote-single__swiper-video swiper loading">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <div class="quote-single__item-video">
+                            <a href="https://media.w3.org/2010/05/sintel/trailer.mp4" data-fancybox>
+                                <img class="inline" width="520" alt="" src="img/content/quote/video-bg.jpg"/>
+                                <div class="quote-single__item-video-box">
+                                    <div class="quote-single__item-video-time">
+                                        3:24
+                                    </div>
+                                    <div class="quote-single__item-video-content">
+                                        <span>
+                                            Мой опыт обучения на факультете безопасности
+                                        </span>
+                                        <div class="quote-single__item-video-content-play">
+                                            <svg width="15" height="17">
+                                                <use xlink:href="#play" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="quote-single__item-video">
+                            <a href="https://media.w3.org/2010/05/sintel/trailer.mp4" data-fancybox>
+                                <img class="inline" width="520" alt="" src="img/content/quote/video-bg.jpg"/>
+                                <div class="quote-single__item-video-box">
+                                    <div class="quote-single__item-video-time">
+                                        3:24
+                                    </div>
+                                    <div class="quote-single__item-video-content">
+                                        <span>
+                                            Мой опыт обучения на факультете безопасности
+                                        </span>
+                                        <div class="quote-single__item-video-content-play">
+                                            <svg width="15" height="17">
+                                                <use xlink:href="#play" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="quote-single__btn-box">
+                <a class="quote-single__btn button" href="#">
+                    Все выпускники
+                </a>
+            </div>
+        </div>
+    </div>
+
+    {{/content}}
+{{/extend}}
+

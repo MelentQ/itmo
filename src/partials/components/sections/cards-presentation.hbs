@@ -1,0 +1,115 @@
+{{#extend "section"}}
+    {{#content "content"}}
+
+        <div class="cards-presentation">
+            <h2 class="cards-presentation__title title-h2">
+                {{data.headTitle}}
+            </h2>
+            <div class="cards-presentation__wrapper">
+                {{#if data.contentLeft}}
+                <div class="cards-presentation__content">
+                    <div class="cards-presentation__content-box">
+                        <span class="cards-presentation__content-span">
+                            Кастмоная разработка курсов
+                        </span>
+                        <div class="cards-presentation__content-center">
+                            <div class="cards-presentation__content-center-title">
+                                Разработаем курс под ваши цели и задачи
+                            </div>
+                            <div class="cards-presentation__content-center-box">
+                                <p>
+                                    Проблема нехватки высококвалифицированных кадров – одна из главных на рынке. Курсы позволяют компании повысить квалификацию сотрудников и свою конкурентоспособность.
+                                </p>
+                                <ul>
+                                    <li>
+                                        преимущество 1
+                                    </li>
+                                    <li>
+                                        преимущество 2
+                                    </li>
+                                    <li>
+                                        преимущество 3
+                                    </li>
+                                </ul>
+                            </div>
+                            <a class="cards-presentation__content-center-btn" href="#">
+                                Варианты обучения
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {{/if}}
+                <div class="cards-presentation__slider {{data.modsSlider}} js-present-slider">
+                    <div class="cards-presentation__swiper swiper loading">
+                        <ul class="swiper-wrapper">
+                            {{#each data.swiperContent}}
+                                <li class="swiper-slide">
+                                    {{#if this.imgLeft}}
+                                        <div class="cards-presentation__swiper-img-box">
+                                            <img src={{this.imgUrl}} alt={{this.imgAlt}}>
+                                        </div>
+                                    {{/if}}
+                                    <div class="cards-presentation__swiper-item">
+                                        <div class="cards-presentation__swiper-item-box">
+                                            <div class="cards-presentation__swiper-top">
+                                                <div class="cards-presentation__swiper-pagination swiper__pagination"></div>
+                                                {{#if this.swiperTopText}}
+                                                    <span class="cards-presentation__swiper-top-text">
+                                                        Готовые базовые курсы
+                                                    </span>
+                                                {{/if}}
+                                            </div>
+                                            <div class="cards-presentation__swiper-contain">
+                                                {{#if this.dateText}}
+                                                <div>
+                                                    {{this.dateText}}
+                                                </div>
+                                                {{/if}}
+                                                <span>
+                                                    {{this.title}}
+                                                </span>
+                                                <p>
+                                                    {{this.desc}}
+                                                </p>
+                                            </div>
+                                            {{#unless this.imgLeft}}
+                                                <div class="cards-presentation__swiper-item-img-box">
+                                                    <img src={{this.imgUrl}} alt={{this.imgAlt}}>
+                                                </div>
+                                            {{/unless}}
+                                        </div>
+                                        <ul class="cards-presentation__swiper-item-list">
+                                            {{#each this.numbers}}
+                                                <li>
+                                                    {{> components/numbers}}
+                                                </li>
+                                            {{/each}}
+                                        </ul>
+                                        {{#if this.button}}
+                                        <a class="cards-presentation__swiper-item-btn button" href="#">
+                                            Подробнее на сайте мероприятия
+                                        </a>
+                                        {{/if}}
+                                    </div>
+                                </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    <div class="cards-presentation__navigation slider-pagination-btns">
+                        <button class="slider-pagination-btns__button prev" type="button" title="Prev">
+                            <svg width="8" height="16">
+                                <use xlink:href="#arrow-slide" />
+                            </svg>
+                        </button>
+                        <button class="slider-pagination-btns__button next" type="button" title="Next">
+                            <svg width="8" height="16">
+                                <use xlink:href="#arrow-slide" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {{/content}}
+{{/extend}}

@@ -1,0 +1,34 @@
+{{#extend "section"}}
+    {{#content "content"}}
+
+      <div class="banners">
+        <div class="banners__wrapper">
+          <h3 class="banners__title">
+            Успейте зарегистрироваться на всероссийскую олимпиаду
+          </h3>
+          <div class="banners__box">
+            <span class="banners__box-text">
+              До окончания регистрации:
+            </span>
+            <div class="banners__box-date loading" id="timer" data-time="2022-11-27">
+              <div class="banners__box-date-box">
+                <span id="days">00</span>
+              </div>
+              <div class="banners__box-date-line"></div>
+              <div class="banners__box-date-box">
+                <span id="hours">00</span>
+              </div>
+              <div class="banners__box-date-line"></div>
+              <div class="banners__box-date-box">
+                <span id="minutes">00</span>
+              </div>
+            </div>
+            <a class="banners__box-btn button button--white" href="#">
+              Зарегистрироваться
+            </a>
+          </div>
+        </div>
+      </div>
+
+    {{/content}}
+{{/extend}}

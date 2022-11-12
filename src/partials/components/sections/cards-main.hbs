@@ -1,0 +1,87 @@
+{{#extend "section"}}
+    {{#content "content"}}
+
+      <div class="cards-main">
+        <h2 class="cards-main__title title-h2">
+          {{data.headTitle}}
+        </h2>
+        <div class="cards-main__desc">
+          <p>
+            {{data.desc}}
+          </p>
+        </div>
+        <div class="cards-main__slider {{data.modsSlider}}">
+          <div class="ordinary-slider__wrapper">
+            <div class="ordinary-slider swiper swiper loading">
+              <div class="ordinary-slider__swiper swiper-wrapper">
+                {{#each data.swiperContent}}
+                <div class="ordinary-slider__slide swiper-slide">
+                  <div class="ordinary-slider__slide-box">
+                    <img class="ordinary-slider__slide-box-img" src={{this.imgUrl}} alt={{this.imgAlt}}>
+                    <ul class="ordinary-slider__slide-box-list">
+                      {{#each this.listItems}}
+                      <li>
+                        {{this.text}}
+                      </li>
+                      {{/each}}
+                    </ul>
+                  </div>
+                  <div class="ordinary-slider__slide-wrapper">
+                    <div class="ordinary-slider__slide-logo">
+                      <img class="ordinary-slider__slide-logo-img" src={{this.logoCompany}} alt="Сбер">
+                    </div>
+                    <div class="ordinary-slider__slide-content">
+                      <ul class="ordinary-slider__slide-content-header">
+                        {{#each this.headerList}}
+                        <li class="ordinary-slider__slide-content-header-item">
+                          {{this.name}}
+                        </li>
+                        {{/each}}
+                      </ul>
+                      <a class="ordinary-slider__slide-content-title" href="#">
+                        {{this.title}}
+                      </a>
+                        {{> components/user-card}}
+                      <div class="ordinary-slider__slide-info">
+                        <div class="ordinary-slider__slide-info-benefit">
+                          Будет полезен:
+                        </div>
+                        <ul class="ordinary-slider__slide-info-list">
+                          <li>
+                            Бакалаврам
+                          </li>
+                          <li>
+                            Магистрам
+                          </li>
+                        </ul>
+                        <div class="ordinary-slider__slide-info-text">
+                          Студенты курса проходят стажировки в компании и к концу обучения готовы стать ее полноценными сотрудниками.
+                        </div>
+                        <a class="ordinary-slider__slide-info-link button" href="#">
+                          Уведомить о запуске курса
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {{/each}}
+              </div>
+            </div>
+          </div>
+          <div class="cards-main__navigation slider-pagination-btns">
+            <button class="slider-pagination-btns__button prev" type="button" title="Prev">
+                <svg width="8" height="16">
+                    <use xlink:href="#arrow-slide" />
+                </svg>
+            </button>
+            <button class="slider-pagination-btns__button next" type="button" title="Next">
+                <svg width="8" height="16">
+                    <use xlink:href="#arrow-slide" />
+                </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    {{/content}}
+{{/extend}}

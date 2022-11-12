@@ -1,0 +1,340 @@
+.cards-presentation{
+
+    &__wrapper{
+        display: flex;
+        gap: 2rem;
+
+        @include breakpoint(laptop) {
+            flex-direction: column;
+            height: auto;
+        }
+    }
+
+    &__content{
+        flex: 0 1 40%;
+        padding: 1.2rem;
+        border-radius: 2.4rem;
+        background-color: $grayscale-100;
+        color: $grayscale-100;
+    }
+
+    &__content-box{
+        background-image: url("../../img/content/cards-presentation/content-bg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 1.8rem;
+        padding: 3.2rem 2.8rem 3.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        row-gap: 5rem;
+        background-color: $grayscale-300;
+        height: 100%;
+
+        @include breakpoint(small-tablet) {
+            row-gap: 2rem;
+            padding: 2.2rem;
+        }
+    }
+
+    &__content-span{
+        margin-bottom: 6.6rem;
+
+        @include breakpoint(laptop) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__content-center{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2rem;
+        height: 100%;
+        align-items: flex-start;
+    }
+
+    &__content-center-title{
+        @extend %fs-roboto-l;
+        margin-bottom: 1.2rem;
+        max-width: 34rem;
+
+        @include breakpoint(laptop) {
+            margin-bottom: 2rem;
+            margin-bottom: 0;
+        }
+    }
+
+    &__content-center-box{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: auto;
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+
+            li{
+                padding-left: 1.5rem;
+                position: relative;
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0.8rem;
+                    width: 0.5rem;
+                    height: 0.5rem;
+                    background-color: $grayscale-100;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    &__content-center-btn{
+        display: inline-block;
+        @extend %interactive-white-btn;
+        padding: 2.1rem 3.2rem;
+        border-radius: 999px;
+        background-color: $grayscale-100;
+        color: $primary-900;
+        @extend %fs-button-1;
+        text-transform: uppercase;
+        text-align: center;
+
+        &:link,
+        &:visited {
+            color: $primary-900;
+        }
+
+        @include breakpoint(small-tablet) {
+            margin-top: 2rem;
+            width: 100%;
+        }
+    }
+
+    &__slider{
+        background-color: $grayscale-100;
+        border-radius: 2.4rem;
+        flex: 0 1 60%;
+        padding: 4rem 4rem 4.8rem;
+        gap: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        min-width: 0;
+        overflow: hidden;
+        height: 100%;
+
+        @include breakpoint(small-tablet) {
+            gap: 2.4rem;
+            padding: 2rem;
+        }
+
+        &--big{
+            flex: 0 1 100%;
+            padding: 1.2rem;
+
+            @include breakpoint(tablet) {
+                padding: 2.4rem;
+
+                .cards-presentation__navigation{
+                    display: none;
+                }
+            }
+
+            .swiper-slide{
+                display: flex;
+                flex-direction: row;
+                gap: 4rem;
+
+                @include breakpoint(tablet) {
+                    flex-direction: column;
+                    gap: 2.4rem;
+                }
+            }
+
+            .cards-presentation__swiper-item{
+                padding: 3rem 2.8rem 4.4rem 0;
+                flex: 0 1 60%;
+                align-items: flex-start;
+                min-width: auto;
+                gap: 5.6rem;
+
+                @include breakpoint(tablet) {
+                    padding: 0;
+                    flex: 0 1 auto;
+                    gap: 2.4rem;
+                }
+            }
+
+            .cards-presentation__swiper-item-box{
+                grid-template-columns: repeat(1, 1fr);
+                column-gap: 0;
+                row-gap: 5.5rem;
+
+                @include breakpoint(tablet) {
+                    row-gap: 2rem;
+                }
+
+            }
+            .cards-presentation__swiper-item-btn{
+                display: inline-block;
+
+                @include breakpoint(small-tablet) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__swiper{
+        height: 100%;
+    }
+
+    &__swiper-img-box{
+        flex: 0 1 40%;
+        position: relative;
+        background-color: $grayscale-300;
+        border-radius: 1.8rem;
+        overflow: hidden;
+
+        @include breakpoint(tablet) {
+            height: 40rem;
+            flex: 0 1 auto;
+        }
+
+        @include breakpoint(small-tablet) {
+            height: 30.2rem;
+        }
+
+        img{
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__swiper-top{
+        padding-right: 19.3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        grid-column: span 2;
+
+        @include breakpoint(small-tablet) {
+            padding-right: 0;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__swiper-top-text{
+        flex-shrink: 0;
+    }
+
+    &__swiper-pagination{
+        @extend %fs-roboto-l
+    }
+
+    &__swiper-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 3.6rem;
+        min-height: 50rem;
+
+        @include breakpoint(laptop) {
+            height: auto;
+            min-height: 38rem;
+        }
+    }
+
+    &__swiper-item-box{
+        display: grid;
+        grid-template-columns: auto 20rem;
+        column-gap: 3.6rem;
+        row-gap: 11rem;
+
+        @include breakpoint(laptop) {
+            row-gap: 6rem;
+        }
+
+        @include breakpoint(small-tablet) {
+           grid-template-columns: repeat(1, 1fr);
+           column-gap: 0;
+           row-gap: 2.4rem;
+        }
+    }
+
+    &__swiper-contain{
+        div{
+            margin-bottom: 1.2rem;
+        }
+        span{
+            display: inline-block;
+            @extend %fs-roboto-l;
+            margin-bottom: 3.2rem;
+
+            @include breakpoint(small-tablet) {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    &__swiper-item-img-box{
+        position: relative;
+        width: 20rem;
+        height: 20rem;
+        border-radius: 2.4rem;
+        flex-shrink: 0;
+        overflow: hidden;
+
+        @include breakpoint(small-tablet) {
+            height: 30.2rem;
+            width: 100%;
+            order: -1;
+        }
+
+        img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }
+    }
+
+    &__swiper-item-list{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4rem 4.8rem;
+
+        @include breakpoint(small-tablet) {
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+
+    &__navigation{
+        position: absolute;
+        top: 3.2rem;
+        right: 4rem;
+        z-index: 10;
+
+        @include breakpoint(small-tablet) {
+            position: static;
+        }
+    }
+}

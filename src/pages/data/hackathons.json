@@ -1,0 +1,10 @@
+{
+    "title": "Хакатоны",
+    "cardsInstance": {
+      "block": "cards",
+      "dot": true,
+      "title": "",
+      "mods": "section--bg-transparent section--without-right"
+    }
+  }
+  
